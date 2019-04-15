@@ -2,4 +2,4 @@
 .coverage
 .ipynb_checkpoints
 .DS_Store
-*.pyc
+notes.ipynb
