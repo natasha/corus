@@ -14,6 +14,7 @@ META = Meta(
     label='ne5',
     title='Collection5',
     source='http://www.labinform.ru/pub/named_entities/',
+    description='1000 news articles with PER, LOC, ORG markup.',
     instruction=[
         'wget http://www.labinform.ru/pub/named_entities/collection5.zip',
         'unzip collection5.zip',

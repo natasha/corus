@@ -15,7 +15,7 @@ def format_registry_(registry):
     yield '<tr>'
     yield '<th>Dataset</th>'
     yield '<th>API <code>from corus import</code></th>'
-    yield '<th>Usage</th>'
+    yield '<th>How to download</th>'
     yield '</tr>'
     for meta, function in registry:
         example = DOCS + '#' + meta.label
@@ -25,17 +25,21 @@ def format_registry_(registry):
 
         yield '<td>'
         yield '<a href="%s">%s</a>' % (meta.source, meta.title)
+        yield '</br>'
+        yield meta.description
         yield '</td>'
 
         yield '<td>'
         yield '<code>%s</code>' % function
+        yield '</br>'
+        yield '<a href="%s">usage example</a>' % example
         yield '</td>'
 
         yield '<td>'
-        for step in meta.instruction:
+        for index, step in enumerate(meta.instruction):
+            if index > 0:
+                yield '</br>'
             yield step
-            yield '</br>'
-        yield 'See <code>%s</code> <a href="%s">usage example</a>' % (function, example)
         yield '</td>'
 
         yield '</tr>'

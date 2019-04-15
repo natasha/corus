@@ -11,6 +11,7 @@ META = Meta(
     label='lenta',
     title='Lenta.ru',
     source='https://github.com/yutkin/Lenta.Ru-News-Dataset',
+    description='Dump of lenta.ru, ~790 000 articles, ~1.9Gb of text.',
     instruction=[
         'wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.0/lenta-ru-news.csv.gz'
     ]
