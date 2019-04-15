@@ -2,4 +2,6 @@
 .coverage
 .ipynb_checkpoints
 .DS_Store
+*.pyc
+*.egg-info
 notes.ipynb
