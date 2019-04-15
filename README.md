@@ -114,3 +114,18 @@ wget http://panchenko.me/data/russe/librusec_fb2.plain.gz
 </tr>
 </table>
 <!--- registry --->
+
+
+## Development
+
+Tests:
+
+```bash
+make test
+```
+
+Add new sourse:
+1. Implement `corus/sources/<source>.py`
+2. Add import and registy entry into `corus/__init__.py`
+3. Add example into `docs.ipynb`
+4. Run tests (readme is updated)
