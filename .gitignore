@@ -1,0 +1,5 @@
+.cache
+.coverage
+.ipynb_checkpoints
+.DS_Store
+*.pyc
