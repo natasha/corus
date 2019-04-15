@@ -97,5 +97,20 @@ rm collection5.zip
 wget https://github.com/dice-group/FOX/raw/master/input/Wikiner/aij-wikiner-ru-wp3.bz2
 </td>
 </tr>
+<tr>
+<td>
+<a href="https://russe.nlpub.org/downloads/">Lib.rus.ec</a>
+</br>
+Dump of lib.rus.ec, ~150Gb of text, prepared for RUSSE workshop.
+</td>
+<td>
+<code>load_librusec</code>
+</br>
+<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#librusec">usage example</a>
+</td>
+<td>
+wget http://panchenko.me/data/russe/librusec_fb2.plain.gz
+</td>
+</tr>
 </table>
 <!--- registry --->

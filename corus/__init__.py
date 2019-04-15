@@ -19,6 +19,10 @@ from .sources.wikiner import (
     META as WIKINER_META,
     load as load_wikiner
 )
+from .sources.librusec import (
+    META as LIBRUSEC_META,
+    load as load_librusec
+)
 
 
 REGISTRY = [
@@ -26,5 +30,6 @@ REGISTRY = [
     (FACTRU_META, load_factru),
     (GAREEV_META, load_gareev),
     (NE5_META, load_ne5),
-    (WIKINER_META, load_wikiner)
+    (WIKINER_META, load_wikiner),
+    (LIBRUSEC_META, load_librusec),
 ]
