@@ -1,7 +1,7 @@
 
-# Links to russian corpora + python functions for loading and parsing
+# Corus
 
-in one place
+Links to russian corpora + python functions for loading and parsing
 
 <!--- registry --->
 <table>
