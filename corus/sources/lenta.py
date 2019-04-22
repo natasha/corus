@@ -18,13 +18,13 @@ class LentaRecord(Record):
         self.tags = tags
 
 
-def parse(lines):
+def parse_lenta(lines):
     rows = parse_csv(lines)
     skip_header(rows)
     for cells in rows:
         yield LentaRecord(*cells)
 
 
-def load(path):
+def load_lenta(path):
     lines = load_gz_lines(path)
-    return parse(lines)
+    return parse_lenta(lines)

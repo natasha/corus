@@ -17,7 +17,7 @@ def flush(id, buffer):
     return LibrusecRecord(id, '\n'.join(buffer))
 
 
-def parse(lines):
+def parse_librusec(lines):
     id = None
     buffer = []
     for line in lines:
@@ -32,6 +32,6 @@ def parse(lines):
     yield flush(id, buffer)
 
 
-def load(path):
+def load_librusec(path):
     lines = load_gz_lines(path)
-    return parse(lines)
+    return parse_librusec(lines)

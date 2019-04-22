@@ -45,6 +45,6 @@ def list_ids(dir):
             yield match.group(1)
 
 
-def load(dir):
+def load_gareev(dir):
     for id in list_ids(dir):
         yield load_id(id, dir)

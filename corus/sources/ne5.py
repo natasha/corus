@@ -68,6 +68,6 @@ def load_id(id, dir):
     return Ne5Markup(id, text, spans)
 
 
-def load(dir):
+def load_ne5(dir):
     for id in list_ids(dir):
         yield load_id(id, dir)

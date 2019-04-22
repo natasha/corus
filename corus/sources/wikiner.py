@@ -13,7 +13,7 @@ class WikinerMarkup(Record):
         self.spans = spans
 
 
-def parse(line):
+def parse_wikiner(line):
     if not line:
         # skip empy lines
         return
@@ -31,9 +31,9 @@ def parse(line):
     return WikinerMarkup(text, spans)
 
 
-def load(path):
+def load_wikiner(path):
     lines = load_bz2_lines(path)
     for line in lines:
-        record = parse(line)
+        record = parse_wikiner(line)
         if record:
             yield record
