@@ -2,8 +2,8 @@
 from ..record import Record
 from ..io import (
     load_gz_lines,
-    parse_csv
-)
+    parse_csv,
+    skip_header
 )
 
 
@@ -20,6 +20,7 @@ class LentaRecord(Record):
 
 def parse(lines):
     rows = parse_csv(lines)
+    skip_header(rows)
     for cells in rows:
         yield LentaRecord(*cells)
 

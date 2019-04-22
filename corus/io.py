@@ -36,10 +36,16 @@ def load_bz2_lines(path, encoding='utf8'):
     return load_gz_lines(path, encoding=encoding, gzip=bz2)
 
 
-def parse_csv(lines, header=True):
-    if header:
-        next(lines)
-    return csv.reader(lines)
+def parse_csv(lines, delimiter=','):
+    return csv.reader(lines, delimiter=delimiter)
+
+
+def parse_tsv(lines):
+    return parse_csv(lines, delimiter='\t')
+
+
+def skip_header(rows):
+    return next(rows)
 
 
 def parse_jsonl(lines):
