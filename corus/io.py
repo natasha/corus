@@ -1,9 +1,14 @@
 
 import gzip
 import bz2
+import tarfile
+
 import csv
 import json
+
 import xml.etree.ElementTree as ET
+
+from fnmatch import fnmatch as match_pattern
 
 
 def load_text(path):
@@ -51,3 +56,25 @@ def skip_header(rows):
 def parse_jsonl(lines):
     for line in lines:
         yield json.loads(line)
+
+
+def open_tar(path):
+    return tarfile.open(path)
+
+
+def list_tar(tar):
+    for member in tar:
+        yield member
+        tar.members = []
+
+
+def match_names(records, pattern):
+    for record in records:
+        if match_pattern(record.name, pattern):
+            yield record
+
+
+def read_tar(tar, member, encoding='utf8'):
+    file = tar.extractfile(member)
+    data = file.read()
+    return data.decode(encoding)
