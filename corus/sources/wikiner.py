@@ -1,20 +1,8 @@
 
-from ..meta import Meta
 from ..record import Record
 from ..io import load_bz2_lines
 from ..bio import io_spans
 from ..token import find_tokens
-
-
-META = Meta(
-    label='wikiner',
-    title='WiNER',
-    source='https://www.aclweb.org/anthology/I17-1042',
-    description='~200 000 sentences from Wiki automaticaly annotated with PER, LOC, ORG tags.',
-    instruction=[
-        'wget https://github.com/dice-group/FOX/raw/master/input/Wikiner/aij-wikiner-ru-wp3.bz2'
-    ]
-)
 
 
 class WikinerMarkup(Record):

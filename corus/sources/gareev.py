@@ -6,23 +6,9 @@ from ..path import (
     join_path
 )
 from ..io import load_lines
-from ..meta import Meta
 from ..record import Record
 from ..token import find_tokens
 from ..bio import bio_spans
-
-
-META = Meta(
-    label='gareev',
-    title='Gareev',
-    source='https://www.researchgate.net/publication/262203599_Introducing_Baselines_for_Russian_Named_Entity_Recognition',
-    description='97 news articles with PER, ORG markup.',
-    instruction=[
-        'Email Rinat Gareev (gareev-rm@yandex.ru) ask for dataset',
-        'tar -xvf rus-ner-news-corpus.iob.tar.gz',
-        'rm rus-ner-news-corpus.iob.tar.gz'
-    ]
-)
 
 
 class GareevRecord(Record):

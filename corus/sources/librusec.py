@@ -2,19 +2,7 @@
 import re
 
 from ..record import Record
-from ..meta import Meta
 from ..io import load_gz_lines
-
-
-META = Meta(
-    label='librusec',
-    title='Lib.rus.ec',
-    source='https://russe.nlpub.org/downloads/',
-    description='Dump of lib.rus.ec, ~150Gb of text, prepared for RUSSE workshop.',
-    instruction=[
-        'wget http://panchenko.me/data/russe/librusec_fb2.plain.gz'
-    ]
-)
 
 
 class LibrusecRecord(Record):

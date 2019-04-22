@@ -5,23 +5,9 @@ from ..path import (
     join_path
 )
 from ..record import Record
-from ..meta import Meta
 from ..io import (
     load_text,
     load_lines,
-)
-
-
-META = Meta(
-    label='factru',
-    title='factRuEval-2016',
-    source='https://github.com/dialogue-evaluation/factRuEval-2016/',
-    description='254 news articles with PER, LOC, ORG markup.',
-    instruction=[
-        'wget https://github.com/dialogue-evaluation/factRuEval-2016/archive/master.zip',
-        'unzip master.zip',
-        'rm master.zip'
-    ]
 )
 
 
