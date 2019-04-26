@@ -62,10 +62,32 @@ def open_tar(path):
     return tarfile.open(path)
 
 
-def list_tar(tar):
-    for member in tar:
-        yield member
-        tar.members = []
+class TarRecord(Record):
+    __attributes__ = ['name', 'offset', 'file']
+
+    def __init__(self, name, offset, file):
+        self.name = name
+        self.offset = offset
+        self.file = file
+
+
+def load_tar(path, offset=0):
+    with tarfile.open(path) as tar:
+        tar.fileobj.seek(offset)
+        while True:
+            member = tarfile.TarInfo.fromtarfile(tar)
+            if not member.isfile():
+                continue
+
+            file = tar.extractfile(member)
+            yield TarRecord(
+                name=member.name,
+                offset=member.offset,
+                file=file
+            )
+
+            tar.members = []
+            tar.fileobj.seek(tar.offset)
 
 
 def match_names(records, pattern):
