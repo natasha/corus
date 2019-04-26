@@ -73,8 +73,30 @@ def match_names(records, pattern):
         if match_pattern(record.name, pattern):
             yield record
 
+class ZipRecord(Record):
+    __attributes__ = ['name', 'offset', 'file']
 
-def read_tar(tar, member, encoding='utf8'):
-    file = tar.extractfile(member)
-    data = file.read()
-    return data.decode(encoding)
+    def __init__(self, name, offset, file):
+        self.name = name
+        self.offset = offset
+        self.file = file
+
+
+def load_zip(path, offset=0):
+    with open_zip(path) as zip:
+        zip.seek(offset)
+        while True:
+            offset = zip.tell()
+
+            header = read_zip_header(zip)
+            if not header:
+                break
+            if not header.uncompressed:
+                continue
+
+            file = read_zip_data(zip, header)
+            yield ZipRecord(
+                name=header.name,
+                offset=offset,
+                file=file
+            )
