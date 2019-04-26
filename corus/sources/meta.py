@@ -17,7 +17,7 @@ from . import (
     load_taiga_magazines,
     load_taiga_subtitles,
     load_taiga_social,
-    load_taiga_proza,git
+    load_taiga_proza,
     load_taiga_stihi,
 )
 
