@@ -10,6 +10,33 @@ import xml.etree.ElementTree as ET
 
 from fnmatch import fnmatch as match_pattern
 
+from .record import Record
+from .zip import (
+    open_zip,
+    read_zip_header,
+    read_zip_data
+)
+
+
+#######
+#
+#   UTILS
+#
+#######
+
+
+def match_names(records, pattern):
+    for record in records:
+        if match_pattern(record.name, pattern):
+            yield record
+
+
+#######
+#
+#    TEXT
+#
+########
+
 
 def load_text(path):
     with open(path) as file:
@@ -27,8 +54,22 @@ def load_lines(path):
             yield line.rstrip('\n')
 
 
+#####
+#
+#   XML
+#
+######
+
+
 def parse_xml(content):
     return ET.fromstring(content)
+
+
+#########
+#
+#   GZ
+#
+#####
 
 
 def load_gz_lines(path, encoding='utf8', gzip=gzip):
@@ -37,8 +78,22 @@ def load_gz_lines(path, encoding='utf8', gzip=gzip):
             yield line.rstrip()
 
 
+########
+#
+#    BZ
+#
+########
+
+
 def load_bz2_lines(path, encoding='utf8'):
     return load_gz_lines(path, encoding=encoding, gzip=bz2)
+
+
+########
+#
+#   CSV
+#
+#######
 
 
 def parse_csv(lines, delimiter=','):
@@ -53,13 +108,23 @@ def skip_header(rows):
     return next(rows)
 
 
+#########
+#
+#    JSONL
+#
+#######
+
+
 def parse_jsonl(lines):
     for line in lines:
         yield json.loads(line)
 
 
-def open_tar(path):
-    return tarfile.open(path)
+#######
+#
+#   TAR
+#
+######
 
 
 class TarRecord(Record):
@@ -90,10 +155,12 @@ def load_tar(path, offset=0):
             tar.fileobj.seek(tar.offset)
 
 
-def match_names(records, pattern):
-    for record in records:
-        if match_pattern(record.name, pattern):
-            yield record
+#######
+#
+#   ZIP
+#
+######
+
 
 class ZipRecord(Record):
     __attributes__ = ['name', 'offset', 'file']
