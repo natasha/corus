@@ -24,10 +24,10 @@ Links to russian corpora + python functions for loading and parsing
 #ner
 #news
 </td>
-<td>
+<td align="right">
 254
 </td>
-<td>
+<td align="right">
 0.95
 </td>
 <td>
@@ -52,10 +52,10 @@ Manual PER, LOC, ORG markup prepared for 2016 Dialog competition.
 #ner
 #news
 </td>
-<td>
+<td align="right">
 97
 </td>
-<td>
+<td align="right">
 0.44
 </td>
 <td>
@@ -79,11 +79,11 @@ Email Rinat Gareev (gareev-rm@yandex.ru) ask for dataset
 <td>
 #news
 </td>
-<td>
-739 351
+<td align="right">
+739&nbsp;351
 </td>
-<td>
-1 702
+<td align="right">
+1&nbsp;702
 </td>
 <td>
 Dump of lenta.ru
@@ -102,11 +102,11 @@ Dump of lenta.ru
 <td>
 #lit
 </td>
-<td>
-301 871
+<td align="right">
+301&nbsp;871
 </td>
-<td>
-148 402
+<td align="right">
+148&nbsp;402
 </td>
 <td>
 Dump of lib.rus.ec prepared for RUSSE workshop
@@ -126,10 +126,10 @@ Dump of lib.rus.ec prepared for RUSSE workshop
 #ner
 #news
 </td>
-<td>
-1 000
+<td align="right">
+1&nbsp;000
 </td>
-<td>
+<td align="right">
 2
 </td>
 <td>
@@ -153,10 +153,10 @@ News articles with manual PER, LOC, ORG markup.
 <td>
 #ner
 </td>
-<td>
-203 287
+<td align="right">
+203&nbsp;287
 </td>
-<td>
+<td align="right">
 36
 </td>
 <td>
@@ -174,9 +174,9 @@ Sentences from Wiki auto annotated with PER, LOC, ORG tags.
 </td>
 <td>
 </td>
-<td>
+<td align="right">
 </td>
-<td>
+<td align="right">
 </td>
 <td>
 Large collection of russian texts from various sources: news sites, magazines, literacy, social networks.
@@ -197,10 +197,10 @@ Taiga/Arzamas
 <td>
 #news
 </td>
-<td>
+<td align="right">
 311
 </td>
-<td>
+<td align="right">
 4
 </td>
 <td>
@@ -217,10 +217,10 @@ Taiga/Fontanka
 <td>
 #news
 </td>
-<td>
-342 683
+<td align="right">
+342&nbsp;683
 </td>
-<td>
+<td align="right">
 786
 </td>
 <td>
@@ -237,10 +237,10 @@ Taiga/Interfax
 <td>
 #news
 </td>
-<td>
-46 429
+<td align="right">
+46&nbsp;429
 </td>
-<td>
+<td align="right">
 77
 </td>
 <td>
@@ -257,10 +257,10 @@ Taiga/KP
 <td>
 #news
 </td>
-<td>
-45 503
+<td align="right">
+45&nbsp;503
 </td>
-<td>
+<td align="right">
 61
 </td>
 <td>
@@ -277,10 +277,10 @@ Taiga/Lenta
 <td>
 #news
 </td>
-<td>
-36 446
+<td align="right">
+36&nbsp;446
 </td>
-<td>
+<td align="right">
 95
 </td>
 <td>
@@ -297,10 +297,10 @@ Taiga/N+1
 <td>
 #news
 </td>
-<td>
-7 696
+<td align="right">
+7&nbsp;696
 </td>
-<td>
+<td align="right">
 24
 </td>
 <td>
@@ -316,11 +316,11 @@ Taiga/Magazines
 </td>
 <td>
 </td>
-<td>
-39 890
+<td align="right">
+39&nbsp;890
 </td>
-<td>
-2 243
+<td align="right">
+2&nbsp;243
 </td>
 <td>
 Dump of magazines.russ.ru
@@ -335,10 +335,10 @@ Taiga/Subtitles
 </td>
 <td>
 </td>
-<td>
-19 011
+<td align="right">
+19&nbsp;011
 </td>
-<td>
+<td align="right">
 909
 </td>
 <td>
@@ -353,10 +353,10 @@ Taiga/Social
 </td>
 <td>
 </td>
-<td>
-1 876 442
+<td align="right">
+1&nbsp;876&nbsp;442
 </td>
-<td>
+<td align="right">
 648
 </td>
 <td>
@@ -372,11 +372,11 @@ Taiga/Proza
 <td>
 #lit
 </td>
-<td>
-1 732 434
+<td align="right">
+1&nbsp;732&nbsp;434
 </td>
-<td>
-39 164
+<td align="right">
+39&nbsp;164
 </td>
 <td>
 Dump of proza.ru
@@ -391,11 +391,11 @@ Taiga/Stihi
 </td>
 <td>
 </td>
-<td>
-9 157 686
+<td align="right">
+9&nbsp;157&nbsp;686
 </td>
-<td>
-13 109
+<td align="right">
+13&nbsp;109
 </td>
 <td>
 Dump of stihi.ru

@@ -28,7 +28,7 @@ def format_bytes(value):
 
 def format_count(value):
     # https://stackoverflow.com/questions/16670125/python-format-string-thousand-separator-with-spaces/
-    return format(value, ',').replace(',', ' ')
+    return format(value, ',').replace(',', '&nbsp;')
 
 
 def format_metas_(metas, url):
@@ -68,12 +68,12 @@ def format_metas_(metas, url):
                 yield '#' + tag
         yield '</td>'
 
-        yield '<td>'
+        yield '<td align="right">'
         if meta.stats and meta.stats.count:
             yield format_count(meta.stats.count)
         yield '</td>'
 
-        yield '<td>'
+        yield '<td align="right">'
         if meta.stats and meta.stats.bytes:
             yield format_bytes(meta.stats.bytes)
         yield '</td>'
