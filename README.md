@@ -413,7 +413,7 @@ Tests:
 make test
 ```
 
-Add new sourse:
+Add new source:
 1. Implement `corus/sources/<source>.py`
 2. Add import and registy entry into `corus/__init__.py`
 3. Add example into `docs.ipynb`
