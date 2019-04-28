@@ -3,12 +3,12 @@ import re
 from itertools import islice as head
 
 from ...record import Record
-from ...io import (
-    load_tar,
-    match_names
-)
+from ...io import match_names
 
-from .common import parse_filename_id
+from .common import (
+    load_tar,
+    parse_filename_id
+)
 
 
 FB = 'fb'

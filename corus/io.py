@@ -1,7 +1,6 @@
 
 import gzip
 import bz2
-import tarfile
 
 import csv
 import json
@@ -9,13 +8,6 @@ import json
 import xml.etree.ElementTree as ET
 
 from fnmatch import fnmatch as match_pattern
-
-from .record import Record
-from .zip import (
-    open_zip,
-    read_zip_header,
-    read_zip_data
-)
 
 
 #######
@@ -120,74 +112,3 @@ def skip_header(rows):
 def parse_jsonl(lines):
     for line in lines:
         yield json.loads(line)
-
-
-#######
-#
-#   TAR
-#
-######
-
-
-class TarRecord(Record):
-    __attributes__ = ['name', 'offset', 'file']
-
-    def __init__(self, name, offset, file):
-        self.name = name
-        self.offset = offset
-        self.file = file
-
-
-def load_tar(path, offset=0):
-    with tarfile.open(path) as tar:
-        tar.fileobj.seek(offset)
-        while True:
-            member = tarfile.TarInfo.fromtarfile(tar)
-            if not member.isfile():
-                continue
-
-            file = tar.extractfile(member)
-            yield TarRecord(
-                name=member.name,
-                offset=member.offset,
-                file=file
-            )
-
-            tar.members = []
-            tar.fileobj.seek(tar.offset)
-
-
-#######
-#
-#   ZIP
-#
-######
-
-
-class ZipRecord(Record):
-    __attributes__ = ['name', 'offset', 'file']
-
-    def __init__(self, name, offset, file):
-        self.name = name
-        self.offset = offset
-        self.file = file
-
-
-def load_zip(path, offset=0):
-    with open_zip(path) as zip:
-        zip.seek(offset)
-        while True:
-            offset = zip.tell()
-
-            header = read_zip_header(zip)
-            if not header:
-                break
-            if not header.uncompressed:
-                continue
-
-            file = read_zip_data(zip, header)
-            yield ZipRecord(
-                name=header.name,
-                offset=offset,
-                file=file
-            )

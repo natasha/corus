@@ -1,21 +1,33 @@
 
 from io import TextIOWrapper
 from itertools import islice as head
+import tarfile
 
 from ...record import Record
 from ...path import (
     get_filename,
     split_ext
 )
+from ...zip import (
+    open_zip,
+    read_zip_header,
+    read_zip_data
+)
 from ...io import (
     match_names,
 
     parse_tsv,
     skip_header,
-
-    load_tar,
-    load_zip
 )
+
+
+class ArchiveRecord(Record):
+    __attributes__ = ['name', 'offset', 'file']
+
+    def __init__(self, name, offset, file):
+        self.name = name
+        self.offset = offset
+        self.file = file
 
 
 class TaigaRecord(Record):
@@ -59,6 +71,45 @@ class Meta(Record):
         self.lang = lang
         self.title = title
         self.url = url
+
+
+def load_tar(path, offset=0):
+    with tarfile.open(path) as tar:
+        tar.fileobj.seek(offset)
+        while True:
+            member = tarfile.TarInfo.fromtarfile(tar)
+            if not member.isfile():
+                continue
+
+            file = tar.extractfile(member)
+            yield ArchiveRecord(
+                name=member.name,
+                offset=member.offset,
+                file=file
+            )
+
+            tar.members = []
+            tar.fileobj.seek(tar.offset)
+
+
+def load_zip(path, offset=0):
+    with open_zip(path) as zip:
+        zip.seek(offset)
+        while True:
+            offset = zip.tell()
+
+            header = read_zip_header(zip)
+            if not header:
+                break
+            if not header.uncompressed:
+                continue
+
+            file = read_zip_data(zip, header)
+            yield ArchiveRecord(
+                name=header.name,
+                offset=offset,
+                file=file
+            )
 
 
 def parse_meta(file, encoding='utf8'):
