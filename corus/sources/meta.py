@@ -8,6 +8,7 @@ from . import (
     load_librusec,
     load_ne5,
     load_wikiner,
+
     load_taiga_arzamas,
     load_taiga_fontanka,
     load_taiga_interfax,
@@ -19,6 +20,10 @@ from . import (
     load_taiga_social,
     load_taiga_proza,
     load_taiga_stihi,
+
+    load_buriy_lenta,
+    load_buriy_news,
+    load_buriy_webhose,
 )
 
 
@@ -254,5 +259,51 @@ METAS = [
             bytes=13745805334
         ),
         functions=[load_taiga_stihi]
+    ),
+    Meta(
+        title='Buriy (russian-nlp-datasets)',
+        url='https://github.com/buriy/russian-nlp-datasets/releases',
+        description='Several russian news datasets from webhose.io, lenta.ru and other news sites.',
+    ),
+    Meta(
+        title='Buriy/Lenta',
+        description='Dump of lenta.ru.',
+        instruction=[
+            'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/lenta.tar.bz2',
+        ],
+        stats=Stats(
+            count=699777,
+            bytes=1683268809
+        ),
+        tags=[NEWS],
+        functions=[load_buriy_lenta],
+    ),
+    Meta(
+        title='Buriy/News',
+        description='Dump of top 40 news + 20 fashion news sites.',
+        instruction=[
+            'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2014.tar.bz2',
+            'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2015-part1.tar.bz2',
+            'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2015-part2.tar.bz2'
+        ],
+        stats=Stats(
+            count=2154801,
+            bytes=7340672169
+        ),
+        tags=[NEWS],
+        functions=[load_buriy_news],
+    ),
+    Meta(
+        title='Buriy/Webhose',
+        description='Dump from webhose.io, 300 sources for one month.',
+        instruction=[
+            'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/stress.tar.gz'
+        ],
+        stats=Stats(
+            count=285965,
+            bytes=901066314
+        ),
+        tags=[NEWS],
+        functions=[load_buriy_webhose],
     ),
 ]

@@ -401,6 +401,95 @@ Taiga/Stihi
 Dump of stihi.ru
 </td>
 </tr>
+<tr>
+<td>
+<a href="https://github.com/buriy/russian-nlp-datasets/releases">Buriy (russian-nlp-datasets)</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td align="right">
+</td>
+<td align="right">
+</td>
+<td>
+Several russian news datasets from webhose.io, lenta.ru and other news sites.
+</td>
+</tr>
+<tr>
+<td>
+Buriy/Lenta
+</td>
+<td>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy">load_buriy</a></code>
+</td>
+<td>
+#news
+</td>
+<td align="right">
+699&nbsp;777
+</td>
+<td align="right">
+1&nbsp;605
+</td>
+<td>
+Dump of lenta.ru.
+</br>
+</br>
+<code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/lenta.tar.bz2</code>
+</td>
+</tr>
+<tr>
+<td>
+Buriy/News
+</td>
+<td>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy">load_buriy</a></code>
+</td>
+<td>
+#news
+</td>
+<td align="right">
+2&nbsp;154&nbsp;801
+</td>
+<td align="right">
+7&nbsp;000
+</td>
+<td>
+Dump of top 40 news + 20 fashion news sites.
+</br>
+</br>
+<code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2014.tar.bz2</code>
+</br>
+<code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2015-part1.tar.bz2</code>
+</br>
+<code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2015-part2.tar.bz2</code>
+</td>
+</tr>
+<tr>
+<td>
+Buriy/Webhose
+</td>
+<td>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy">load_buriy</a></code>
+</td>
+<td>
+#news
+</td>
+<td align="right">
+285&nbsp;965
+</td>
+<td align="right">
+859
+</td>
+<td>
+Dump from webhose.io, 300 sources for one month.
+</br>
+</br>
+<code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/stress.tar.gz</code>
+</td>
+</tr>
 </table>
 <!--- metas --->
 
@@ -415,6 +504,7 @@ make test
 
 Add new source:
 1. Implement `corus/sources/<source>.py`
-2. Add import and registy entry into `corus/__init__.py`
-3. Add example into `docs.ipynb`
-4. Run tests (readme is updated)
+2. Add import into `corus/sources/__init__.py`
+3. Add meta into `corus/source/meta.py`
+4. Add example into `docs.ipynb` (check meta table is correct)
+5. Run tests (readme is updated)

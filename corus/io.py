@@ -96,7 +96,9 @@ def load_bz2_lines(path, encoding='utf8'):
 #######
 
 
-def parse_csv(lines, delimiter=','):
+def parse_csv(lines, delimiter=',', max_field=None):
+    if max_field:
+        csv.field_size_limit(max_field)
     return csv.reader(lines, delimiter=delimiter)
 
 
