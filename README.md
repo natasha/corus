@@ -422,7 +422,7 @@ Several russian news datasets from webhose.io, lenta.ru and other news sites.
 Buriy/Lenta
 </td>
 <td>
-<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy">load_buriy</a></code>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_lenta">load_buriy_lenta</a></code>
 </td>
 <td>
 #news
@@ -445,7 +445,7 @@ Dump of lenta.ru.
 Buriy/News
 </td>
 <td>
-<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy">load_buriy</a></code>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_news">load_buriy_news</a></code>
 </td>
 <td>
 #news
@@ -472,7 +472,7 @@ Dump of top 40 news + 20 fashion news sites.
 Buriy/Webhose
 </td>
 <td>
-<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy">load_buriy</a></code>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_webhose">load_buriy_webhose</a></code>
 </td>
 <td>
 #news

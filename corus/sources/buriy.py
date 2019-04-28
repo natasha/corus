@@ -73,9 +73,16 @@ def load_buriy(path):
             yield record
 
 
-load_buriy_lenta = load_buriy
-load_buriy_news = load_buriy
-load_buriy_webhose = load_buriy
+def load_buriy_lenta(path):
+    return load_buriy(path)
+
+
+def load_buriy_news(path):
+    return load_buriy(path)
+
+
+def load_buriy_webhose(path):
+    return load_buriy(path)
 
 
 __all__ = [
