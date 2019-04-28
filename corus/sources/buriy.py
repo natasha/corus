@@ -1,5 +1,6 @@
 
 import tarfile
+from io import TextIOWrapper
 from datetime import datetime
 
 from ..record import Record
@@ -21,17 +22,13 @@ class BuriyRecord(Record):
         self.text = text
 
 
-def load_tar(path):
+def load_tar(path, encoding='utf8'):
     with tarfile.open(path) as tar:
         for member in tar:
             if not member.isfile():
                 continue
-            yield tar.extractfile(member)
-
-
-def parse_lines(file, encoding='utf8'):
-    for line in file:
-        yield line.decode(encoding)
+            file = tar.extractfile(member)
+            yield TextIOWrapper(file, encoding)
 
 
 def parse_timestamp(timestamp):
@@ -67,8 +64,7 @@ def parse_buriy(lines, max_text=300000):
 
 
 def load_buriy(path):
-    for file in load_tar(path):
-        lines = parse_lines(file)
+    for lines in load_tar(path):
         for record in parse_buriy(lines):
             yield record
 
