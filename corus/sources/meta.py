@@ -24,6 +24,8 @@ from . import (
     load_buriy_lenta,
     load_buriy_news,
     load_buriy_webhose,
+
+    load_mokoron,
 )
 
 
@@ -55,8 +57,46 @@ class Stats(Record):
 NER = 'ner'
 NEWS = 'news'
 LIT = 'lit'
+SOCIAL = 'social'
 
 METAS = [
+    Meta(
+        title='Lenta.ru',
+        url='https://github.com/yutkin/Lenta.Ru-News-Dataset',
+        description='Dump of lenta.ru',
+        stats=Stats(
+            bytes=1785632079,
+            count=739351
+        ),
+        instruction=[
+            'wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.0/lenta-ru-news.csv.gz'
+        ],
+        tags=[NEWS],
+        functions=[load_lenta]
+    ),
+    Meta(
+        title='Lib.rus.ec',
+        url='https://russe.nlpub.org/downloads/',
+        description='Dump of lib.rus.ec prepared for RUSSE workshop',
+        stats=Stats(
+            count=301871,
+            bytes=155611193945
+        ),
+        instruction=[
+            'wget http://panchenko.me/data/russe/librusec_fb2.plain.gz'
+        ],
+        tags=[LIT],
+        functions=[load_librusec]
+    ),
+
+
+    ###########
+    #
+    #    NER
+    #
+    ############
+
+
     Meta(
         title='factRuEval-2016',
         url='https://github.com/dialogue-evaluation/factRuEval-2016/',
@@ -90,34 +130,6 @@ METAS = [
         functions=[load_gareev]
     ),
     Meta(
-        title='Lenta.ru',
-        url='https://github.com/yutkin/Lenta.Ru-News-Dataset',
-        description='Dump of lenta.ru',
-        stats=Stats(
-            bytes=1785632079,
-            count=739351
-        ),
-        instruction=[
-            'wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.0/lenta-ru-news.csv.gz'
-        ],
-        tags=[NEWS],
-        functions=[load_lenta]
-    ),
-    Meta(
-        title='Lib.rus.ec',
-        url='https://russe.nlpub.org/downloads/',
-        description='Dump of lib.rus.ec prepared for RUSSE workshop',
-        stats=Stats(
-            count=301871,
-            bytes=155611193945
-        ),
-        instruction=[
-            'wget http://panchenko.me/data/russe/librusec_fb2.plain.gz'
-        ],
-        tags=[LIT],
-        functions=[load_librusec]
-    ),
-    Meta(
         title='Collection5',
         url='http://www.labinform.ru/pub/named_entities/',
         description='News articles with manual PER, LOC, ORG markup.',
@@ -147,6 +159,15 @@ METAS = [
         tags=[NER],
         functions=[load_wikiner]
     ),
+
+
+    ##########
+    #
+    #    TAIGA
+    #
+    ###########
+
+
     Meta(
         title='Taiga',
         url='https://tatianashavrina.github.io/taiga_site/',
@@ -239,6 +260,7 @@ METAS = [
             count=1876442,
             bytes=679670941
         ),
+        tags=[SOCIAL],
         functions=[load_taiga_social]
     ),
     Meta(
@@ -260,6 +282,15 @@ METAS = [
         ),
         functions=[load_taiga_stihi]
     ),
+
+
+    #############
+    #
+    #   BURIY
+    #
+    ##########
+
+
     Meta(
         title='Buriy (russian-nlp-datasets)',
         url='https://github.com/buriy/russian-nlp-datasets/releases',
@@ -305,5 +336,28 @@ METAS = [
         ),
         tags=[NEWS],
         functions=[load_buriy_webhose],
+    ),
+
+
+    #########
+    #
+    #    MOKORON
+    #
+    #########
+
+
+    Meta(
+        title='Mokoron Russian Twitter Corpus',
+        url='http://study.mokoron.com/',
+        description='Russian tweets.',
+        instruction=[
+            'Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql'
+        ],
+        stats=Stats(
+            count=17633417,
+            bytes=1998559570
+        ),
+        tags=[SOCIAL],
+        functions=[load_mokoron],
     ),
 ]

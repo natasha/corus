@@ -15,6 +15,52 @@ Links to russian corpora + python functions for loading and parsing
 </tr>
 <tr>
 <td>
+<a href="https://github.com/yutkin/Lenta.Ru-News-Dataset">Lenta.ru</a>
+</td>
+<td>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_lenta">load_lenta</a></code>
+</td>
+<td>
+#news
+</td>
+<td align="right">
+739&nbsp;351
+</td>
+<td align="right">
+1&nbsp;702
+</td>
+<td>
+Dump of lenta.ru
+</br>
+</br>
+<code>wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.0/lenta-ru-news.csv.gz</code>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://russe.nlpub.org/downloads/">Lib.rus.ec</a>
+</td>
+<td>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_librusec">load_librusec</a></code>
+</td>
+<td>
+#lit
+</td>
+<td align="right">
+301&nbsp;871
+</td>
+<td align="right">
+148&nbsp;402
+</td>
+<td>
+Dump of lib.rus.ec prepared for RUSSE workshop
+</br>
+</br>
+<code>wget http://panchenko.me/data/russe/librusec_fb2.plain.gz</code>
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/dialogue-evaluation/factRuEval-2016/">factRuEval-2016</a>
 </td>
 <td>
@@ -67,52 +113,6 @@ Email Rinat Gareev (gareev-rm@yandex.ru) ask for dataset
 <code>tar -xvf rus-ner-news-corpus.iob.tar.gz</code>
 </br>
 <code>rm rus-ner-news-corpus.iob.tar.gz</code>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/yutkin/Lenta.Ru-News-Dataset">Lenta.ru</a>
-</td>
-<td>
-<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_lenta">load_lenta</a></code>
-</td>
-<td>
-#news
-</td>
-<td align="right">
-739&nbsp;351
-</td>
-<td align="right">
-1&nbsp;702
-</td>
-<td>
-Dump of lenta.ru
-</br>
-</br>
-<code>wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.0/lenta-ru-news.csv.gz</code>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://russe.nlpub.org/downloads/">Lib.rus.ec</a>
-</td>
-<td>
-<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_librusec">load_librusec</a></code>
-</td>
-<td>
-#lit
-</td>
-<td align="right">
-301&nbsp;871
-</td>
-<td align="right">
-148&nbsp;402
-</td>
-<td>
-Dump of lib.rus.ec prepared for RUSSE workshop
-</br>
-</br>
-<code>wget http://panchenko.me/data/russe/librusec_fb2.plain.gz</code>
 </td>
 </tr>
 <tr>
@@ -352,6 +352,7 @@ Taiga/Social
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_social">load_taiga_social</a></code>
 </td>
 <td>
+#social
 </td>
 <td align="right">
 1&nbsp;876&nbsp;442
@@ -488,6 +489,29 @@ Dump from webhose.io, 300 sources for one month.
 </br>
 </br>
 <code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/stress.tar.gz</code>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://study.mokoron.com/">Mokoron Russian Twitter Corpus</a>
+</td>
+<td>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_mokoron">load_mokoron</a></code>
+</td>
+<td>
+#social
+</td>
+<td align="right">
+17&nbsp;633&nbsp;417
+</td>
+<td align="right">
+1&nbsp;905
+</td>
+<td>
+Russian tweets.
+</br>
+</br>
+Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql
 </td>
 </tr>
 </table>
