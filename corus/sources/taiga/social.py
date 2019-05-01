@@ -2,8 +2,8 @@
 import re
 from itertools import islice as head
 
-from ...record import Record
-from ...io import match_names
+from corus.record import Record
+from corus.io import match_names
 
 from .common import (
     load_tar,

@@ -1,6 +1,6 @@
 
-from ..record import Record
-from ..io import (
+from corus.record import Record
+from corus.io import (
     load_gz_lines,
     parse_csv,
     skip_header

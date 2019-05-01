@@ -1,8 +1,8 @@
 
-from ..record import Record
-from ..io import load_bz2_lines
-from ..bio import io_spans
-from ..token import find_tokens
+from corus.record import Record
+from corus.io import load_bz2_lines
+from corus.bio import io_spans
+from corus.token import find_tokens
 
 
 class WikinerMarkup(Record):

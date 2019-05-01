@@ -3,17 +3,17 @@ from io import TextIOWrapper
 from itertools import islice as head
 import tarfile
 
-from ...record import Record
-from ...path import (
+from corus.record import Record
+from corus.path import (
     get_filename,
     split_ext
 )
-from ...zip import (
+from corus.zip import (
     open_zip,
     read_zip_header,
     read_zip_data
 )
-from ...io import (
+from corus.io import (
     match_names,
 
     parse_tsv,

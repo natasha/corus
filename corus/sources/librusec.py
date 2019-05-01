@@ -1,8 +1,8 @@
 
 import re
 
-from ..record import Record
-from ..io import load_gz_lines
+from corus.record import Record
+from corus.io import load_gz_lines
 
 
 class LibrusecRecord(Record):

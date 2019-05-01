@@ -2,8 +2,8 @@
 import re
 from datetime import datetime
 
-from ..record import Record
-from ..io import load_lines
+from corus.record import Record
+from corus.io import load_lines
 
 
 # – id: уникальный номер сообщения в системе twitter;

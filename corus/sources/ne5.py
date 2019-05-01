@@ -1,12 +1,12 @@
 
 import re
 
-from ..path import (
+from corus.path import (
     list_dir,
     join_path
 )
-from ..record import Record
-from ..io import load_lines
+from corus.record import Record
+from corus.io import load_lines
 
 
 class Ne5Span(Record):

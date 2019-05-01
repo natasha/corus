@@ -3,8 +3,8 @@ import tarfile
 from io import TextIOWrapper
 from datetime import datetime
 
-from ..record import Record
-from ..io import (
+from corus.record import Record
+from corus.io import (
     parse_csv,
     skip_header,
 )

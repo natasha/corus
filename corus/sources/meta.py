@@ -1,5 +1,5 @@
 
-from ..record import Record
+from corus.record import Record
 
 from . import (
     load_factru,

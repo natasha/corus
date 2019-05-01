@@ -1,14 +1,14 @@
 
 import re
 
-from ..path import (
+from corus.path import (
     list_dir,
     join_path
 )
-from ..io import load_lines
-from ..record import Record
-from ..token import find_tokens
-from ..bio import bio_spans
+from corus.io import load_lines
+from corus.record import Record
+from corus.token import find_tokens
+from corus.bio import bio_spans
 
 
 class GareevRecord(Record):
