@@ -8,3 +8,4 @@ from .wikiner import load_wikiner  # noqa
 from .taiga import *  # noqa
 from .buriy import *  # noqa
 from .mokoron import *  # noqa
+from .wiki import load_wiki  # noqa

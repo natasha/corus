@@ -26,6 +26,7 @@ from . import (
     load_buriy_webhose,
 
     load_mokoron,
+    load_wiki
 )
 
 
@@ -359,5 +360,27 @@ METAS = [
         ),
         tags=[SOCIAL],
         functions=[load_mokoron],
+    ),
+
+
+    ###########
+    #
+    #   WIKI
+    #
+    #########
+
+
+    Meta(
+        title='Wikipedia',
+        url='https://dumps.wikimedia.org/',
+        description='Russian Wiki dump.',
+        instruction=[
+            'wget https://dumps.wikimedia.org/ruwiki/latest/ruwiki-latest-pages-articles.xml.bz2'
+        ],
+        stats=Stats(
+            count=1541401,
+            bytes=13895798340
+        ),
+        functions=[load_wiki],
     ),
 ]

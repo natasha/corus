@@ -514,6 +514,28 @@ Russian tweets.
 Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql
 </td>
 </tr>
+<tr>
+<td>
+<a href="https://dumps.wikimedia.org/">Wikipedia</a>
+</td>
+<td>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_wiki">load_wiki</a></code>
+</td>
+<td>
+</td>
+<td align="right">
+1&nbsp;541&nbsp;401
+</td>
+<td align="right">
+13&nbsp;252
+</td>
+<td>
+Russian Wiki dump.
+</br>
+</br>
+<code>wget https://dumps.wikimedia.org/ruwiki/latest/ruwiki-latest-pages-articles.xml.bz2</code>
+</td>
+</tr>
 </table>
 <!--- metas --->
 
