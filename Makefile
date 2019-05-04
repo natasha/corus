@@ -3,7 +3,7 @@ test:
 	pytest -vv --pep8 --flakes corus --cov corus --cov-report term-missing --nbval docs.ipynb
 
 ci:
-	pytest -vv --pep8 --flakes corus --cov corus --cov-report xml --nbval docs.ipynb
+	pytest -vv --pep8 --flakes corus --cov corus --cov-report xml --nbval-lax docs.ipynb
 
 wheel:
 	python setup.py bdist_wheel --universal
