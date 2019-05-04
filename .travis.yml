@@ -1,5 +1,11 @@
 language: python
 python:
+  - "2.7"
+  - "3.4"
   - "3.5"
+  - "3.6"
+  # - "pypy"  some problems with running jupyter cells under pypy2
+  - "pypy3"
 script:
+  - sed -i 's/kernelspec//' docs.ipynb
   - make ci
