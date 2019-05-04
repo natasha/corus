@@ -1,7 +1,7 @@
 
 # dev
-pytest==3.1.2
-pytest-flakes==4.0.0
-pytest-pep8==1.0.6
-pytest-cov==2.5.1
-nbval==0.9.1
+pytest
+pytest-flakes
+pytest-pep8
+pytest-cov
+nbval
