@@ -6,7 +6,7 @@ ci:
 	pytest -vv --pep8 --flakes corus --cov corus --cov-report xml --nbval docs.ipynb
 
 wheel:
-	python setup.py bdist_wheel --universal
+	python setup.py bdist_wheel
 
 upload:
 	twine upload dist/*
