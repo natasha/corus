@@ -1,7 +1,54 @@
 
-# Corus
+# corus [![Build Status](https://travis-ci.org/natasha/corus.svg?branch=master)](https://travis-ci.org/natasha/corus)
 
-Links to russian corpora + python functions for loading and parsing
+Links to russian corpora + python functions for loading and parsing.
+
+## Usage
+
+For example lets use dump of lenta.ru by @yutkin. Manually download the archive (link in the "Reference" section):
+```bash
+wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.0/lenta-ru-news.csv.gz
+```
+
+Use `corus` to load the data:
+
+```python
+>>> from corus import load_lenta
+
+>>> path = 'lenta-ru-news.csv.gz'
+>>> records = load_lenta(path)
+>>> next(records)
+
+LentaRecord(
+    url='https://lenta.ru/news/2018/12/14/cancer/',
+    title='Названы регионы России с\xa0самой высокой смертностью от\xa0рака',
+    text='Вице-премьер по социальным вопросам Татьяна Голикова рассказала, в каких регионах России зафиксирована наиболее высокая смертность от рака, сооб...',
+    topic='Россия',
+    tags='Общество'
+)
+```
+
+Iterate over texts:
+
+```python
+>>> records = load_lenta(path)
+>>> for record in records:
+...     text = record.text
+...     ...
+
+```
+
+For links to other datasets and their loaders see the "Reference" section.
+
+## Install
+
+`corus` supports Python 3.4+ и PyPy 3.
+
+```bash
+$ pip install corus
+```
+
+## Reference
 
 <!--- metas --->
 <table>
@@ -538,6 +585,15 @@ Russian Wiki dump.
 </tr>
 </table>
 <!--- metas --->
+
+## Licence
+
+MIT
+
+## Support
+
+- Chat — https://telegram.me/natural_language_processing
+- Issues — https://github.com/natasha/razdel/issues
 
 
 ## Development
