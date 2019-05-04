@@ -47,7 +47,7 @@ class MokoronRecord(Record):
         for key in ['id', 'sentiment', 'replies', 'retweets',
                     'favourites', 'posts', 'followers', 'friends', 'lists']:
             dict[key] = int(dict[key])
-        dict['timestamp'] = datetime.fromtimestamp(float(dict['timestamp']))
+        dict['timestamp'] = datetime.utcfromtimestamp(float(dict['timestamp']))
         return cls(**dict)
 
 
