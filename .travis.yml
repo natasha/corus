@@ -4,7 +4,9 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
-  # - "pypy"  some problems with running jupyter cells under pypy2
+  # some problems with running jupyter cells under pypy2
+  # assume if it works on py2 and pypy3 it also works on pypy2
+  # - "pypy"  
   - "pypy3"
 script:
   - sed -i 's/kernelspec//' docs.ipynb
