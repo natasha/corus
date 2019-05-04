@@ -6,5 +6,7 @@ coverage.xml
 .DS_Store
 *.pyc
 *.egg-info
+build
+dist
 notes.ipynb
 main.py
