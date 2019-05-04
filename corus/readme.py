@@ -37,8 +37,8 @@ def format_metas_(metas, url):
     yield '<th>Dataset</th>'
     yield '<th>API <code>from corus import</code></th>'
     yield '<th>Tags</th>'
-    yield '<th>Records</th>'
-    yield '<th>Uncompressed, Mb</th>'
+    yield '<th>Texts</th>'
+    yield '<th>Mb</th>'
     yield '<th>Description</th>'
     yield '</tr>'
     for meta in metas:

@@ -56,8 +56,8 @@ $ pip install corus
 <th>Dataset</th>
 <th>API <code>from corus import</code></th>
 <th>Tags</th>
-<th>Records</th>
-<th>Uncompressed, Mb</th>
+<th>Texts</th>
+<th>Mb</th>
 <th>Description</th>
 </tr>
 <tr>
