@@ -5,6 +5,7 @@ from corus.path import (
     list_dir,
     join_path
 )
+from corus.compat import PY2
 from corus.record import Record
 from corus.io import load_lines
 
@@ -53,10 +54,17 @@ def parse_spans(lines):
         yield Ne5Span(index, type, start, stop, text)
 
 
-def load_text(path):
-    # do not convert \r\n to \n
-    with open(path, newline='') as file:
-        return file.read()
+if PY2:
+    def load_text(path, encoding='utf8'):
+        with open(path, 'rb') as file:
+            return file.read().decode('utf8')
+
+
+else:
+    def load_text(path):
+        # do not convert \r\n to \n
+        with open(path, newline='') as file:
+            return file.read()
 
 
 def load_id(id, dir):

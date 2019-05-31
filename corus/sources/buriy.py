@@ -8,6 +8,7 @@ from corus.io import (
     parse_csv,
     skip_header,
 )
+from corus.compat import patch_tar_file
 
 
 class BuriyRecord(Record):
@@ -28,6 +29,7 @@ def load_tar(path, encoding='utf8'):
             if not member.isfile():
                 continue
             file = tar.extractfile(member)
+            patch_tar_file(file)
             yield TextIOWrapper(file, encoding)
 
 

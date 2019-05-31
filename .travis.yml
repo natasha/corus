@@ -1,13 +1,10 @@
 language: python
 python:
-  # ok it requires additional work to support py2, drop for now
-  # - "2.7"
+  - "2.7"
   - "3.4"
   - "3.5"
   - "3.6"
-  # some problems with running jupyter cells under pypy2
-  # assume if it works on py2 and pypy3 it also works on pypy2
-  # - "pypy"  
+  - "pypy"
   - "pypy3"
 script:
   - make ci

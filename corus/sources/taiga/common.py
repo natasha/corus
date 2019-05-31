@@ -19,6 +19,7 @@ from corus.io import (
     parse_tsv,
     skip_header,
 )
+from corus.compat import patch_tar_file
 
 
 class ArchiveRecord(Record):
@@ -82,6 +83,7 @@ def load_tar(path, offset=0):
                 continue
 
             file = tar.extractfile(member)
+            patch_tar_file(file)
             yield ArchiveRecord(
                 name=member.name,
                 offset=member.offset,

@@ -1,4 +1,6 @@
-# coding: utf8
+# coding: utf-8
+
+from __future__ import unicode_literals
 
 import re
 from datetime import datetime
@@ -38,7 +40,7 @@ def parse_metas(items):
             profession=profession,
             about=about
         )
-        title = item['title'].strip('• ')
+        title = item['title'].strip(u'• ')
         url = item['URL']
         yield Meta(
             id=id,

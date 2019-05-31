@@ -56,7 +56,6 @@ def parse_lj(file):
 
 def flush(network, id, buffer):
     text = '\n'.join(buffer)
-    buffer.clear()
     return TaigaSocialRecord(
         id=id,
         network=network,
@@ -73,11 +72,13 @@ def parse_social_(file, network):
         if match:
             if previous:
                 yield flush(network, previous, buffer)
+                buffer = []
             previous = match.group(1)
         else:
             buffer.append(line)
     if previous:
         yield flush(network, previous, buffer)
+        buffer = []
 
 
 def parse_social(file, network):
