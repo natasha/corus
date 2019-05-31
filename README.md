@@ -596,3 +596,13 @@ Add new source:
 3. Add meta into `corus/source/meta.py`
 4. Add example into `docs.ipynb` (check meta table is correct)
 5. Run tests (readme is updated)
+
+Package:
+
+```bash
+make version
+git push
+git push --tags
+
+make clean wheel upload
+```

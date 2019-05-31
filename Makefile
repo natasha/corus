@@ -5,6 +5,9 @@ test:
 ci:
 	pytest -vv --pep8 --flakes corus --cov corus --cov-report xml --nbval-lax --current-env docs.ipynb
 
+version:
+	bumpversion minor
+
 wheel:
 	python setup.py bdist_wheel
 
