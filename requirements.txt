@@ -5,5 +5,7 @@ pytest-flakes==4.0.0
 pytest-pep8==1.0.6
 pytest-cov==2.5.1
 nbval==0.9.1
+coveralls==1.3.0
+
 # Plugin 'nbval' could not be loaded: (six 1.10.0 (/home/travis/virtualenv/pypy3.5-5.8.0/site-packages), Requirement.parse('six>=1.11.0'), {'jsonschema'})!
 six==1.12.0

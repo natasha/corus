@@ -8,3 +8,5 @@ python:
   - "pypy3"
 script:
   - make ci
+after_success:
+  coveralls
