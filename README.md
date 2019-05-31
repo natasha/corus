@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/natasha/corus.svg?branch=master)](https://travis-ci.org/natasha/corus) [![Coverage Status](https://coveralls.io/repos/github/natasha/corus/badge.svg?branch=master)](https://coveralls.io/github/natasha/corus?branch=master)
 
-Links to publicly available russian corpora + code for loading and parsing. 20+ datasets, 350Gb+ of text.
+Links to publicly available russian corpora + code for loading and parsing. <a href="#reference">20+ datasets, 350Gb+ of text</a>.
 
 ## Usage
 
