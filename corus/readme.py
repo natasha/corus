@@ -3,6 +3,7 @@ from __future__ import division
 
 import re
 
+from .sources.meta import is_group
 from .io import (
     load_text,
     dump_text
@@ -33,6 +34,16 @@ def format_count(value):
     return format(value, ',').replace(',', '&nbsp;')
 
 
+def unfold_metas(items):
+    for item in items:
+        if is_group(item):
+            yield True, item
+            for meta in item.metas:
+                yield False, meta
+        else:
+            yield False, item
+
+
 def format_metas_(metas, url):
     yield '<table>'
     yield '<tr>'
@@ -43,7 +54,7 @@ def format_metas_(metas, url):
     yield '<th>Mb</th>'
     yield '<th>Description</th>'
     yield '</tr>'
-    for meta in metas:
+    for group, meta in unfold_metas(metas):
         yield '<tr>'
 
         yield '<td>'
@@ -53,34 +64,38 @@ def format_metas_(metas, url):
             yield meta.title
         yield '</td>'
 
-        yield '<td>'
-        for index, function in enumerate(meta.functions):
-            if index > 0:
-                yield '</br>'
-            name = function.__name__
-            anchor = '#' + name
-            if url:
-                anchor = url + anchor
-            yield '<code><a href="%s">%s</a></code>' % (anchor, name)
-        yield '</td>'
+        if not group:
+            yield '<td>'
+            for index, function in enumerate(meta.functions):
+                if index > 0:
+                    yield '</br>'
+                name = function.__name__
+                anchor = '#' + name
+                if url:
+                    anchor = url + anchor
+                yield '<code><a href="%s">%s</a></code>' % (anchor, name)
+            yield '</td>'
 
-        yield '<td>'
-        if meta.tags:
-            for tag in meta.tags:
-                yield '#' + tag
-        yield '</td>'
+            yield '<td>'
+            if meta.tags:
+                for tag in meta.tags:
+                    yield '#' + tag
+            yield '</td>'
 
-        yield '<td align="right">'
-        if meta.stats and meta.stats.count:
-            yield format_count(meta.stats.count)
-        yield '</td>'
+            yield '<td align="right">'
+            if meta.stats and meta.stats.count:
+                yield format_count(meta.stats.count)
+            yield '</td>'
 
-        yield '<td align="right">'
-        if meta.stats and meta.stats.bytes:
-            yield format_bytes(meta.stats.bytes)
-        yield '</td>'
+            yield '<td align="right">'
+            if meta.stats and meta.stats.bytes:
+                yield format_bytes(meta.stats.bytes)
+            yield '</td>'
 
-        yield '<td>'
+        if group:
+            yield '<td colspan="5">'
+        else:
+            yield '<td>'
         if meta.description:
             yield meta.description
             if meta.instruction:

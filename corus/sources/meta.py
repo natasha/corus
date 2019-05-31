@@ -47,6 +47,21 @@ class Meta(Record):
         self.functions = functions
 
 
+class Group(Record):
+    __attributes__ = ['title', 'url', 'description', 'instruction', 'metas']
+
+    def __init__(self, title, url=None, description=None, instruction=(), metas=()):
+        self.title = title
+        self.url = url
+        self.description = description
+        self.instruction = instruction
+        self.metas = metas
+
+
+def is_group(item):
+    return isinstance(item, Group)
+
+
 class Stats(Record):
     __attributes__ = ['bytes', 'count']
 
@@ -161,185 +176,6 @@ METAS = [
         functions=[load_wikiner]
     ),
 
-
-    ##########
-    #
-    #    TAIGA
-    #
-    ###########
-
-
-    Meta(
-        title='Taiga',
-        url='https://tatianashavrina.github.io/taiga_site/',
-        description='Large collection of russian texts from various sources: news sites, magazines, literacy, social networks.',
-        instruction=[
-            'wget https://linghub.ru/static/Taiga/retagged_taiga.tar.gz',
-            'tar -xzvf retagged_taiga.tar.gz'
-        ]
-    ),
-    Meta(
-        title='Taiga/Arzamas',
-        description='Dump of arzamas.academy.',
-        stats=Stats(
-            count=311,
-            bytes=4721604
-        ),
-        tags=[NEWS],
-        functions=[load_taiga_arzamas],
-    ),
-    Meta(
-        title='Taiga/Fontanka',
-        description='Dump of fontanka.ru.',
-        stats=Stats(
-            count=342683,
-            bytes=824419630
-        ),
-        tags=[NEWS],
-        functions=[load_taiga_fontanka],
-    ),
-    Meta(
-        title='Taiga/Interfax',
-        description='Dump of interfax.ru.',
-        stats=Stats(
-            count=46429,
-            bytes=81320006
-        ),
-        tags=[NEWS],
-        functions=[load_taiga_interfax],
-    ),
-    Meta(
-        title='Taiga/KP',
-        description='Dump of kp.ru.',
-        stats=Stats(
-            count=45503,
-            bytes=64789612
-        ),
-        tags=[NEWS],
-        functions=[load_taiga_kp],
-    ),
-    Meta(
-        title='Taiga/Lenta',
-        description='Dump of lenta.ru.',
-        stats=Stats(
-            count=36446,
-            bytes=99772679
-        ),
-        tags=[NEWS],
-        functions=[load_taiga_lenta],
-    ),
-    Meta(
-        title='Taiga/N+1',
-        description='Dump of nplus1.ru.',
-        stats=Stats(
-            count=7696,
-            bytes=26167631
-        ),
-        tags=[NEWS],
-        functions=[load_taiga_nplus1],
-    ),
-    Meta(
-        title='Taiga/Magazines',
-        description='Dump of magazines.russ.ru',
-        stats=Stats(
-            count=39890,
-            bytes=2352629006
-        ),
-        functions=[load_taiga_magazines]
-    ),
-    Meta(
-        title='Taiga/Subtitles',
-        stats=Stats(
-            count=19011,
-            bytes=953237022
-        ),
-        functions=[load_taiga_subtitles]
-    ),
-    Meta(
-        title='Taiga/Social',
-        stats=Stats(
-            count=1876442,
-            bytes=679670941
-        ),
-        tags=[SOCIAL],
-        functions=[load_taiga_social]
-    ),
-    Meta(
-        title='Taiga/Proza',
-        description='Dump of proza.ru',
-        stats=Stats(
-            count=1732434,
-            bytes=41067043857
-        ),
-        tags=[LIT],
-        functions=[load_taiga_proza]
-    ),
-    Meta(
-        title='Taiga/Stihi',
-        description='Dump of stihi.ru',
-        stats=Stats(
-            count=9157686,
-            bytes=13745805334
-        ),
-        functions=[load_taiga_stihi]
-    ),
-
-
-    #############
-    #
-    #   BURIY
-    #
-    ##########
-
-
-    Meta(
-        title='Buriy (russian-nlp-datasets)',
-        url='https://github.com/buriy/russian-nlp-datasets/releases',
-        description='Several russian news datasets from webhose.io, lenta.ru and other news sites.',
-    ),
-    Meta(
-        title='Buriy/Lenta',
-        description='Dump of lenta.ru.',
-        instruction=[
-            'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/lenta.tar.bz2',
-        ],
-        stats=Stats(
-            count=699777,
-            bytes=1683268809
-        ),
-        tags=[NEWS],
-        functions=[load_buriy_lenta],
-    ),
-    Meta(
-        title='Buriy/News',
-        description='Dump of top 40 news + 20 fashion news sites.',
-        instruction=[
-            'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2014.tar.bz2',
-            'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2015-part1.tar.bz2',
-            'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2015-part2.tar.bz2'
-        ],
-        stats=Stats(
-            count=2154801,
-            bytes=7340672169
-        ),
-        tags=[NEWS],
-        functions=[load_buriy_news],
-    ),
-    Meta(
-        title='Buriy/Webhose',
-        description='Dump from webhose.io, 300 sources for one month.',
-        instruction=[
-            'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/stress.tar.gz'
-        ],
-        stats=Stats(
-            count=285965,
-            bytes=901066314
-        ),
-        tags=[NEWS],
-        functions=[load_buriy_webhose],
-    ),
-
-
     #########
     #
     #    MOKORON
@@ -382,5 +218,184 @@ METAS = [
             bytes=13895798340
         ),
         functions=[load_wiki],
+    ),
+
+    ##########
+    #
+    #    TAIGA
+    #
+    ###########
+
+    Group(
+        title='Taiga',
+        url='https://tatianashavrina.github.io/taiga_site/',
+        description='Large collection of russian texts from various sources: news sites, magazines, literacy, social networks.',
+        instruction=[
+            'wget https://linghub.ru/static/Taiga/retagged_taiga.tar.gz',
+            'tar -xzvf retagged_taiga.tar.gz'
+        ],
+        metas=[
+            Meta(
+                title='Arzamas',
+                description='Dump of arzamas.academy.',
+                stats=Stats(
+                    count=311,
+                    bytes=4721604
+                ),
+                tags=[NEWS],
+                functions=[load_taiga_arzamas],
+            ),
+            Meta(
+                title='Fontanka',
+                description='Dump of fontanka.ru.',
+                stats=Stats(
+                    count=342683,
+                    bytes=824419630
+                ),
+                tags=[NEWS],
+                functions=[load_taiga_fontanka],
+            ),
+            Meta(
+                title='Interfax',
+                description='Dump of interfax.ru.',
+                stats=Stats(
+                    count=46429,
+                    bytes=81320006
+                ),
+                tags=[NEWS],
+                functions=[load_taiga_interfax],
+            ),
+            Meta(
+                title='KP',
+                description='Dump of kp.ru.',
+                stats=Stats(
+                    count=45503,
+                    bytes=64789612
+                ),
+                tags=[NEWS],
+                functions=[load_taiga_kp],
+            ),
+            Meta(
+                title='Lenta',
+                description='Dump of lenta.ru.',
+                stats=Stats(
+                    count=36446,
+                    bytes=99772679
+                ),
+                tags=[NEWS],
+                functions=[load_taiga_lenta],
+            ),
+            Meta(
+                title='Taiga/N+1',
+                description='Dump of nplus1.ru.',
+                stats=Stats(
+                    count=7696,
+                    bytes=26167631
+                ),
+                tags=[NEWS],
+                functions=[load_taiga_nplus1],
+            ),
+            Meta(
+                title='Magazines',
+                description='Dump of magazines.russ.ru',
+                stats=Stats(
+                    count=39890,
+                    bytes=2352629006
+                ),
+                functions=[load_taiga_magazines]
+            ),
+            Meta(
+                title='Subtitles',
+                stats=Stats(
+                    count=19011,
+                    bytes=953237022
+                ),
+                functions=[load_taiga_subtitles]
+            ),
+            Meta(
+                title='Social',
+                stats=Stats(
+                    count=1876442,
+                    bytes=679670941
+                ),
+                tags=[SOCIAL],
+                functions=[load_taiga_social]
+            ),
+            Meta(
+                title='Proza',
+                description='Dump of proza.ru',
+                stats=Stats(
+                    count=1732434,
+                    bytes=41067043857
+                ),
+                tags=[LIT],
+                functions=[load_taiga_proza]
+            ),
+            Meta(
+                title='Stihi',
+                description='Dump of stihi.ru',
+                stats=Stats(
+                    count=9157686,
+                    bytes=13745805334
+                ),
+                functions=[load_taiga_stihi]
+            ),
+        ]
+    ),
+
+    #############
+    #
+    #   BURIY
+    #
+    ##########
+
+
+    Group(
+        title='Russian NLP Datasets',
+        url='https://github.com/buriy/russian-nlp-datasets/releases',
+        description='Several russian news datasets from webhose.io, lenta.ru and other news sites.',
+        metas=[
+            Meta(
+                title='Lenta',
+                description='Dump of lenta.ru.',
+                instruction=[
+                    'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/lenta.tar.bz2',
+                ],
+                stats=Stats(
+                    count=699777,
+                    bytes=1683268809
+                ),
+                tags=[NEWS],
+                functions=[load_buriy_lenta],
+            ),
+            Meta(
+                title='News',
+                description='Dump of top 40 news + 20 fashion news sites.',
+                instruction=[
+                    'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2014.tar.bz2',
+                    'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2015-part1.tar.bz2',
+                    'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/news-articles-2015-part2.tar.bz2'
+                ],
+                stats=Stats(
+                    count=2154801,
+                    bytes=7340672169
+                ),
+                tags=[NEWS],
+                functions=[load_buriy_news],
+            ),
+            Meta(
+                title='Webhose',
+                description='Dump from webhose.io, 300 sources for one month.',
+                instruction=[
+                    'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/stress.tar.gz'
+                ],
+                stats=Stats(
+                    count=285965,
+                    bytes=901066314
+                ),
+                tags=[NEWS],
+                functions=[load_buriy_webhose],
+            ),
+        ]
     ),
 ]
