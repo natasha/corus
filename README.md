@@ -1,7 +1,7 @@
 
 # corus [![Build Status](https://travis-ci.org/natasha/corus.svg?branch=master)](https://travis-ci.org/natasha/corus)
 
-Links to russian corpora + python functions for loading and parsing.
+Links to russian corpora + code for loading and parsing. 20+ datasets, 350Gb+ of text.
 
 ## Usage
 
