@@ -16,17 +16,26 @@ KB = 1024
 MB = 1024 * KB
 GB = 1024 * MB
 
+LABELS = {
+    KB: 'Kb',
+    MB: 'Mb',
+    GB: 'Gb'
+}
+
 
 def is_command(step, commands=COMMANDS):
     return step.startswith(commands)
 
 
 def format_bytes(value):
-    value = value / MB
-    if value < 1:
-        return format(value, '.2f')
-    else:
-        return format_count(int(value))
+    value /= KB
+    unit = KB
+    for _ in range(2):
+        if value < KB:
+            break
+        value /= KB
+        unit *= KB
+    return '%.2f %s' % (value, LABELS[unit])
 
 
 def format_count(value):
@@ -51,7 +60,7 @@ def format_metas_(metas, url):
     yield '<th>API <code>from corus import</code></th>'
     yield '<th>Tags</th>'
     yield '<th>Texts</th>'
-    yield '<th>Mb</th>'
+    yield '<th>Uncompressed</th>'
     yield '<th>Description</th>'
     yield '</tr>'
     for group, meta in unfold_metas(metas):

@@ -59,7 +59,7 @@ $ pip install corus
 <th>API <code>from corus import</code></th>
 <th>Tags</th>
 <th>Texts</th>
-<th>Mb</th>
+<th>Uncompressed</th>
 <th>Description</th>
 </tr>
 <tr>
@@ -76,7 +76,7 @@ $ pip install corus
 739&nbsp;351
 </td>
 <td align="right">
-1&nbsp;702
+1.66 Gb
 </td>
 <td>
 Dump of lenta.ru
@@ -99,7 +99,7 @@ Dump of lenta.ru
 301&nbsp;871
 </td>
 <td align="right">
-148&nbsp;402
+144.92 Gb
 </td>
 <td>
 Dump of lib.rus.ec prepared for RUSSE workshop
@@ -123,7 +123,7 @@ Dump of lib.rus.ec prepared for RUSSE workshop
 254
 </td>
 <td align="right">
-0.95
+969.27 Kb
 </td>
 <td>
 Manual PER, LOC, ORG markup prepared for 2016 Dialog competition.
@@ -151,7 +151,7 @@ Manual PER, LOC, ORG markup prepared for 2016 Dialog competition.
 97
 </td>
 <td align="right">
-0.44
+455.02 Kb
 </td>
 <td>
 Manual PER, ORG markup.
@@ -179,7 +179,7 @@ Email Rinat Gareev (gareev-rm@yandex.ru) ask for dataset
 1&nbsp;000
 </td>
 <td align="right">
-2
+2.96 Mb
 </td>
 <td>
 News articles with manual PER, LOC, ORG markup.
@@ -206,7 +206,7 @@ News articles with manual PER, LOC, ORG markup.
 203&nbsp;287
 </td>
 <td align="right">
-36
+36.15 Mb
 </td>
 <td>
 Sentences from Wiki auto annotated with PER, LOC, ORG tags.
@@ -229,7 +229,7 @@ Sentences from Wiki auto annotated with PER, LOC, ORG tags.
 17&nbsp;633&nbsp;417
 </td>
 <td align="right">
-1&nbsp;905
+1.86 Gb
 </td>
 <td>
 Russian tweets.
@@ -251,7 +251,7 @@ Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql
 1&nbsp;541&nbsp;401
 </td>
 <td align="right">
-13&nbsp;252
+12.94 Gb
 </td>
 <td>
 Russian Wiki dump.
@@ -287,7 +287,7 @@ Arzamas
 311
 </td>
 <td align="right">
-4
+4.50 Mb
 </td>
 <td>
 Dump of arzamas.academy.
@@ -307,7 +307,7 @@ Fontanka
 342&nbsp;683
 </td>
 <td align="right">
-786
+786.23 Mb
 </td>
 <td>
 Dump of fontanka.ru.
@@ -327,7 +327,7 @@ Interfax
 46&nbsp;429
 </td>
 <td align="right">
-77
+77.55 Mb
 </td>
 <td>
 Dump of interfax.ru.
@@ -347,7 +347,7 @@ KP
 45&nbsp;503
 </td>
 <td align="right">
-61
+61.79 Mb
 </td>
 <td>
 Dump of kp.ru.
@@ -367,7 +367,7 @@ Lenta
 36&nbsp;446
 </td>
 <td align="right">
-95
+95.15 Mb
 </td>
 <td>
 Dump of lenta.ru.
@@ -387,7 +387,7 @@ Taiga/N+1
 7&nbsp;696
 </td>
 <td align="right">
-24
+24.96 Mb
 </td>
 <td>
 Dump of nplus1.ru.
@@ -406,7 +406,7 @@ Magazines
 39&nbsp;890
 </td>
 <td align="right">
-2&nbsp;243
+2.19 Gb
 </td>
 <td>
 Dump of magazines.russ.ru
@@ -425,7 +425,7 @@ Subtitles
 19&nbsp;011
 </td>
 <td align="right">
-909
+909.08 Mb
 </td>
 <td>
 </td>
@@ -444,7 +444,7 @@ Social
 1&nbsp;876&nbsp;442
 </td>
 <td align="right">
-648
+648.18 Mb
 </td>
 <td>
 </td>
@@ -463,7 +463,7 @@ Proza
 1&nbsp;732&nbsp;434
 </td>
 <td align="right">
-39&nbsp;164
+38.25 Gb
 </td>
 <td>
 Dump of proza.ru
@@ -482,7 +482,7 @@ Stihi
 9&nbsp;157&nbsp;686
 </td>
 <td align="right">
-13&nbsp;109
+12.80 Gb
 </td>
 <td>
 Dump of stihi.ru
@@ -510,7 +510,7 @@ Lenta
 699&nbsp;777
 </td>
 <td align="right">
-1&nbsp;605
+1.57 Gb
 </td>
 <td>
 Dump of lenta.ru.
@@ -533,7 +533,7 @@ News
 2&nbsp;154&nbsp;801
 </td>
 <td align="right">
-7&nbsp;000
+6.84 Gb
 </td>
 <td>
 Dump of top 40 news + 20 fashion news sites.
@@ -560,7 +560,7 @@ Webhose
 285&nbsp;965
 </td>
 <td align="right">
-859
+859.32 Mb
 </td>
 <td>
 Dump from webhose.io, 300 sources for one month.
