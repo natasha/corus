@@ -569,6 +569,60 @@ Dump from webhose.io, 300 sources for one month.
 <code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/stress.tar.gz</code>
 </td>
 </tr>
+<tr>
+<td>
+<a href="https://github.com/ods-ai-ml4sg/proj_news_viz">ODS #proj_news_viz</a>
+</td>
+<td colspan="5">
+Several news sites scraped by members of #proj_news_viz ODS project.
+</td>
+</tr>
+<tr>
+<td>
+Interfax
+</td>
+<td>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_interfax">load_ods_interfax</a></code>
+</td>
+<td>
+#news
+</td>
+<td align="right">
+543&nbsp;962
+</td>
+<td align="right">
+1.22 Gb
+</td>
+<td>
+Dump of interfax.ru.
+</br>
+</br>
+Manually download interfax_v1.csv.zip https://drive.google.com/file/d/1M7z0YoOgpm53IsJ3qOhT_nfiDnGUPeys/view
+</td>
+</tr>
+<tr>
+<td>
+Gazeta
+</td>
+<td>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_gazeta">load_ods_gazeta</a></code>
+</td>
+<td>
+#news
+</td>
+<td align="right">
+865&nbsp;847
+</td>
+<td align="right">
+1.63 Gb
+</td>
+<td>
+Dump of gazeta.ru.
+</br>
+</br>
+Manually download gazeta_v1.csv.zip from https://drive.google.com/file/d/18B8CvHgmwwyz9GWBZ0TS6dE_x6gYnWCb/view
+</td>
+</tr>
 </table>
 <!--- metas --->
 

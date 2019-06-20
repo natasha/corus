@@ -1,6 +1,7 @@
 
 import gzip
 import bz2
+from zipfile import ZipFile
 
 import csv
 import json
@@ -114,6 +115,26 @@ else:
         with bz2.open(path, mode='rt', encoding=encoding) as file:
             for line in file:
                 yield line.rstrip()
+
+
+#######
+#
+#   ZIP
+#
+########
+
+
+def list_zip(path):
+    with ZipFile(path) as zip:
+        return zip.namelist()
+
+
+def load_zip_lines(path, name, encoding=UTF8):
+    with ZipFile(path) as zip:
+        with zip.open(name) as file:
+            for line in file:
+                yield line.decode(encoding).rstrip()
+
 
 ########
 #

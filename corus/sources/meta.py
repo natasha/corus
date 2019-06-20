@@ -26,7 +26,10 @@ from . import (
     load_buriy_webhose,
 
     load_mokoron,
-    load_wiki
+    load_wiki,
+
+    load_ods_interfax,
+    load_ods_gazeta
 )
 
 
@@ -343,6 +346,7 @@ METAS = [
         ]
     ),
 
+
     #############
     #
     #   BURIY
@@ -398,4 +402,46 @@ METAS = [
             ),
         ]
     ),
+
+
+
+    #############
+    #
+    #    ODS
+    #
+    #########
+
+    Group(
+        title='ODS #proj_news_viz',
+        url='https://github.com/ods-ai-ml4sg/proj_news_viz',
+        description='Several news sites scraped by members of #proj_news_viz ODS project.',
+        metas=[
+            Meta(
+                title='Interfax',
+                description='Dump of interfax.ru.',
+                instruction=[
+                    'Manually download interfax_v1.csv.zip https://drive.google.com/file/d/1M7z0YoOgpm53IsJ3qOhT_nfiDnGUPeys/view',
+                ],
+                stats=Stats(
+                    count=543962,
+                    bytes=1314464670
+                ),
+                tags=[NEWS],
+                functions=[load_ods_interfax],
+            ),
+            Meta(
+                title='Gazeta',
+                description='Dump of gazeta.ru.',
+                instruction=[
+                    'Manually download gazeta_v1.csv.zip from https://drive.google.com/file/d/18B8CvHgmwwyz9GWBZ0TS6dE_x6gYnWCb/view',
+                ],
+                stats=Stats(
+                    count=865847,
+                    bytes=1752712439
+                ),
+                tags=[NEWS],
+                functions=[load_ods_gazeta],
+            ),
+        ]
+    )
 ]
