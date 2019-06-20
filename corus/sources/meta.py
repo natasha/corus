@@ -29,7 +29,10 @@ from . import (
     load_wiki,
 
     load_ods_interfax,
-    load_ods_gazeta
+    load_ods_gazeta,
+
+    load_ria_raw,
+    load_ria,
 )
 
 
@@ -106,6 +109,20 @@ METAS = [
         ],
         tags=[LIT],
         functions=[load_librusec]
+    ),
+    Meta(
+        title='Rossiya Segodnya',
+        url='https://github.com/RossiyaSegodnya/ria_news_dataset',
+        description=None,
+        stats=Stats(
+            count=1003869,
+            bytes=3974121040
+        ),
+        instruction=[
+            'wget https://github.com/RossiyaSegodnya/ria_news_dataset/raw/master/ria.json.gz'
+        ],
+        tags=[NEWS],
+        functions=[load_ria_raw, load_ria]
     ),
 
 

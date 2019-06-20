@@ -10,3 +10,4 @@ from .buriy import *  # noqa
 from .mokoron import *  # noqa
 from .wiki import load_wiki  # noqa
 from .ods import *  # noqa
+from .ria import *  # noqa

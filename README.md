@@ -110,6 +110,28 @@ Dump of lib.rus.ec prepared for RUSSE workshop
 </tr>
 <tr>
 <td>
+<a href="https://github.com/RossiyaSegodnya/ria_news_dataset">Rossiya Segodnya</a>
+</td>
+<td>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ria_raw">load_ria_raw</a></code>
+</br>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ria">load_ria</a></code>
+</td>
+<td>
+#news
+</td>
+<td align="right">
+1&nbsp;003&nbsp;869
+</td>
+<td align="right">
+3.70 Gb
+</td>
+<td>
+<code>wget https://github.com/RossiyaSegodnya/ria_news_dataset/raw/master/ria.json.gz</code>
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/dialogue-evaluation/factRuEval-2016/">factRuEval-2016</a>
 </td>
 <td>
