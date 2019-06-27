@@ -47,7 +47,7 @@ def maybe_none(value, none=('',)):
     return value
 
 
-def parse_buriy(lines, max_text=300000):
+def parse_buriy(lines, max_text=10000000):
     rows = parse_csv(lines, max_field=max_text)
     skip_header(rows)
     for row in rows:
