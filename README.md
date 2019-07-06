@@ -67,6 +67,7 @@ $ pip install corus
 <a href="https://github.com/yutkin/Lenta.Ru-News-Dataset">Lenta.ru</a>
 </td>
 <td>
+<a name="load_lenta"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_lenta">load_lenta</a></code>
 </td>
 <td>
@@ -90,6 +91,7 @@ Dump of lenta.ru
 <a href="https://russe.nlpub.org/downloads/">Lib.rus.ec</a>
 </td>
 <td>
+<a name="load_librusec"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_librusec">load_librusec</a></code>
 </td>
 <td>
@@ -113,8 +115,10 @@ Dump of lib.rus.ec prepared for RUSSE workshop
 <a href="https://github.com/RossiyaSegodnya/ria_news_dataset">Rossiya Segodnya</a>
 </td>
 <td>
+<a name="load_ria_raw"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ria_raw">load_ria_raw</a></code>
 </br>
+<a name="load_ria"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ria">load_ria</a></code>
 </td>
 <td>
@@ -135,6 +139,7 @@ Dump of lib.rus.ec prepared for RUSSE workshop
 <a href="https://github.com/dialogue-evaluation/factRuEval-2016/">factRuEval-2016</a>
 </td>
 <td>
+<a name="load_factru"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_factru">load_factru</a></code>
 </td>
 <td>
@@ -163,6 +168,7 @@ Manual PER, LOC, ORG markup prepared for 2016 Dialog competition.
 <a href="https://www.researchgate.net/publication/262203599_Introducing_Baselines_for_Russian_Named_Entity_Recognition">Gareev</a>
 </td>
 <td>
+<a name="load_gareev"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_gareev">load_gareev</a></code>
 </td>
 <td>
@@ -191,6 +197,7 @@ Email Rinat Gareev (gareev-rm@yandex.ru) ask for dataset
 <a href="http://www.labinform.ru/pub/named_entities/">Collection5</a>
 </td>
 <td>
+<a name="load_ne5"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ne5">load_ne5</a></code>
 </td>
 <td>
@@ -219,6 +226,7 @@ News articles with manual PER, LOC, ORG markup.
 <a href="https://www.aclweb.org/anthology/I17-1042">WiNER</a>
 </td>
 <td>
+<a name="load_wikiner"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_wikiner">load_wikiner</a></code>
 </td>
 <td>
@@ -242,6 +250,7 @@ Sentences from Wiki auto annotated with PER, LOC, ORG tags.
 <a href="http://study.mokoron.com/">Mokoron Russian Twitter Corpus</a>
 </td>
 <td>
+<a name="load_mokoron"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_mokoron">load_mokoron</a></code>
 </td>
 <td>
@@ -265,6 +274,7 @@ Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql
 <a href="https://dumps.wikimedia.org/">Wikipedia</a>
 </td>
 <td>
+<a name="load_wiki"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_wiki">load_wiki</a></code>
 </td>
 <td>
@@ -300,6 +310,7 @@ Large collection of russian texts from various sources: news sites, magazines, l
 Arzamas
 </td>
 <td>
+<a name="load_taiga_arzamas"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_arzamas">load_taiga_arzamas</a></code>
 </td>
 <td>
@@ -320,6 +331,7 @@ Dump of arzamas.academy.
 Fontanka
 </td>
 <td>
+<a name="load_taiga_fontanka"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_fontanka">load_taiga_fontanka</a></code>
 </td>
 <td>
@@ -340,6 +352,7 @@ Dump of fontanka.ru.
 Interfax
 </td>
 <td>
+<a name="load_taiga_interfax"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_interfax">load_taiga_interfax</a></code>
 </td>
 <td>
@@ -360,6 +373,7 @@ Dump of interfax.ru.
 KP
 </td>
 <td>
+<a name="load_taiga_kp"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_kp">load_taiga_kp</a></code>
 </td>
 <td>
@@ -380,6 +394,7 @@ Dump of kp.ru.
 Lenta
 </td>
 <td>
+<a name="load_taiga_lenta"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_lenta">load_taiga_lenta</a></code>
 </td>
 <td>
@@ -400,6 +415,7 @@ Dump of lenta.ru.
 Taiga/N+1
 </td>
 <td>
+<a name="load_taiga_nplus1"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_nplus1">load_taiga_nplus1</a></code>
 </td>
 <td>
@@ -420,6 +436,7 @@ Dump of nplus1.ru.
 Magazines
 </td>
 <td>
+<a name="load_taiga_magazines"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_magazines">load_taiga_magazines</a></code>
 </td>
 <td>
@@ -439,6 +456,7 @@ Dump of magazines.russ.ru
 Subtitles
 </td>
 <td>
+<a name="load_taiga_subtitles"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_subtitles">load_taiga_subtitles</a></code>
 </td>
 <td>
@@ -457,6 +475,7 @@ Subtitles
 Social
 </td>
 <td>
+<a name="load_taiga_social"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_social">load_taiga_social</a></code>
 </td>
 <td>
@@ -476,6 +495,7 @@ Social
 Proza
 </td>
 <td>
+<a name="load_taiga_proza"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_proza">load_taiga_proza</a></code>
 </td>
 <td>
@@ -496,6 +516,7 @@ Dump of proza.ru
 Stihi
 </td>
 <td>
+<a name="load_taiga_stihi"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_stihi">load_taiga_stihi</a></code>
 </td>
 <td>
@@ -523,6 +544,7 @@ Several russian news datasets from webhose.io, lenta.ru and other news sites.
 Lenta
 </td>
 <td>
+<a name="load_buriy_lenta"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_lenta">load_buriy_lenta</a></code>
 </td>
 <td>
@@ -546,6 +568,7 @@ Dump of lenta.ru.
 News
 </td>
 <td>
+<a name="load_buriy_news"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_news">load_buriy_news</a></code>
 </td>
 <td>
@@ -573,6 +596,7 @@ Dump of top 40 news + 20 fashion news sites.
 Webhose
 </td>
 <td>
+<a name="load_buriy_webhose"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_webhose">load_buriy_webhose</a></code>
 </td>
 <td>
@@ -604,6 +628,7 @@ Several news sites scraped by members of #proj_news_viz ODS project.
 Interfax
 </td>
 <td>
+<a name="load_ods_interfax"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_interfax">load_ods_interfax</a></code>
 </td>
 <td>
@@ -627,6 +652,7 @@ Manually download interfax_v1.csv.zip https://drive.google.com/file/d/1M7z0YoOgp
 Gazeta
 </td>
 <td>
+<a name="load_ods_gazeta"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_gazeta">load_ods_gazeta</a></code>
 </td>
 <td>

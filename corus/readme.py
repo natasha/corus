@@ -79,6 +79,8 @@ def format_metas_(metas, url):
                 if index > 0:
                     yield '</br>'
                 name = function.__name__
+                # to refer to cells in readme table
+                yield '<a name="%s"></a>' % name
                 anchor = '#' + name
                 if url:
                     anchor = url + anchor
