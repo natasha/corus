@@ -247,6 +247,38 @@ Sentences from Wiki auto annotated with PER, LOC, ORG tags.
 </tr>
 <tr>
 <td>
+<a href="http://bsnlp.cs.helsinki.fi/shared_task.html">BSNLP-2019</a>
+</td>
+<td>
+<a name="load_bsnlp"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_bsnlp">load_bsnlp</a></code>
+</td>
+<td>
+#ner
+</td>
+<td align="right">
+464
+</td>
+<td align="right">
+1.16 Mb
+</td>
+<td>
+Markup prepared for 2019 BSNLP Shared Task
+</br>
+</br>
+<code>wget http://bsnlp.cs.helsinki.fi/TRAININGDATA_BSNLP_2019_shared_task.zip</code>
+</br>
+<code>wget http://bsnlp.cs.helsinki.fi/TESTDATA_BSNLP_2019_shared_task.zip</code>
+</br>
+<code>unzip TRAININGDATA_BSNLP_2019_shared_task.zip</code>
+</br>
+<code>unzip TESTDATA_BSNLP_2019_shared_task.zip -d test_pl_cs_ru_bg</code>
+</br>
+<code>rm TRAININGDATA_BSNLP_2019_shared_task.zip TESTDATA_BSNLP_2019_shared_task.zip</code>
+</td>
+</tr>
+<tr>
+<td>
 <a href="http://study.mokoron.com/">Mokoron Russian Twitter Corpus</a>
 </td>
 <td>

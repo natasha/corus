@@ -8,6 +8,7 @@ from . import (
     load_librusec,
     load_ne5,
     load_wikiner,
+    load_bsnlp,
 
     load_taiga_arzamas,
     load_taiga_fontanka,
@@ -194,6 +195,24 @@ METAS = [
         ],
         tags=[NER],
         functions=[load_wikiner]
+    ),
+    Meta(
+        title='BSNLP-2019',
+        url='http://bsnlp.cs.helsinki.fi/shared_task.html',
+        description='Markup prepared for 2019 BSNLP Shared Task',
+        stats=Stats(
+            count=464,
+            bytes=1211300
+        ),
+        instruction=[
+            'wget http://bsnlp.cs.helsinki.fi/TRAININGDATA_BSNLP_2019_shared_task.zip',
+            'wget http://bsnlp.cs.helsinki.fi/TESTDATA_BSNLP_2019_shared_task.zip',
+            'unzip TRAININGDATA_BSNLP_2019_shared_task.zip',
+            'unzip TESTDATA_BSNLP_2019_shared_task.zip -d test_pl_cs_ru_bg',
+            'rm TRAININGDATA_BSNLP_2019_shared_task.zip TESTDATA_BSNLP_2019_shared_task.zip'
+        ],
+        tags=[NER],
+        functions=[load_bsnlp]
     ),
 
 
