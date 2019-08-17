@@ -11,6 +11,10 @@ from corus.io import (
 )
 
 
+DEVSET = 'devset'
+TESTSET = 'testset'
+
+
 class FactruSpan(Record):
     __attributes__ = ['id', 'type', 'start', 'stop']
 
@@ -93,7 +97,7 @@ def load_id(id, dir, set):
     return FactruMarkup(id, text, objects)
 
 
-def load_factru(dir, sets=['devset', 'testset']):
+def load_factru(dir, sets=[DEVSET, TESTSET]):
     for set in sets:
         for id in list_ids(dir, set):
             yield load_id(id, dir, set)
