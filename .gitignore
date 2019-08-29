@@ -8,5 +8,4 @@ coverage.xml
 *.egg-info
 build
 dist
-notes.ipynb
-main.py
+notes
