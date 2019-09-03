@@ -271,7 +271,7 @@ METAS = [
     Group(
         title='Taiga',
         url='https://tatianashavrina.github.io/taiga_site/',
-        description='Large collection of russian texts from various sources: news sites, magazines, literacy, social networks.',
+        description='Large collection of Russian texts from various sources: news sites, magazines, literacy, social networks.',
         instruction=[
             'wget https://linghub.ru/static/Taiga/retagged_taiga.tar.gz',
             'tar -xzvf retagged_taiga.tar.gz'
@@ -396,7 +396,7 @@ METAS = [
     Group(
         title='Russian NLP Datasets',
         url='https://github.com/buriy/russian-nlp-datasets/releases',
-        description='Several russian news datasets from webhose.io, lenta.ru and other news sites.',
+        description='Several Russian news datasets from webhose.io, lenta.ru and other news sites.',
         metas=[
             Meta(
                 title='Lenta',
