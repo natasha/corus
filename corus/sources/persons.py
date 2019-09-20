@@ -5,8 +5,6 @@ from corus.io import (
     list_zip,
     load_zip_texts,
     parse_xml,
-    UTF8,
-    CP1251
 )
 
 
@@ -58,10 +56,10 @@ def parse_anno(text):
 
 def load_ids(ids, path):
     names = part_names(ids, TEXT)
-    texts = load_zip_texts(path, names, CP1251)
+    texts = load_zip_texts(path, names, 'cp1251')
 
     names = part_names(ids, ANNO)
-    annos = load_zip_texts(path, names, UTF8)
+    annos = load_zip_texts(path, names, 'utf-8-sig')
     for text, anno in zip(texts, annos):
         spans = list(parse_anno(anno))
         yield PersonsMarkup(text, spans)
