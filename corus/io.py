@@ -74,8 +74,15 @@ else:
 ######
 
 
-def parse_xml(content):
-    return ET.fromstring(content)
+if PY2:
+    # https://stackoverflow.com/a/12349894/482770
+    def parse_xml(text):
+        content = text.encode('utf8')
+        return ET.fromstring(content)
+
+else:
+    def parse_xml(text):
+        return ET.fromstring(text)
 
 
 #########

@@ -59,7 +59,7 @@ def load_ids(ids, path):
     texts = load_zip_texts(path, names, 'cp1251')
 
     names = part_names(ids, ANNO)
-    annos = load_zip_texts(path, names, 'utf-8-sig')
+    annos = load_zip_texts(path, names, 'utf-8')
     for text, anno in zip(texts, annos):
         spans = list(parse_anno(anno))
         yield PersonsMarkup(text, spans)
