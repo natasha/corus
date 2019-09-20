@@ -1,3 +1,4 @@
+# coding: utf8
 
 import re
 from corus.path import (
@@ -13,6 +14,12 @@ from corus.io import (
 
 DEVSET = 'devset'
 TESTSET = 'testset'
+
+TXT = 'txt'
+SPANS = 'spans'
+OBJECTS = 'objects'
+COREF = 'coref'
+FACTS = 'facts'
 
 
 class FactruSpan(Record):
@@ -34,13 +41,47 @@ class FactruObject(Record):
         self.spans = spans
 
 
-class FactruMarkup(Record):
-    __attributes__ = ['id', 'text', 'objects']
+class FactruCorefSlot(Record):
+    __attributes__ = ['type', 'value']
 
-    def __init__(self, id, text, objects):
+    def __init__(self, type, value):
+        self.type = type
+        self.value = value
+
+
+class FactruCoref(Record):
+    __attributes__ = ['id', 'objects', 'slots']
+
+    def __init__(self, id, objects, slots):
+        self.id = id
+        self.objects = objects
+        self.slots = slots
+
+
+class FactruFactSlot(Record):
+    __attributes__ = ['type', 'value']
+
+    def __init__(self, type, value):
+        self.type = type
+        self.value = value
+
+
+class FactruFact(Record):
+    __attributes__ = ['id', 'type', 'slots']
+
+    def __init__(self, id, type, slots):
+        self.id = id
+        self.type = type
+        self.slots = slots
+
+
+class FactruMarkup(Record):
+    __attributes__ = ['id', 'text', 'facts']
+
+    def __init__(self, id, text, facts):
         self.id = id
         self.text = text
-        self.objects = objects
+        self.facts = facts
 
 
 def list_ids(dir, set):
@@ -50,19 +91,15 @@ def list_ids(dir, set):
             yield match.group(1)
 
 
-def txt_path(id, dir, set):
-    return join_path(dir, set, 'book_%s.txt' % id)
-
-
-def spans_path(id, dir, set):
-    return join_path(dir, set, 'book_%s.spans' % id)
-
-
-def objects_path(id, dir, set):
-    return join_path(dir, set, 'book_%s.objects' % id)
+def part_path(id, dir, set, part):
+    return join_path(dir, set, 'book_%s.%s' % (id, part))
 
 
 def parse_spans(lines):
+    # 32962 loc_name 17 6 89971 1  # 89971 Италии
+    # 32963 org_name 26 4 89973 1  # 89973 миде
+    # 32965 loc_name 31 6 89974 1  # 89974 Грузии
+
     for line in lines:
         id, type, start, size, _ = line.split(None, 4)
         start = int(start)
@@ -71,6 +108,9 @@ def parse_spans(lines):
 
 
 def parse_objects(lines, spans):
+    # 16972 LocOrg 32962 # Италии
+    # 16975 Org 32963 32965 # миде Грузии
+
     id_spans = {_.id: _ for _ in spans}
     for line in lines:
         parts = iter(line.split())
@@ -85,16 +125,100 @@ def parse_objects(lines, spans):
         yield FactruObject(id, type, spans)
 
 
+def parse_coref_slots(lines):
+    for line in lines:
+        if not line:
+            break
+
+        parts = line.split(None, 1)
+        if len(parts) == 1:
+            # 1101 18638 18654
+            # name Венгрия
+            # wikidata
+            # lastname
+            continue
+
+        type, value = parts
+        yield FactruCorefSlot(type, value)
+
+
+def parse_corefs(lines, objects):
+    # 3 16968 16970 16974
+    # name Грузия
+    #
+    # 5 16969
+    # firstname Виторио
+    # lastname Сандали
+
+    id_objects = {_.id: _ for _ in objects}
+    for line in lines:
+        parts = iter(line.split())
+        id = next(parts)
+        objects = [id_objects[_] for _ in parts]
+        slots = list(parse_coref_slots(lines))
+        yield FactruCoref(id, objects, slots)
+
+
+def parse_facts_slots(lines, id_corefs, id_spans):
+    for line in lines:
+        if not line:
+            break
+        type, line = line.split(None, 1)
+        values = line.split(' | ')
+        for value in values:
+            # Participant obj90 Industrial and Commercial Bank of China | Промышленный и коммерческий банк Китая
+            # Participant obj3640 WhatsApp
+            # Type купля/продажа
+            match = re.search(r'^(obj|span)(\d+)', value)
+            if match:
+                section, id = match.groups()
+                if section == 'obj':
+                    value = id_corefs[id]
+                elif section == 'span':
+                    value = id_spans[id]
+
+            yield FactruFactSlot(type, value)
+
+
+def parse_facts(lines, corefs, spans):
+    # 58-0 Meeting
+    # Participant obj5 Сандали Виторио
+    # Participant obj6 Налбандов Александр
+    #
+    # 58-1 Occupation
+    # Who obj5 Сандали Виторио
+    # Where obj2 Италия
+    # Position span32958 чрезвычайный и полномочный посол | span64007 чрезвычайный и полномочный посол Италии в Грузии
+
+    id_corefs = {_.id: _ for _ in corefs}
+    id_spans = {_.id: _ for _ in spans}
+    for line in lines:
+        id, type = line.split(None, 1)
+        slots = list(parse_facts_slots(lines, id_corefs, id_spans))
+        yield FactruFact(id, type, slots)
+
+
 def load_id(id, dir, set):
-    path = txt_path(id, dir, set)
+    path = part_path(id, dir, set, TXT)
     text = load_text(path)
-    path = spans_path(id, dir, set)
+
+    path = part_path(id, dir, set, SPANS)
     lines = load_lines(path)
     spans = list(parse_spans(lines))
-    path = objects_path(id, dir, set)
+
+    path = part_path(id, dir, set, OBJECTS)
     lines = load_lines(path)
     objects = list(parse_objects(lines, spans))
-    return FactruMarkup(id, text, objects)
+
+    path = part_path(id, dir, set, COREF)
+    lines = load_lines(path)
+    corefs = list(parse_corefs(lines, objects))
+
+    path = part_path(id, dir, set, FACTS)
+    lines = load_lines(path)
+    facts = list(parse_facts(lines, corefs, spans))
+
+    return FactruMarkup(id, text, facts)
 
 
 def load_factru(dir, sets=[DEVSET, TESTSET]):
