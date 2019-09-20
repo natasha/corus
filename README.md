@@ -279,6 +279,31 @@ Markup prepared for 2019 BSNLP Shared Task
 </tr>
 <tr>
 <td>
+<a href="http://ai-center.botik.ru/Airec/index.php/ru/collections/28-persons-1000">Persons-1000</a>
+</td>
+<td>
+<a name="load_persons"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_persons">load_persons</a></code>
+</td>
+<td>
+<code>ner</code>
+<code>news</code>
+</td>
+<td align="right">
+1&nbsp;000
+</td>
+<td align="right">
+2.96 Mb
+</td>
+<td>
+PER 
+</br>
+</br>
+<code>wget http://ai-center.botik.ru/Airec/ai-resources/Persons-1000.zip</code>
+</td>
+</tr>
+<tr>
+<td>
 <a href="http://study.mokoron.com/">Mokoron Russian Twitter Corpus</a>
 </td>
 <td>

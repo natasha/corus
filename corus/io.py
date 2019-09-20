@@ -14,6 +14,7 @@ from .compat import PY2
 
 
 UTF8 = 'utf8'
+CP1251 = 'cp1251'
 
 
 #######
@@ -134,6 +135,13 @@ def load_zip_lines(path, name, encoding=UTF8):
         with zip.open(name) as file:
             for line in file:
                 yield line.decode(encoding).rstrip()
+
+
+def load_zip_texts(path, names, encoding):
+    with ZipFile(path) as zip:
+        for name in names:
+            with zip.open(name) as file:
+                yield file.read().decode(encoding)
 
 
 ########

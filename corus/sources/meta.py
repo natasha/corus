@@ -9,6 +9,7 @@ from . import (
     load_ne5,
     load_wikiner,
     load_bsnlp,
+    load_persons,
 
     load_taiga_arzamas,
     load_taiga_fontanka,
@@ -213,6 +214,20 @@ METAS = [
         ],
         tags=[NER],
         functions=[load_bsnlp]
+    ),
+    Meta(
+        title='Persons-1000',
+        url='http://ai-center.botik.ru/Airec/index.php/ru/collections/28-persons-1000',
+        description='PER ',
+        stats=Stats(
+            count=1000,
+            bytes=3105146
+        ),
+        instruction=[
+            'wget http://ai-center.botik.ru/Airec/ai-resources/Persons-1000.zip'
+        ],
+        tags=[NER, NEWS],
+        functions=[load_persons]
     ),
 
 
