@@ -90,7 +90,7 @@ def format_metas_(metas, url):
             yield '<td>'
             if meta.tags:
                 for tag in meta.tags:
-                    yield '#' + tag
+                    yield '<code>%s</code>' % tag
             yield '</td>'
 
             yield '<td align="right">'

@@ -71,7 +71,7 @@ $ pip install corus
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_lenta">load_lenta</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 739&nbsp;351
@@ -95,7 +95,7 @@ Dump of lenta.ru
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_librusec">load_librusec</a></code>
 </td>
 <td>
-#lit
+<code>lit</code>
 </td>
 <td align="right">
 301&nbsp;871
@@ -122,7 +122,7 @@ Dump of lib.rus.ec prepared for RUSSE workshop
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ria">load_ria</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 1&nbsp;003&nbsp;869
@@ -143,8 +143,8 @@ Dump of lib.rus.ec prepared for RUSSE workshop
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_factru">load_factru</a></code>
 </td>
 <td>
-#ner
-#news
+<code>ner</code>
+<code>news</code>
 </td>
 <td align="right">
 254
@@ -172,8 +172,8 @@ Manual PER, LOC, ORG markup prepared for 2016 Dialog competition.
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_gareev">load_gareev</a></code>
 </td>
 <td>
-#ner
-#news
+<code>ner</code>
+<code>news</code>
 </td>
 <td align="right">
 97
@@ -201,8 +201,8 @@ Email Rinat Gareev (gareev-rm@yandex.ru) ask for dataset
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ne5">load_ne5</a></code>
 </td>
 <td>
-#ner
-#news
+<code>ner</code>
+<code>news</code>
 </td>
 <td align="right">
 1&nbsp;000
@@ -230,7 +230,7 @@ News articles with manual PER, LOC, ORG markup.
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_wikiner">load_wikiner</a></code>
 </td>
 <td>
-#ner
+<code>ner</code>
 </td>
 <td align="right">
 203&nbsp;287
@@ -254,7 +254,7 @@ Sentences from Wiki auto annotated with PER, LOC, ORG tags.
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_bsnlp">load_bsnlp</a></code>
 </td>
 <td>
-#ner
+<code>ner</code>
 </td>
 <td align="right">
 464
@@ -311,7 +311,7 @@ PER
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_mokoron">load_mokoron</a></code>
 </td>
 <td>
-#social
+<code>social</code>
 </td>
 <td align="right">
 17&nbsp;633&nbsp;417
@@ -354,7 +354,7 @@ Russian Wiki dump.
 <a href="https://tatianashavrina.github.io/taiga_site/">Taiga</a>
 </td>
 <td colspan="5">
-Large collection of russian texts from various sources: news sites, magazines, literacy, social networks.
+Large collection of Russian texts from various sources: news sites, magazines, literacy, social networks.
 </br>
 </br>
 <code>wget https://linghub.ru/static/Taiga/retagged_taiga.tar.gz</code>
@@ -371,7 +371,7 @@ Arzamas
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_arzamas">load_taiga_arzamas</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 311
@@ -392,7 +392,7 @@ Fontanka
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_fontanka">load_taiga_fontanka</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 342&nbsp;683
@@ -413,7 +413,7 @@ Interfax
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_interfax">load_taiga_interfax</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 46&nbsp;429
@@ -434,7 +434,7 @@ KP
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_kp">load_taiga_kp</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 45&nbsp;503
@@ -455,7 +455,7 @@ Lenta
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_lenta">load_taiga_lenta</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 36&nbsp;446
@@ -476,7 +476,7 @@ Taiga/N+1
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_nplus1">load_taiga_nplus1</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 7&nbsp;696
@@ -536,7 +536,7 @@ Social
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_social">load_taiga_social</a></code>
 </td>
 <td>
-#social
+<code>social</code>
 </td>
 <td align="right">
 1&nbsp;876&nbsp;442
@@ -556,7 +556,7 @@ Proza
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_proza">load_taiga_proza</a></code>
 </td>
 <td>
-#lit
+<code>lit</code>
 </td>
 <td align="right">
 1&nbsp;732&nbsp;434
@@ -593,7 +593,7 @@ Dump of stihi.ru
 <a href="https://github.com/buriy/russian-nlp-datasets/releases">Russian NLP Datasets</a>
 </td>
 <td colspan="5">
-Several russian news datasets from webhose.io, lenta.ru and other news sites.
+Several Russian news datasets from webhose.io, lenta.ru and other news sites.
 </td>
 </tr>
 <tr>
@@ -605,7 +605,7 @@ Lenta
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_lenta">load_buriy_lenta</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 699&nbsp;777
@@ -629,7 +629,7 @@ News
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_news">load_buriy_news</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 2&nbsp;154&nbsp;801
@@ -657,7 +657,7 @@ Webhose
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_webhose">load_buriy_webhose</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 285&nbsp;965
@@ -689,7 +689,7 @@ Interfax
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_interfax">load_ods_interfax</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 543&nbsp;962
@@ -713,7 +713,7 @@ Gazeta
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_gazeta">load_ods_gazeta</a></code>
 </td>
 <td>
-#news
+<code>news</code>
 </td>
 <td align="right">
 865&nbsp;847
