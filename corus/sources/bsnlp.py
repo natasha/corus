@@ -69,17 +69,6 @@ class BsnlpSubstring(Record):
         self.id = id
 
 
-class BsnlpSpan(Record):
-    __attributes__ = ['start', 'stop', 'type', 'normal', 'id']
-
-    def __init__(self, start, stop, type, normal, id):
-        self.start = start
-        self.stop = stop
-        self.type = type
-        self.normal = normal
-        self.id = id
-
-
 class BsnlpMarkup(Record):
     __attributes__ = ['id', 'name', 'lang', 'date', 'url', 'text', 'substrings']
 
@@ -91,11 +80,6 @@ class BsnlpMarkup(Record):
         self.url = url
         self.text = text
         self.substrings = substrings
-
-    @property
-    def spans(self):
-        spans = find_spans(self.text, self.substrings)
-        return filter_overlapping(spans)
 
 
 def walk(dir):
@@ -207,44 +191,3 @@ def load_bsnlp(dir, langs=[RU]):
     raw = load_raw(select_type(ids, RAW))
     annotated = load_annotated(select_type(ids, ANNOTATED))
     return merge(raw, annotated)
-
-
-############
-#
-#     SPANS
-#
-#########
-
-
-def iter_find(text, substring):
-    start = text.find(substring)
-    if start < 0:
-        # For ru just 3 substrings missing:
-        #   "Северный поток – 2"
-        #   Евгений Хвостик
-        #   Тереза Мэй
-        return
-
-    while start >= 0:
-        stop = start + len(substring)
-        yield start, stop
-        start = text.find(substring, stop)
-
-
-def find_spans(text, substrings):
-    for substring in substrings:
-        for start, stop in iter_find(text, substring.text):
-            yield BsnlpSpan(
-                start, stop,
-                substring.type, substring.normal, substring.id
-            )
-
-
-def filter_overlapping(spans):
-    previous = None
-    spans = sorted(spans, key=lambda _: (_.start, -_.stop))
-    for span in spans:
-        if previous and previous.stop > span.start:
-            continue
-        yield span
-        previous = span
