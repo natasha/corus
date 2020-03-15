@@ -1,4 +1,3 @@
-from __future__ import absolute_import  # for from io import BytesIO
 
 from collections import namedtuple
 

@@ -1,6 +1,4 @@
 
-from __future__ import division
-
 import re
 
 from .sources.meta import is_group

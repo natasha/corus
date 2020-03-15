@@ -1,4 +1,3 @@
-# coding: utf8
 
 from datetime import datetime
 

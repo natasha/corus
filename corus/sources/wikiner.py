@@ -1,4 +1,3 @@
-# coding: utf8
 
 from corus.record import Record
 from corus.io import load_bz2_lines

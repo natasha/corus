@@ -1,4 +1,3 @@
-# coding: utf8
 
 import re
 from itertools import islice as head
