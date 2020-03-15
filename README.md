@@ -1,7 +1,7 @@
 
 <img src="https://github.com/natasha/natasha-logos/blob/master/corus.svg">
 
-[![Build Status](https://travis-ci.org/natasha/corus.svg?branch=master)](https://travis-ci.org/natasha/corus) [![Coverage Status](https://coveralls.io/repos/github/natasha/corus/badge.svg?branch=master)](https://coveralls.io/github/natasha/corus?branch=master)
+![CI](https://github.com/natasha/corus/workflows/CI/badge.svg) [![codecov](https://codecov.io/gh/natasha/corus/branch/master/graph/badge.svg)](https://codecov.io/gh/natasha/corus)
 
 Links to publicly available Russian corpora + code for loading and parsing. <a href="#reference">20+ datasets, 350Gb+ of text</a>.
 
@@ -735,7 +735,6 @@ Manually download gazeta_v1.csv.zip from https://drive.google.com/file/d/18B8CvH
 
 - Chat — https://telegram.me/natural_language_processing
 - Issues — https://github.com/natasha/corus/issues
-
 
 ## Development
 
