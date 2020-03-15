@@ -44,7 +44,7 @@ For links to other datasets and their loaders see the <a href="#reference">Refer
 
 ## Install
 
-`corus` supports Python 2.7+, 3.4+ и PyPy 2, 3.
+`corus` supports Python 3.5+, PyPy 3.
 
 ```bash
 $ pip install corus
@@ -730,10 +730,6 @@ Manually download gazeta_v1.csv.zip from https://drive.google.com/file/d/18B8CvH
 </tr>
 </table>
 <!--- metas --->
-
-## Licence
-
-MIT
 
 ## Support
 
