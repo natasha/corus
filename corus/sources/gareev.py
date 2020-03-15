@@ -7,35 +7,38 @@ from corus.path import (
 )
 from corus.io import load_lines
 from corus.record import Record
-from corus.token import find_tokens
-from corus.bio import bio_spans
+
+
+class GareevToken(Record):
+    __attributes__ = ['text', 'tag']
+
+    def __init__(self, text, tag):
+        self.text = text
+        self.tag = tag
 
 
 class GareevRecord(Record):
-    __attributes__ = ['text', 'spans']
+    __attributes__ = ['tokens']
 
-    def __init__(self, text, spans):
-        self.text = text
-        self.spans = spans
+    def __init__(self, tokens):
+        self.tokens = tokens
 
 
 def parse_conll(lines):
-    chunks = []
-    tags = []
     for line in lines:
-        chunk, tag = line.split('\t', 1)
-        chunks.append(chunk)
-        tags.append(tag)
-    text = ' '.join(chunks)
-    tokens = list(find_tokens(chunks, text))
-    spans = list(bio_spans(tokens, tags))
-    return GareevRecord(text, spans)
+        text, tag = line.split('\t', 1)
+        yield GareevToken(text, tag)
+
+
+def parse_gareev(lines):
+    tokens = list(parse_conll(lines))
+    return GareevRecord(tokens)
 
 
 def load_id(id, dir):
     path = join_path(dir, '%s.txt.iob' % id)
     lines = load_lines(path)
-    return parse_conll(lines)
+    return parse_gareev(lines)
 
 
 def list_ids(dir):

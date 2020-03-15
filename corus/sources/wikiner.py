@@ -1,16 +1,22 @@
 
 from corus.record import Record
 from corus.io import load_bz2_lines
-from corus.bio import io_spans
-from corus.token import find_tokens
+
+
+class WikinerToken(Record):
+    __attributes__ = ['text', 'pos', 'tag']
+
+    def __init__(self, text, pos, tag):
+        self.text = text
+        self.pos = pos
+        self.tag = tag
 
 
 class WikinerMarkup(Record):
-    __attributes__ = ['text', 'spans']
+    __attributes__ = ['tokens']
 
-    def __init__(self, text, spans):
-        self.text = text
-        self.spans = spans
+    def __init__(self, tokens):
+        self.tokens = tokens
 
 
 def parse_wikiner(line):
@@ -19,16 +25,13 @@ def parse_wikiner(line):
         return
 
     # На|PR|O севере|S|O граничит|V|O с|PR|O Латвией|S|I-LOC
-    chunks = []
-    tags = []
+    tokens = []
     for part in line.split():
-        chunk, pos, tag = part.split('|', 2)
-        chunks.append(chunk)
-        tags.append(tag)
-    text = ' '.join(chunks)
-    tokens = list(find_tokens(chunks, text))
-    spans = list(io_spans(tokens, tags))
-    return WikinerMarkup(text, spans)
+        text, pos, tag = part.split('|', 2)
+        token = WikinerToken(text, pos, tag)
+        tokens.append(token)
+
+    return WikinerMarkup(tokens)
 
 
 def load_wikiner(path):
