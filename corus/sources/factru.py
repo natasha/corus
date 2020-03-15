@@ -58,10 +58,11 @@ class FactruCoref(Record):
 
 
 class FactruFactSlot(Record):
-    __attributes__ = ['type', 'value']
+    __attributes__ = ['type', 'ref', 'value']
 
-    def __init__(self, type, value):
+    def __init__(self, type, ref, value):
         self.type = type
+        self.ref = ref
         self.value = value
 
 
@@ -75,11 +76,13 @@ class FactruFact(Record):
 
 
 class FactruMarkup(Record):
-    __attributes__ = ['id', 'text', 'facts']
+    __attributes__ = ['id', 'text', 'objects', 'corefs', 'facts']
 
-    def __init__(self, id, text, facts):
+    def __init__(self, id, text, objects, corefs, facts):
         self.id = id
         self.text = text
+        self.objects = objects
+        self.corefs = corefs
         self.facts = facts
 
 
@@ -170,13 +173,14 @@ def parse_facts_slots(lines, id_corefs, id_spans):
             # Type купля/продажа
             match = re.search(r'^(obj|span)(\d+)', value)
             if match:
-                section, id = match.groups()
-                if section == 'obj':
+                ref, id = match.groups()
+                if ref == 'obj':
                     value = id_corefs[id]
-                elif section == 'span':
+                elif ref == 'span':
                     value = id_spans[id]
-
-            yield FactruFactSlot(type, value)
+            else:
+                ref = None
+            yield FactruFactSlot(type, ref, value)
 
 
 def parse_facts(lines, corefs, spans):
@@ -217,7 +221,7 @@ def load_id(id, dir, set):
     lines = load_lines(path)
     facts = list(parse_facts(lines, corefs, spans))
 
-    return FactruMarkup(id, text, facts)
+    return FactruMarkup(id, text, objects, corefs, facts)
 
 
 def load_factru(dir, sets=[DEVSET, TESTSET]):
