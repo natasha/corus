@@ -1,0 +1,25 @@
+# newpar
+# sent_id = instagram-16
+# speaker = screened-18
+# genre = social
+# text = @screened-88 ✅взабраться на статую Христа - только что!😄
+1	@screened-88	@screened-88	X	_	Foreign=Yes	3	vocative	_	_
+2	✅	✅	PUNCT	_	_	3	punct	_	SpaceAfter=No
+3	взабраться	взобраться	VERB	_	Aspect=Perf|VerbForm=Inf|Voice=Mid	0	root	_	_
+4	на	на	ADP	_	_	5	case	_	_
+5	статую	статуя	NOUN	_	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	3	obl	_	_
+6	Христа	Христос	PROPN	_	Animacy=Anim|Case=Gen|Gender=Masc|Number=Sing	5	nmod	_	_
+7	-	-	PUNCT	_	_	9	punct	_	_
+8	только	только	PART	_	_	9	advmod	_	_
+9	что	что	PRON	_	Case=Nom	3	parataxis	_	SpaceAfter=No
+10	!	!	PUNCT	_	_	3	punct	_	SpaceAfter=No
+11	😄	😄	SYM	_	_	3	discourse	_	_
+
+# newpar
+# sent_id = instagram-17
+# speaker = screened-18
+# genre = social
+# text = @screened-58 😊спасибо
+1	@screened-58	@screened-58	X	_	Foreign=Yes	3	vocative	_	_
+2	😊	😊	SYM	_	_	3	discourse	_	SpaceAfter=No
+3	спасибо	спасибо	INTJ	_	_	0	root	_	_

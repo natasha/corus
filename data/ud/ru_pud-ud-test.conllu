@@ -1,0 +1,42 @@
+# newdoc id = n01010
+# sent_id = n01010042
+# text = «Был момент, — сказал господин Панвалкар, — когда он чувствовал, что они должны покинуть здание».
+# english_text = There was a time, Mr Panvalkar said, when he felt that they should leave the building.
+1	«	«	PUNCT	``	_	2	punct	_	SpaceAfter=No
+2	Был	быть	AUX	VBC	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
+3	момент	момент	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	2	nsubj	_	SpaceAfter=No
+4	,	,	PUNCT	,	_	6	punct	_	_
+5	—	—	PUNCT	-	_	6	punct	_	OrigForm=--
+6	сказал	сказать	VERB	VBC	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	2	parataxis	_	_
+7	господин	господин	NOUN	NN	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	6	nsubj	_	_
+8	Панвалкар	Панвалкар	PROPN	NNP	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	7	flat:name	_	SpaceAfter=No
+9	,	,	PUNCT	,	_	6	punct	_	_
+10	—	—	PUNCT	-	_	6	punct	_	OrigForm=--
+11	когда	когда	SCONJ	IN	_	13	mark	_	_
+12	он	он	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3	13	nsubj	_	_
+13	чувствовал	чувствовать	VERB	VBC	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	3	advcl	_	SpaceAfter=No
+14	,	,	PUNCT	,	_	17	punct	_	_
+15	что	что	SCONJ	IN	_	17	mark	_	_
+16	они	они	PRON	PRP	Case=Nom|Number=Plur|Person=3	17	nsubj	_	_
+17	должны	должен	ADJ	JJH	Degree=Pos|Number=Plur|Variant=Short	13	ccomp	_	_
+18	покинуть	покинуть	VERB	VB	Aspect=Perf|VerbForm=Inf|Voice=Act	17	xcomp	_	_
+19	здание	здание	NOUN	NN	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	18	obj	_	SpaceAfter=No
+20	»	»	PUNCT	'	_	2	punct	_	SpaceAfter=No
+21	.	.	PUNCT	.	_	2	punct	_	_
+
+# newdoc id = n01011
+# sent_id = n01011004
+# text = Ей также предъявлено обвинение в покушении на убийство ее двухлетней дочери.
+# english_text = She has also been charged with trying to kill her two-year-old daughter.
+1	Ей	она	PRON	PRP	Case=Dat|Gender=Fem|Number=Sing|Person=3	3	iobj	_	_
+2	также	также	ADV	RB	Degree=Pos	3	advmod	_	_
+3	предъявлено	предъявить	VERB	VBNH	Aspect=Perf|Gender=Neut|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	root	_	_
+4	обвинение	обвинение	NOUN	NN	Animacy=Inan|Case=Nom|Gender=Neut|Number=Sing	3	nsubj:pass	_	_
+5	в	в	ADP	IN	_	6	case	_	_
+6	покушении	покушение	NOUN	NN	Animacy=Inan|Case=Loc|Gender=Neut|Number=Sing	4	nmod	_	_
+7	на	на	ADP	IN	_	8	case	_	_
+8	убийство	убийство	NOUN	NN	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	6	nmod	_	_
+9	ее	ее	DET	PRP$	_	11	det	_	_
+10	двухлетней	двухлетний	ADJ	JJ	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	11	amod	_	_
+11	дочери	дочь	NOUN	NN	Animacy=Anim|Case=Gen|Gender=Fem|Number=Sing	8	nmod	_	SpaceAfter=No
+12	.	.	PUNCT	.	_	3	punct	_	_

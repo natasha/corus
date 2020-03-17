@@ -1,0 +1,35 @@
+# sent_id = 2013Algoritm.xml_16
+# text = Различные определения алгоритма в явной или неявной форме содержат следующий ряд общих требований:
+1	Различные	различный	ADJ	_	Case=Nom|Degree=Pos|Number=Plur	2	amod	2:amod	_
+2	определения	определение	NOUN	_	Animacy=Inan|Case=Nom|Gender=Neut|Number=Plur	9	nsubj	9:nsubj	_
+3	алгоритма	алгоритм	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	2	nmod	2:nmod	_
+4	в	в	ADP	_	_	8	case	8:case	_
+5	явной	явный	ADJ	_	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing	8	amod	8:amod	_
+6	или	или	CCONJ	_	_	7	cc	7:cc	_
+7	неявной	неявный	ADJ	_	Case=Loc|Degree=Pos|Gender=Fem|Number=Sing	5	conj	5:conj	_
+8	форме	форма	NOUN	_	Animacy=Inan|Case=Loc|Gender=Fem|Number=Sing	9	obl	9:obl	_
+9	содержат	содержать	VERB	_	Aspect=Imp|Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin|Voice=Act	0	root	0:root	_
+10	следующий	следующий	ADJ	_	Animacy=Inan|Case=Acc|Degree=Pos|Gender=Masc|Number=Sing	11	amod	11:amod	_
+11	ряд	ряд	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	9	obj	9:obj	_
+12	общих	общий	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	13	amod	13:amod	_
+13	требований	требование	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Plur	11	nmod	11:nmod	SpaceAfter=No
+14	:	:	PUNCT	_	_	9	punct	9:punct	_
+
+# sent_id = 2013Algoritm.xml_17
+# text = - Дискретность - алгоритм должен представлять процесс решения задачи как последовательное выполнение некоторых простых шагов.
+1	-	-	PUNCT	_	_	2	punct	2:punct	_
+2	Дискретность	дискретность	NOUN	_	Animacy=Inan|Case=Nom|Gender=Fem|Number=Sing	0	root	0:root	_
+3	-	-	PUNCT	_	_	5	punct	5:punct	_
+4	алгоритм	алгоритм	NOUN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	5	nsubj	5:nsubj	_
+5	должен	должен	ADJ	_	Degree=Pos|Gender=Masc|Number=Sing|Variant=Short	2	parataxis	2:parataxis	_
+6	представлять	представлять	VERB	_	Aspect=Imp|VerbForm=Inf|Voice=Act	5	xcomp	5:xcomp	_
+7	процесс	процесс	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	6	obj	6:obj	_
+8	решения	решение	NOUN	_	Animacy=Inan|Case=Gen|Gender=Neut|Number=Sing	7	nmod	7:nmod	_
+9	задачи	задача	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	8	nmod	8:nmod	_
+10	как	как	SCONJ	_	_	12	mark	12:mark	_
+11	последовательное	последовательный	ADJ	_	Case=Acc|Degree=Pos|Gender=Neut|Number=Sing	12	amod	12:amod	_
+12	выполнение	выполнение	NOUN	_	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	6	advcl	6:advcl	_
+13	некоторых	некоторый	DET	_	Case=Gen|Number=Plur	15	det	15:det	_
+14	простых	простой	ADJ	_	Case=Gen|Degree=Pos|Number=Plur	15	amod	15:amod	_
+15	шагов	шаг	NOUN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Plur	12	nmod	12:nmod	SpaceAfter=No
+16	.	.	PUNCT	_	_	2	punct	2:punct	_

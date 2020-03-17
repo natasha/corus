@@ -1,0 +1,35 @@
+# sent_id = dev-s3
+# text = Он и являлся&#39;&#39; полным властелином всей Ахсауской местности&#39;&#39; и родоначальником Телакуровых, построивших здесь свой замок.
+1	Он	он	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3	3	nsubj	_	_
+2	и	и	PART	UH	_	3	advmod	_	_
+3	являлся	являться	VERB	VBC	Aspect=Imp|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Mid	0	root	_	SpaceAfter=No
+4	&#39;&#39;	&#39;&#39;	PUNCT	``	_	6	punct	_	_
+5	полным	полный	ADJ	JJL	Case=Ins|Degree=Pos|Gender=Masc|Number=Sing	6	amod	_	_
+6	властелином	властелин	NOUN	NN	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	3	xcomp	_	_
+7	всей	весь	DET	DT	Case=Gen|Gender=Fem|Number=Sing	9	det	_	_
+8	Ахсауской	ахсауский	ADJ	JJL	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	9	amod	_	_
+9	местности	местность	NOUN	NN	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	6	nmod	_	SpaceAfter=No
+10	&#39;&#39;	&#39;&#39;	PUNCT	&#39;&#39;	_	6	punct	_	_
+11	и	и	CCONJ	CC	_	12	cc	_	_
+12	родоначальником	родоначальник	NOUN	NN	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	6	conj	_	_
+13	Телакуровых	Телакуров	PROPN	NNP	Animacy=Anim|Case=Gen|Gender=Masc|Number=Plur	12	nmod	_	SpaceAfter=No
+14	,	,	PUNCT	,	_	15	punct	_	_
+15	построивших	построить	VERB	VBNL	Animacy=Anim|Aspect=Perf|Case=Gen|Number=Plur|Tense=Past|VerbForm=Part|Voice=Act	13	acl	_	_
+16	здесь	здесь	ADV	RB	Degree=Pos	15	advmod	_	_
+17	свой	свой	DET	PRP$	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	18	det	_	_
+18	замок	замок	NOUN	NN	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	15	obj	_	SpaceAfter=No
+19	.	.	PUNCT	.	_	6	punct	_	_
+
+# sent_id = dev-s4
+# text = Сержант посоветовал Баклсу пойти на работу водителем машины скорой помощи.
+1	Сержант	сержант	NOUN	NN	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	2	nsubj	_	_
+2	посоветовал	посоветовать	VERB	VBC	Aspect=Perf|Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
+3	Баклсу	Баклс	PROPN	NNP	Animacy=Anim|Case=Dat|Gender=Masc|Number=Sing	2	iobj	_	_
+4	пойти	пойти	VERB	VB	Aspect=Perf|VerbForm=Inf|Voice=Act	2	xcomp	_	_
+5	на	на	ADP	IN	_	6	case	_	_
+6	работу	работа	NOUN	NN	Animacy=Inan|Case=Acc|Gender=Fem|Number=Sing	4	obl	_	_
+7	водителем	водитель	NOUN	NN	Animacy=Anim|Case=Ins|Gender=Masc|Number=Sing	4	xcomp	_	_
+8	машины	машина	NOUN	NN	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	7	nmod	_	_
+9	скорой	скорый	ADJ	JJL	Case=Gen|Degree=Pos|Gender=Fem|Number=Sing	10	amod	_	_
+10	помощи	помощь	NOUN	NN	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	8	nmod	_	SpaceAfter=No
+11	.	.	PUNCT	.	_	2	punct	_	_

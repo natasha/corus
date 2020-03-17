@@ -80,9 +80,6 @@ $ pip install corus
 1.66 Gb
 </td>
 <td>
-Dump of lenta.ru
-</br>
-</br>
 <code>wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.0/lenta-ru-news.csv.gz</code>
 </td>
 </tr>
@@ -153,7 +150,7 @@ Dump of lib.rus.ec prepared for RUSSE workshop
 969.27 Kb
 </td>
 <td>
-Manual PER, LOC, ORG markup prepared for 2016 Dialog competition.
+Manual PER, LOC, ORG markup prepared for 2016 Dialog competition
 </br>
 </br>
 <code>wget https://github.com/dialogue-evaluation/factRuEval-2016/archive/master.zip</code>
@@ -182,7 +179,7 @@ Manual PER, LOC, ORG markup prepared for 2016 Dialog competition.
 455.02 Kb
 </td>
 <td>
-Manual PER, ORG markup.
+Manual PER, ORG markup (no LOC)
 </br>
 </br>
 Email Rinat Gareev (gareev-rm@yandex.ru) ask for dataset
@@ -211,7 +208,7 @@ Email Rinat Gareev (gareev-rm@yandex.ru) ask for dataset
 2.96 Mb
 </td>
 <td>
-News articles with manual PER, LOC, ORG markup.
+News articles with manual PER, LOC, ORG markup
 </br>
 </br>
 <code>wget http://www.labinform.ru/pub/named_entities/collection5.zip</code>
@@ -239,7 +236,7 @@ News articles with manual PER, LOC, ORG markup.
 36.15 Mb
 </td>
 <td>
-Sentences from Wiki auto annotated with PER, LOC, ORG tags.
+Sentences from Wiki auto annotated with PER, LOC, ORG tags
 </br>
 </br>
 <code>wget https://github.com/dice-group/FOX/raw/master/input/Wikiner/aij-wikiner-ru-wp3.bz2</code>
@@ -296,7 +293,7 @@ Markup prepared for 2019 BSNLP Shared Task
 2.96 Mb
 </td>
 <td>
-PER 
+Same as Collection5, only PER markup + normalized names
 </br>
 </br>
 <code>wget http://ai-center.botik.ru/Airec/ai-resources/Persons-1000.zip</code>
@@ -320,7 +317,7 @@ PER
 1.86 Gb
 </td>
 <td>
-Russian tweets.
+Russian Twitter sentiment markup
 </br>
 </br>
 Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql
@@ -343,7 +340,7 @@ Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql
 12.94 Gb
 </td>
 <td>
-Russian Wiki dump.
+Russian Wiki dump
 </br>
 </br>
 <code>wget https://dumps.wikimedia.org/ruwiki/latest/ruwiki-latest-pages-articles.xml.bz2</code>
@@ -354,7 +351,7 @@ Russian Wiki dump.
 <a href="https://tatianashavrina.github.io/taiga_site/">Taiga</a>
 </td>
 <td colspan="5">
-Large collection of Russian texts from various sources: news sites, magazines, literacy, social networks.
+Large collection of Russian texts from various sources: news sites, magazines, literacy, social networks
 </br>
 </br>
 <code>wget https://linghub.ru/static/Taiga/retagged_taiga.tar.gz</code>
@@ -380,7 +377,6 @@ Arzamas
 4.50 Mb
 </td>
 <td>
-Dump of arzamas.academy.
 </td>
 </tr>
 <tr>
@@ -401,7 +397,6 @@ Fontanka
 786.23 Mb
 </td>
 <td>
-Dump of fontanka.ru.
 </td>
 </tr>
 <tr>
@@ -422,7 +417,6 @@ Interfax
 77.55 Mb
 </td>
 <td>
-Dump of interfax.ru.
 </td>
 </tr>
 <tr>
@@ -443,7 +437,6 @@ KP
 61.79 Mb
 </td>
 <td>
-Dump of kp.ru.
 </td>
 </tr>
 <tr>
@@ -464,7 +457,6 @@ Lenta
 95.15 Mb
 </td>
 <td>
-Dump of lenta.ru.
 </td>
 </tr>
 <tr>
@@ -485,7 +477,6 @@ Taiga/N+1
 24.96 Mb
 </td>
 <td>
-Dump of nplus1.ru.
 </td>
 </tr>
 <tr>
@@ -505,7 +496,6 @@ Magazines
 2.19 Gb
 </td>
 <td>
-Dump of magazines.russ.ru
 </td>
 </tr>
 <tr>
@@ -565,7 +555,6 @@ Proza
 38.25 Gb
 </td>
 <td>
-Dump of proza.ru
 </td>
 </tr>
 <tr>
@@ -585,7 +574,6 @@ Stihi
 12.80 Gb
 </td>
 <td>
-Dump of stihi.ru
 </td>
 </tr>
 <tr>
@@ -614,9 +602,6 @@ Lenta
 1.57 Gb
 </td>
 <td>
-Dump of lenta.ru.
-</br>
-</br>
 <code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/lenta.tar.bz2</code>
 </td>
 </tr>
@@ -698,9 +683,6 @@ Interfax
 1.22 Gb
 </td>
 <td>
-Dump of interfax.ru.
-</br>
-</br>
 Manually download interfax_v1.csv.zip https://drive.google.com/file/d/1M7z0YoOgpm53IsJ3qOhT_nfiDnGUPeys/view
 </td>
 </tr>
@@ -722,10 +704,114 @@ Gazeta
 1.63 Gb
 </td>
 <td>
-Dump of gazeta.ru.
-</br>
-</br>
 Manually download gazeta_v1.csv.zip from https://drive.google.com/file/d/18B8CvHgmwwyz9GWBZ0TS6dE_x6gYnWCb/view
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://universaldependencies.org/">Universal Dependencies</a>
+</td>
+<td colspan="5">
+</td>
+</tr>
+<tr>
+<td>
+GSD
+</td>
+<td>
+<a name="load_ud_gsd"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_gsd">load_ud_gsd</a></code>
+</td>
+<td>
+<code>morph</code>
+<code>syntax</code>
+</td>
+<td align="right">
+5&nbsp;030
+</td>
+<td align="right">
+1.01 Mb
+</td>
+<td>
+<code>wget https://github.com/UniversalDependencies/UD_Russian-GSD/raw/master/ru_gsd-ud-dev.conllu</code>
+</br>
+<code>wget https://github.com/UniversalDependencies/UD_Russian-GSD/raw/master/ru_gsd-ud-test.conllu</code>
+</br>
+<code>wget https://github.com/UniversalDependencies/UD_Russian-GSD/raw/master/ru_gsd-ud-train.conllu</code>
+</td>
+</tr>
+<tr>
+<td>
+Taiga
+</td>
+<td>
+<a name="load_ud_taiga"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_taiga">load_ud_taiga</a></code>
+</td>
+<td>
+<code>morph</code>
+<code>syntax</code>
+</td>
+<td align="right">
+3&nbsp;264
+</td>
+<td align="right">
+353.80 Kb
+</td>
+<td>
+<code>wget https://github.com/UniversalDependencies/UD_Russian-Taiga/raw/master/ru_taiga-ud-dev.conllu</code>
+</br>
+<code>wget https://github.com/UniversalDependencies/UD_Russian-Taiga/raw/master/ru_taiga-ud-test.conllu</code>
+</br>
+<code>wget https://github.com/UniversalDependencies/UD_Russian-Taiga/raw/master/ru_taiga-ud-train.conllu</code>
+</td>
+</tr>
+<tr>
+<td>
+PUD
+</td>
+<td>
+<a name="load_ud_pud"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_pud">load_ud_pud</a></code>
+</td>
+<td>
+<code>morph</code>
+<code>syntax</code>
+</td>
+<td align="right">
+1&nbsp;000
+</td>
+<td align="right">
+207.78 Kb
+</td>
+<td>
+<code>wget https://github.com/UniversalDependencies/UD_Russian-PUD/raw/master/ru_pud-ud-test.conllu</code>
+</td>
+</tr>
+<tr>
+<td>
+SynTagRus
+</td>
+<td>
+<a name="load_ud_syntag"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_syntag">load_ud_syntag</a></code>
+</td>
+<td>
+<code>morph</code>
+<code>syntax</code>
+</td>
+<td align="right">
+61&nbsp;889
+</td>
+<td align="right">
+11.33 Mb
+</td>
+<td>
+<code>wget https://github.com/UniversalDependencies/UD_Russian-SynTagRus/raw/master/ru_syntagrus-ud-dev.conllu</code>
+</br>
+<code>wget https://github.com/UniversalDependencies/UD_Russian-SynTagRus/raw/master/ru_syntagrus-ud-test.conllu</code>
+</br>
+<code>wget https://github.com/UniversalDependencies/UD_Russian-SynTagRus/raw/master/ru_syntagrus-ud-train.conllu</code>
 </td>
 </tr>
 </table>

@@ -35,6 +35,11 @@ from . import (
 
     load_ria_raw,
     load_ria,
+
+    load_ud_gsd,
+    load_ud_taiga,
+    load_ud_pud,
+    load_ud_syntag
 )
 
 
@@ -82,12 +87,13 @@ NER = 'ner'
 NEWS = 'news'
 LIT = 'lit'
 SOCIAL = 'social'
+MORPH = 'morph'
+SYNTAX = 'syntax'
 
 METAS = [
     Meta(
         title='Lenta.ru',
         url='https://github.com/yutkin/Lenta.Ru-News-Dataset',
-        description='Dump of lenta.ru',
         stats=Stats(
             bytes=1785632079,
             count=739351
@@ -115,7 +121,6 @@ METAS = [
     Meta(
         title='Rossiya Segodnya',
         url='https://github.com/RossiyaSegodnya/ria_news_dataset',
-        description=None,
         stats=Stats(
             count=1003869,
             bytes=3974121040
@@ -138,7 +143,7 @@ METAS = [
     Meta(
         title='factRuEval-2016',
         url='https://github.com/dialogue-evaluation/factRuEval-2016/',
-        description='Manual PER, LOC, ORG markup prepared for 2016 Dialog competition.',
+        description='Manual PER, LOC, ORG markup prepared for 2016 Dialog competition',
         stats=Stats(
             count=254,
             bytes=992532
@@ -154,7 +159,7 @@ METAS = [
     Meta(
         title='Gareev',
         url='https://www.researchgate.net/publication/262203599_Introducing_Baselines_for_Russian_Named_Entity_Recognition',
-        description='Manual PER, ORG markup.',
+        description='Manual PER, ORG markup (no LOC)',
         stats=Stats(
             count=97,
             bytes=465938
@@ -170,7 +175,7 @@ METAS = [
     Meta(
         title='Collection5',
         url='http://www.labinform.ru/pub/named_entities/',
-        description='News articles with manual PER, LOC, ORG markup.',
+        description='News articles with manual PER, LOC, ORG markup',
         stats=Stats(
             count=1000,
             bytes=3105146
@@ -186,7 +191,7 @@ METAS = [
     Meta(
         title='WiNER',
         url='https://www.aclweb.org/anthology/I17-1042',
-        description='Sentences from Wiki auto annotated with PER, LOC, ORG tags.',
+        description='Sentences from Wiki auto annotated with PER, LOC, ORG tags',
         stats=Stats(
             count=203287,
             bytes=37907651
@@ -218,7 +223,7 @@ METAS = [
     Meta(
         title='Persons-1000',
         url='http://ai-center.botik.ru/Airec/index.php/ru/collections/28-persons-1000',
-        description='PER ',
+        description='Same as Collection5, only PER markup + normalized names',
         stats=Stats(
             count=1000,
             bytes=3105146
@@ -241,7 +246,7 @@ METAS = [
     Meta(
         title='Mokoron Russian Twitter Corpus',
         url='http://study.mokoron.com/',
-        description='Russian tweets.',
+        description='Russian Twitter sentiment markup',
         instruction=[
             'Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql'
         ],
@@ -264,7 +269,7 @@ METAS = [
     Meta(
         title='Wikipedia',
         url='https://dumps.wikimedia.org/',
-        description='Russian Wiki dump.',
+        description='Russian Wiki dump',
         instruction=[
             'wget https://dumps.wikimedia.org/ruwiki/latest/ruwiki-latest-pages-articles.xml.bz2'
         ],
@@ -286,7 +291,7 @@ METAS = [
     Group(
         title='Taiga',
         url='https://tatianashavrina.github.io/taiga_site/',
-        description='Large collection of Russian texts from various sources: news sites, magazines, literacy, social networks.',
+        description='Large collection of Russian texts from various sources: news sites, magazines, literacy, social networks',
         instruction=[
             'wget https://linghub.ru/static/Taiga/retagged_taiga.tar.gz',
             'tar -xzvf retagged_taiga.tar.gz'
@@ -294,7 +299,6 @@ METAS = [
         metas=[
             Meta(
                 title='Arzamas',
-                description='Dump of arzamas.academy.',
                 stats=Stats(
                     count=311,
                     bytes=4721604
@@ -304,7 +308,6 @@ METAS = [
             ),
             Meta(
                 title='Fontanka',
-                description='Dump of fontanka.ru.',
                 stats=Stats(
                     count=342683,
                     bytes=824419630
@@ -314,7 +317,6 @@ METAS = [
             ),
             Meta(
                 title='Interfax',
-                description='Dump of interfax.ru.',
                 stats=Stats(
                     count=46429,
                     bytes=81320006
@@ -324,7 +326,6 @@ METAS = [
             ),
             Meta(
                 title='KP',
-                description='Dump of kp.ru.',
                 stats=Stats(
                     count=45503,
                     bytes=64789612
@@ -334,7 +335,6 @@ METAS = [
             ),
             Meta(
                 title='Lenta',
-                description='Dump of lenta.ru.',
                 stats=Stats(
                     count=36446,
                     bytes=99772679
@@ -344,7 +344,6 @@ METAS = [
             ),
             Meta(
                 title='Taiga/N+1',
-                description='Dump of nplus1.ru.',
                 stats=Stats(
                     count=7696,
                     bytes=26167631
@@ -354,7 +353,6 @@ METAS = [
             ),
             Meta(
                 title='Magazines',
-                description='Dump of magazines.russ.ru',
                 stats=Stats(
                     count=39890,
                     bytes=2352629006
@@ -380,7 +378,6 @@ METAS = [
             ),
             Meta(
                 title='Proza',
-                description='Dump of proza.ru',
                 stats=Stats(
                     count=1732434,
                     bytes=41067043857
@@ -390,7 +387,6 @@ METAS = [
             ),
             Meta(
                 title='Stihi',
-                description='Dump of stihi.ru',
                 stats=Stats(
                     count=9157686,
                     bytes=13745805334
@@ -415,7 +411,6 @@ METAS = [
         metas=[
             Meta(
                 title='Lenta',
-                description='Dump of lenta.ru.',
                 instruction=[
                     'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/lenta.tar.bz2',
                 ],
@@ -472,7 +467,6 @@ METAS = [
         metas=[
             Meta(
                 title='Interfax',
-                description='Dump of interfax.ru.',
                 instruction=[
                     'Manually download interfax_v1.csv.zip https://drive.google.com/file/d/1M7z0YoOgpm53IsJ3qOhT_nfiDnGUPeys/view',
                 ],
@@ -485,7 +479,6 @@ METAS = [
             ),
             Meta(
                 title='Gazeta',
-                description='Dump of gazeta.ru.',
                 instruction=[
                     'Manually download gazeta_v1.csv.zip from https://drive.google.com/file/d/18B8CvHgmwwyz9GWBZ0TS6dE_x6gYnWCb/view',
                 ],
@@ -497,5 +490,75 @@ METAS = [
                 functions=[load_ods_gazeta],
             ),
         ]
+    ),
+
+
+    #############
+    #
+    #    UD
+    #
+    #########
+
+
+    Group(
+        title='Universal Dependencies',
+        url='https://universaldependencies.org/',
+        metas=[
+            Meta(
+                title='GSD',
+                instruction=[
+                    'wget https://github.com/UniversalDependencies/UD_Russian-GSD/raw/master/ru_gsd-ud-dev.conllu',
+                    'wget https://github.com/UniversalDependencies/UD_Russian-GSD/raw/master/ru_gsd-ud-test.conllu',
+                    'wget https://github.com/UniversalDependencies/UD_Russian-GSD/raw/master/ru_gsd-ud-train.conllu'
+                ],
+                stats=Stats(
+                    count=5030,
+                    bytes=1059114
+                ),
+                tags=[MORPH, SYNTAX],
+                functions=[load_ud_gsd],
+            ),
+            Meta(
+                title='Taiga',
+                instruction=[
+                    'wget https://github.com/UniversalDependencies/UD_Russian-Taiga/raw/master/ru_taiga-ud-dev.conllu',
+                    'wget https://github.com/UniversalDependencies/UD_Russian-Taiga/raw/master/ru_taiga-ud-test.conllu',
+                    'wget https://github.com/UniversalDependencies/UD_Russian-Taiga/raw/master/ru_taiga-ud-train.conllu'
+                ],
+                stats=Stats(
+                    count=3264,
+                    bytes=362293
+                ),
+                tags=[MORPH, SYNTAX],
+                functions=[load_ud_taiga],
+            ),
+            Meta(
+                title='PUD',
+                instruction=[
+                    'wget https://github.com/UniversalDependencies/UD_Russian-PUD/raw/master/ru_pud-ud-test.conllu',
+                ],
+                stats=Stats(
+                    count=1000,
+                    bytes=212766
+                ),
+                tags=[MORPH, SYNTAX],
+                functions=[load_ud_pud],
+            ),
+            Meta(
+                title='SynTagRus',
+                instruction=[
+                    'wget https://github.com/UniversalDependencies/UD_Russian-SynTagRus/raw/master/ru_syntagrus-ud-dev.conllu',
+                    'wget https://github.com/UniversalDependencies/UD_Russian-SynTagRus/raw/master/ru_syntagrus-ud-test.conllu',
+                    'wget https://github.com/UniversalDependencies/UD_Russian-SynTagRus/raw/master/ru_syntagrus-ud-train.conllu',
+                ],
+                stats=Stats(
+                    count=61889,
+                    bytes=11877258
+                ),
+                tags=[MORPH, SYNTAX],
+                functions=[load_ud_syntag],
+            ),
+        ]
     )
+
 ]
