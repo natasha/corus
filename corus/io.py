@@ -107,7 +107,7 @@ def load_zip_lines(path, name, encoding='utf8'):
                 yield rstrip(line.decode(encoding))
 
 
-def load_zip_texts(path, names, encoding):
+def load_zip_texts(path, names, encoding='utf8'):
     with ZipFile(path) as zip:
         for name in names:
             with zip.open(name) as file:

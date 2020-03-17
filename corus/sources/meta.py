@@ -46,6 +46,7 @@ from . import (
     load_morphoru_corpora,
 
     load_gramru,
+    load_corpora,
 )
 
 
@@ -310,6 +311,28 @@ METAS = [
             bytes=31503713
         ),
         functions=[load_gramru],
+    ),
+
+
+    ########
+    #
+    #   CORPORA
+    #
+    #########
+
+
+    Meta(
+        title='OpenCorpora',
+        url='http://opencorpora.org/',
+        instruction=[
+            'wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.zip'
+        ],
+        stats=Stats(
+            count=4030,
+            bytes=21194932
+        ),
+        tags=[MORPH],
+        functions=[load_corpora],
     ),
 
 

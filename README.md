@@ -378,6 +378,27 @@ Russian Wiki dump
 </tr>
 <tr>
 <td>
+<a href="http://opencorpora.org/">OpenCorpora</a>
+</td>
+<td>
+<a name="load_corpora"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_corpora">load_corpora</a></code>
+</td>
+<td>
+<code>morph</code>
+</td>
+<td align="right">
+4&nbsp;030
+</td>
+<td align="right">
+20.21 Mb
+</td>
+<td>
+<code>wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.zip</code>
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://tatianashavrina.github.io/taiga_site/">Taiga</a>
 </td>
 <td colspan="5">

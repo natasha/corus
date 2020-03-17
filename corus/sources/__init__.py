@@ -16,3 +16,4 @@ from .ria import *  # noqa
 from .ud import *  # noqa
 from .morphoru import *  # noqa
 from .gramru import load_gramru  # noqa
+from .corpora import load_corpora  # noqa
