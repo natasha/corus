@@ -814,6 +814,88 @@ SynTagRus
 <code>wget https://github.com/UniversalDependencies/UD_Russian-SynTagRus/raw/master/ru_syntagrus-ud-train.conllu</code>
 </td>
 </tr>
+<tr>
+<td>
+<a href="https://github.com/dialogue-evaluation/morphoRuEval-2017">morphoRuEval-2017</a>
+</td>
+<td colspan="5">
+</td>
+</tr>
+<tr>
+<td>
+General Internet-Corpus
+</td>
+<td>
+<a name="load_morphoru_gicrya"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_morphoru_gicrya">load_morphoru_gicrya</a></code>
+</td>
+<td>
+<code>morph</code>
+</td>
+<td align="right">
+83&nbsp;148
+</td>
+<td align="right">
+10.58 Mb
+</td>
+<td>
+<code>wget https://github.com/dialogue-evaluation/morphoRuEval-2017/raw/master/GIKRYA_texts_new.zip</code>
+</br>
+<code>unzip GIKRYA_texts_new.zip</code>
+</br>
+<code>rm GIKRYA_texts_new.zip</code>
+</td>
+</tr>
+<tr>
+<td>
+Russian National Corpus
+</td>
+<td>
+<a name="load_morphoru_rnc"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_morphoru_rnc">load_morphoru_rnc</a></code>
+</td>
+<td>
+<code>morph</code>
+</td>
+<td align="right">
+98&nbsp;892
+</td>
+<td align="right">
+12.71 Mb
+</td>
+<td>
+<code>wget https://github.com/dialogue-evaluation/morphoRuEval-2017/raw/master/RNC_texts.rar</code>
+</br>
+<code>unrar x RNC_texts.rar</code>
+</br>
+<code>rm RNC_texts.rar</code>
+</td>
+</tr>
+<tr>
+<td>
+OpenCorpora
+</td>
+<td>
+<a name="load_morphoru_corpora"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_morphoru_corpora">load_morphoru_corpora</a></code>
+</td>
+<td>
+<code>morph</code>
+</td>
+<td align="right">
+38&nbsp;510
+</td>
+<td align="right">
+4.80 Mb
+</td>
+<td>
+<code>wget https://github.com/dialogue-evaluation/morphoRuEval-2017/raw/master/OpenCorpora_Texts.rar</code>
+</br>
+<code>unrar x OpenCorpora_Texts.rar</code>
+</br>
+<code>rm OpenCorpora_Texts.rar</code>
+</td>
+</tr>
 </table>
 <!--- metas --->
 

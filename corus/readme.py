@@ -8,7 +8,7 @@ from .io import (
 )
 
 
-COMMANDS = ('wget', 'unzip', 'rm', 'tar')
+COMMANDS = ('wget', 'unzip', 'unrar', 'rm', 'tar')
 
 KB = 1024
 MB = 1024 * KB

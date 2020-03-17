@@ -1,0 +1,29 @@
+==> blogs.xhtml <==
+==newfile==
+	Кстати	кстати	H	_	_
+	о	о	ADP	_	_
+	вопросе	вопрос	NOUN	Animacy=Inan|Case=Loc|Gender=Masc|Number=Sing	_
+	"	"	PUNCT	_	_
+	Пушкин	Пушкин	NOUN	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	NameType=Sur
+	и	и	CONJ	_	_
+	святитель	святитель	NOUN	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	_
+	Филарет	Филарет	NOUN	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	NameType=Giv
+	,	,	PUNCT	_	_
+	митрополит	митрополит	NOUN	Animacy=Anim|Case=Nom|Gender=Masc|Number=Sing	_
+	Московский	московский	ADJ	Case=Nom|Gender=Masc|Number=Sing|Variant=Full	_
+	"...	"...	PUNCT	_	_
+	ты	ты	PRON	Case=Nom|Number=Sing|Person=2	_
+	надумал	надумать	VERB	Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	Subcat=Tran|Aspect=Perf
+	,	,	PUNCT	_	_
+	что	что	PRON	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	_
+	можно	можно	ADV	Degree=Pos	Predic=Yes
+	сказать	сказать	VERB	VerbForm=Inf|Voice=Act	Subcat=Tran|Aspect=Perf
+	?	?	PUNCT	_	_
+
+	Да	да	PART	_	_
+	!	!	PUNCT	_	_
+
+	И	и	CONJ	_	_
+	чтооо	что	PRON	Animacy=Inan|Case=Acc|Gender=Neut|Number=Sing	Typo=Yes
+	же	же	PART	_	_
+	?	?	PUNCT	_	_

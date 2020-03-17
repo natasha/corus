@@ -14,3 +14,4 @@ from .wiki import load_wiki  # noqa
 from .ods import *  # noqa
 from .ria import *  # noqa
 from .ud import *  # noqa
+from .morphoru import *  # noqa

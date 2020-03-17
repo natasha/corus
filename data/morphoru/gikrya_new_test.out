@@ -1,0 +1,12 @@
+1	А	а	CONJ	_
+2	потом	потом	ADV	Degree=Pos
+3	опять	опять	ADV	Degree=Pos
+4	появлялись	появляться	VERB	Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Mid
+5	эсэсовцы	эсэсовец	NOUN	Animacy=Anim|Case=Nom|Gender=Masc|Number=Plur
+6	.	.	PUNCT	_
+
+1	Вокруг	вокруг	ADP	_
+2	него	он	PRON	Case=Gen|Gender=Masc|Number=Sing|Person=3
+3	вспыхнул	вспыхнуть	VERB	Gender=Masc|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act
+4	зеленый	зелёный	ADJ	Case=Nom|Degree=Pos|Gender=Masc|Number=Sing
+5	свет	свет	NOUN	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing

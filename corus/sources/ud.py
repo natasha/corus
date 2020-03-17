@@ -53,6 +53,10 @@ def _none(value):
     return value
 
 
+def parse_row(line):
+    return [_none(_) for _ in line.split('\t')]
+
+
 def parse_attr(line):
     # newdoc
     # title = instagram-2019
@@ -68,8 +72,7 @@ def parse_attr(line):
 
 
 def parse_token(line):
-    parts = [_none(_) for _ in line.split('\t')]
-    id, text, lemma, pos, _, feats, head_id, rel, _, _ = parts
+    id, text, lemma, pos, _, feats, head_id, rel, _, _ = parse_row(line)
     feats = dict(parse_feats(feats))
     return UDToken(id, text, lemma, pos, feats, head_id, rel)
 

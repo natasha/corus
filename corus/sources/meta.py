@@ -39,7 +39,11 @@ from . import (
     load_ud_gsd,
     load_ud_taiga,
     load_ud_pud,
-    load_ud_syntag
+    load_ud_syntag,
+
+    load_morphoru_gicrya,
+    load_morphoru_rnc,
+    load_morphoru_corpora,
 )
 
 
@@ -559,6 +563,61 @@ METAS = [
                 functions=[load_ud_syntag],
             ),
         ]
-    )
+    ),
 
+    #############
+    #
+    #    UD
+    #
+    #########
+
+
+    Group(
+        title='morphoRuEval-2017',
+        url='https://github.com/dialogue-evaluation/morphoRuEval-2017',
+        metas=[
+            Meta(
+                title='General Internet-Corpus',
+                instruction=[
+                    'wget https://github.com/dialogue-evaluation/morphoRuEval-2017/raw/master/GIKRYA_texts_new.zip',
+                    'unzip GIKRYA_texts_new.zip',
+                    'rm GIKRYA_texts_new.zip'
+                ],
+                stats=Stats(
+                    count=83148,
+                    bytes=11091464
+                ),
+                tags=[MORPH],
+                functions=[load_morphoru_gicrya],
+            ),
+            Meta(
+                title='Russian National Corpus',
+                instruction=[
+                    'wget https://github.com/dialogue-evaluation/morphoRuEval-2017/raw/master/RNC_texts.rar',
+                    'unrar x RNC_texts.rar',
+                    'rm RNC_texts.rar'
+                ],
+                stats=Stats(
+                    count=98892,
+                    bytes=13330673
+                ),
+                tags=[MORPH],
+                functions=[load_morphoru_rnc],
+            ),
+            Meta(
+                title='OpenCorpora',
+                instruction=[
+                    'wget https://github.com/dialogue-evaluation/morphoRuEval-2017/raw/master/OpenCorpora_Texts.rar',
+                    'unrar x OpenCorpora_Texts.rar',
+                    'rm OpenCorpora_Texts.rar'
+                ],
+                stats=Stats(
+                    count=38510,
+                    bytes=5028255
+                ),
+                tags=[MORPH],
+                functions=[load_morphoru_corpora],
+            ),
+        ]
+    ),
 ]
