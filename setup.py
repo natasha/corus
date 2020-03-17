@@ -19,7 +19,6 @@ setup(
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
-        'Topic :: Scientific/Engineering :: Artificial Intelligence',
     ],
     keywords='corpora, russian, nlp, datasets',
     install_requires=[],
