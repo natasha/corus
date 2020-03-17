@@ -44,6 +44,8 @@ from . import (
     load_morphoru_gicrya,
     load_morphoru_rnc,
     load_morphoru_corpora,
+
+    load_gramru,
 )
 
 
@@ -282,6 +284,32 @@ METAS = [
             bytes=13895798340
         ),
         functions=[load_wiki],
+    ),
+
+
+    ########
+    #
+    #   GRAMRU
+    #
+    #########
+
+
+    Meta(
+        title='GramEval2020',
+        url='https://github.com/dialogue-evaluation/GramEval2020',
+        instruction=[
+            'wget https://github.com/dialogue-evaluation/GramEval2020/archive/master.zip',
+            'unzip master.zip',
+            'mv GramEval2020-master/dataTrain train',
+            'mv GramEval2020-master/dataOpenTest dev',
+            'rm -r master.zip GramEval2020-master',
+            'wget https://github.com/AlexeySorokin/GramEval2020/raw/master/data/GramEval_private_test.conllu'
+        ],
+        stats=Stats(
+            count=162372,
+            bytes=31503713
+        ),
+        functions=[load_gramru],
     ),
 
 

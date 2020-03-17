@@ -1,0 +1,28 @@
+1	А	а	CCONJ	_	_	5	cc	_	_
+2	потом	потом	ADV	_	Degree=Pos	5	advmod	_	_
+3	мы	мы	PRON	_	Case=Nom|Number=Plur|Person=1	5	nsubj	_	_
+4	все	весь	DET	_	Case=Nom|Number=Plur	3	det	_	_
+5	погрузились	погружаться	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Mid	0	root	_	_
+6	в	в	ADP	_	_	7	case	_	_
+7	автобус	автобус	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	5	obl	_	_
+8	и	и	CCONJ	_	_	9	cc	_	_
+9	поехали	поехать	VERB	_	Aspect=Perf|Mood=Ind|Number=Plur|Tense=Past|VerbForm=Fin|Voice=Act	5	conj	_	_
+10	их	они	PRON	_	Case=Acc|Number=Plur|Person=3	9	obj	_	_
+11	в	в	ADP	_	_	12	case	_	_
+12	аэропорт	аэропорт	NOUN	_	Animacy=Inan|Case=Acc|Gender=Masc|Number=Sing	13	obl	_	_
+13	провожать	провожать	VERB	_	Aspect=Imp|VerbForm=Inf|Voice=Act	9	xcomp	_	_
+14	.	.	PUNCT	_	_	13	punct	_	_
+
+1	Маменька	маменька	PROPN	_	Animacy=Anim|Case=Nom|Gender=Fem|Number=Sing	2	nsubj	_	_
+2	сбежала	сбежать	VERB	_	Aspect=Perf|Gender=Fem|Mood=Ind|Number=Sing|Tense=Past|VerbForm=Fin|Voice=Act	0	root	_	_
+3	?	?	PUNCT	_	_	2	punct	_	_
+
+1	Писано	писать	VERB	_	Aspect=Perf|Gender=Neut|Number=Sing|Tense=Past|Variant=Short|VerbForm=Part|Voice=Pass	0	root	_	_
+2	въ	в	PROPN	_	Animacy=Inan|Case=Nom|Gender=Masc|Number=Sing	1	nsubj:pass	_	_
+3	нашемъ	нашемъ	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	2	nmod	_	_
+4	строеніи	строеніь	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	3	nmod	_	_
+5	въ	в	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	4	nmod	_	_
+6	Воскресенскомъ	Воскресенскомъ	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	5	nmod	_	_
+7	монастырѣ	монастырѣ	NOUN	_	Animacy=Inan|Case=Gen|Gender=Fem|Number=Sing	2	nmod	_	_
+8	въ	в	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	7	nmod	_	_
+9	Новомъ	Новомъ	PROPN	_	Animacy=Inan|Case=Gen|Gender=Masc|Number=Sing	8	nmod	_	_

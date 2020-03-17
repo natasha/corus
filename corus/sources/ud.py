@@ -96,7 +96,7 @@ def parse_ud(lines):
                 token = parse_token(line)
                 tokens.append(token)
 
-        id = attrs.pop('sent_id')
+        id = attrs.pop('sent_id', None)
         text = attrs.pop('text', None)
         yield UDSent(id, text, attrs, tokens)
 

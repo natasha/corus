@@ -348,6 +348,36 @@ Russian Wiki dump
 </tr>
 <tr>
 <td>
+<a href="https://github.com/dialogue-evaluation/GramEval2020">GramEval2020</a>
+</td>
+<td>
+<a name="load_gramru"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_gramru">load_gramru</a></code>
+</td>
+<td>
+</td>
+<td align="right">
+162&nbsp;372
+</td>
+<td align="right">
+30.04 Mb
+</td>
+<td>
+<code>wget https://github.com/dialogue-evaluation/GramEval2020/archive/master.zip</code>
+</br>
+<code>unzip master.zip</code>
+</br>
+<code>mv GramEval2020-master/dataTrain train</code>
+</br>
+<code>mv GramEval2020-master/dataOpenTest dev</code>
+</br>
+<code>rm -r master.zip GramEval2020-master</code>
+</br>
+<code>wget https://github.com/AlexeySorokin/GramEval2020/raw/master/data/GramEval_private_test.conllu</code>
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://tatianashavrina.github.io/taiga_site/">Taiga</a>
 </td>
 <td colspan="5">
