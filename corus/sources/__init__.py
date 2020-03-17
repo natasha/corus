@@ -17,3 +17,6 @@ from .ud import *  # noqa
 from .morphoru import *  # noqa
 from .gramru import load_gramru  # noqa
 from .corpora import load_corpora  # noqa
+from .russe import *  # noqa
+from .toloka import load_toloka_lrwc  # noqa
+from .simlex import load_simlex  # noqa

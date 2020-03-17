@@ -47,6 +47,14 @@ from . import (
 
     load_gramru,
     load_corpora,
+
+    load_russe_hj,
+    load_russe_rt,
+    load_russe_ae,
+
+    load_toloka_lrwc,
+
+    load_simlex,
 )
 
 
@@ -96,6 +104,8 @@ LIT = 'lit'
 SOCIAL = 'social'
 MORPH = 'morph'
 SYNTAX = 'syntax'
+EMB = 'emb'
+SIM = 'sim'
 
 METAS = [
     Meta(
@@ -333,6 +343,24 @@ METAS = [
         ),
         tags=[MORPH],
         functions=[load_corpora],
+    ),
+
+
+    ########
+    #
+    #   SIMLEX
+    #
+    ##########
+
+
+    Meta(
+        title='RusVectores SimLex-965',
+        instruction=[
+            'wget https://rusvectores.org/static/testsets/ru_simlex965_tagged.tsv',
+            'wget https://rusvectores.org/static/testsets/ru_simlex965.tsv'
+        ],
+        tags=[EMB, SIM],
+        functions=[load_simlex],
     ),
 
 
@@ -616,6 +644,7 @@ METAS = [
         ]
     ),
 
+
     #############
     #
     #    UD
@@ -668,6 +697,72 @@ METAS = [
                 ),
                 tags=[MORPH],
                 functions=[load_morphoru_corpora],
+            ),
+        ]
+    ),
+
+
+    #############
+    #
+    #   RUSSE SEM
+    #
+    #########
+
+
+    Group(
+        title='RUSSE Russian Semantic Relatedness',
+        url='https://russe.nlpub.org/downloads/',
+        metas=[
+            Meta(
+                title='HJ: Human Judgements of Word Pairs',
+                instruction=[
+                    'wget https://github.com/nlpub/russe-evaluation/raw/master/russe/evaluation/hj.csv'
+                ],
+                tags=[EMB, SIM],
+                functions=[load_russe_hj],
+            ),
+            Meta(
+                title='RT: Synonyms and Hypernyms from the Thesaurus RuThes',
+                instruction=[
+                    'wget https://raw.githubusercontent.com/nlpub/russe-evaluation/master/russe/evaluation/rt.csv'
+                ],
+                tags=[EMB, SIM],
+                functions=[load_russe_rt],
+            ),
+            Meta(
+                title='AE: Cognitive Associations from the Sociation.org Experiment',
+                instruction=[
+                    'wget https://github.com/nlpub/russe-evaluation/raw/master/russe/evaluation/ae-train.csv',
+                    'wget https://github.com/nlpub/russe-evaluation/raw/master/russe/evaluation/ae-test.csv',
+                    'wget https://raw.githubusercontent.com/nlpub/russe-evaluation/master/russe/evaluation/ae2.csv'
+                ],
+                tags=[EMB, SIM],
+                functions=[load_russe_ae],
+            ),
+        ]
+    ),
+
+
+    #############
+    #
+    #   TOLOKA
+    #
+    #########
+
+
+    Group(
+        title='Toloka Datasets',
+        url='https://toloka.yandex.ru/datasets/',
+        metas=[
+            Meta(
+                title='Lexical Relations from the Wisdom of the Crowd (LRWC)',
+                instruction=[
+                    'wget https://tlk.s3.yandex.net/dataset/LRWC.zip',
+                    'unzip LRWC.zip',
+                    'rm LRWC.zip'
+                ],
+                tags=[EMB, SIM],
+                functions=[load_toloka_lrwc],
             ),
         ]
     ),

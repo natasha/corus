@@ -399,6 +399,28 @@ Russian Wiki dump
 </tr>
 <tr>
 <td>
+RusVectores SimLex-965
+</td>
+<td>
+<a name="load_simlex"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_simlex">load_simlex</a></code>
+</td>
+<td>
+<code>emb</code>
+<code>sim</code>
+</td>
+<td align="right">
+</td>
+<td align="right">
+</td>
+<td>
+<code>wget https://rusvectores.org/static/testsets/ru_simlex965_tagged.tsv</code>
+</br>
+<code>wget https://rusvectores.org/static/testsets/ru_simlex965.tsv</code>
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://tatianashavrina.github.io/taiga_site/">Taiga</a>
 </td>
 <td colspan="5">
@@ -945,6 +967,108 @@ OpenCorpora
 <code>unrar x OpenCorpora_Texts.rar</code>
 </br>
 <code>rm OpenCorpora_Texts.rar</code>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://russe.nlpub.org/downloads/">RUSSE Russian Semantic Relatedness</a>
+</td>
+<td colspan="5">
+</td>
+</tr>
+<tr>
+<td>
+HJ: Human Judgements of Word Pairs
+</td>
+<td>
+<a name="load_russe_hj"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_russe_hj">load_russe_hj</a></code>
+</td>
+<td>
+<code>emb</code>
+<code>sim</code>
+</td>
+<td align="right">
+</td>
+<td align="right">
+</td>
+<td>
+<code>wget https://github.com/nlpub/russe-evaluation/raw/master/russe/evaluation/hj.csv</code>
+</td>
+</tr>
+<tr>
+<td>
+RT: Synonyms and Hypernyms from the Thesaurus RuThes
+</td>
+<td>
+<a name="load_russe_rt"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_russe_rt">load_russe_rt</a></code>
+</td>
+<td>
+<code>emb</code>
+<code>sim</code>
+</td>
+<td align="right">
+</td>
+<td align="right">
+</td>
+<td>
+<code>wget https://raw.githubusercontent.com/nlpub/russe-evaluation/master/russe/evaluation/rt.csv</code>
+</td>
+</tr>
+<tr>
+<td>
+AE: Cognitive Associations from the Sociation.org Experiment
+</td>
+<td>
+<a name="load_russe_ae"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_russe_ae">load_russe_ae</a></code>
+</td>
+<td>
+<code>emb</code>
+<code>sim</code>
+</td>
+<td align="right">
+</td>
+<td align="right">
+</td>
+<td>
+<code>wget https://github.com/nlpub/russe-evaluation/raw/master/russe/evaluation/ae-train.csv</code>
+</br>
+<code>wget https://github.com/nlpub/russe-evaluation/raw/master/russe/evaluation/ae-test.csv</code>
+</br>
+<code>wget https://raw.githubusercontent.com/nlpub/russe-evaluation/master/russe/evaluation/ae2.csv</code>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://toloka.yandex.ru/datasets/">Toloka Datasets</a>
+</td>
+<td colspan="5">
+</td>
+</tr>
+<tr>
+<td>
+Lexical Relations from the Wisdom of the Crowd (LRWC)
+</td>
+<td>
+<a name="load_toloka_lrwc"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_toloka_lrwc">load_toloka_lrwc</a></code>
+</td>
+<td>
+<code>emb</code>
+<code>sim</code>
+</td>
+<td align="right">
+</td>
+<td align="right">
+</td>
+<td>
+<code>wget https://tlk.s3.yandex.net/dataset/LRWC.zip</code>
+</br>
+<code>unzip LRWC.zip</code>
+</br>
+<code>rm LRWC.zip</code>
 </td>
 </tr>
 </table>

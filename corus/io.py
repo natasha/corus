@@ -135,6 +135,12 @@ def skip_header(rows):
     return next(rows)
 
 
+def dict_csv(rows):
+    header = next(rows)
+    for row in rows:
+        yield dict(zip(header, row))
+
+
 #########
 #
 #    JSONL
