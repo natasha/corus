@@ -66,7 +66,7 @@ def format_metas_(metas, nbviewer=None):
 
         yield '<td>'
         if meta.url:
-            yield f'<a href="{meta.url}">{meta.title}</a>'
+            yield '<a href="%s">%s</a>' % (meta.url, meta.title)
         else:
             yield meta.title
         yield '</td>'
@@ -77,18 +77,23 @@ def format_metas_(metas, nbviewer=None):
                 if index > 0:
                     yield '</br>'
                 name = function.__name__
-                yield f'<a name="{name}"></a>'
+                yield '<a name="%s"></a>' % name
                 if nbviewer:
-                    yield f'<code><a href="{nbviewer}#{name}">{name}</a></code>'
-                    yield f'<a href="#{name}"><code>#</code></a>'
+                    yield (
+                        '<code><a href="{nbviewer}#{name}">{name}</a></code>'.format(
+                            nbviewer=nbviewer,
+                            name=name
+                        )
+                    )
+                    yield '<a href="#%s"><code>#</code></a>' % name
                 else:
-                    yield f'<code><a href="#{name}">{name}</a></code>'
+                    yield '<code><a href="#{name}">{name}</a></code>'.format(name=name)
             yield '</td>'
 
             yield '<td>'
             if meta.tags:
                 for tag in meta.tags:
-                    yield f'<code>{tag}</code>'
+                    yield '<code>%s</code>' % tag
             yield '</td>'
 
             yield '<td align="right">'
@@ -115,7 +120,7 @@ def format_metas_(metas, nbviewer=None):
             if index > 0:
                 yield '</br>'
             if is_command(step):
-                yield f'<code>{step}</code>'
+                yield '<code>%s</code>' % step
             else:
                 yield step
         yield '</td>'
