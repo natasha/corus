@@ -69,7 +69,7 @@ $ pip install corus
 <td>
 <a name="load_lenta"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_lenta">load_lenta</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_lenta">#</a>
+<a href="#load_lenta"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -91,7 +91,7 @@ $ pip install corus
 <td>
 <a name="load_librusec"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_librusec">load_librusec</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_librusec">#</a>
+<a href="#load_librusec"><code>#</code></a>
 </td>
 <td>
 <code>lit</code>
@@ -116,11 +116,11 @@ Dump of lib.rus.ec prepared for RUSSE workshop
 <td>
 <a name="load_ria_raw"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ria_raw">load_ria_raw</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ria_raw">#</a>
+<a href="#load_ria_raw"><code>#</code></a>
 </br>
 <a name="load_ria"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ria">load_ria</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ria">#</a>
+<a href="#load_ria"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -142,7 +142,7 @@ Dump of lib.rus.ec prepared for RUSSE workshop
 <td>
 <a name="load_factru"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_factru">load_factru</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_factru">#</a>
+<a href="#load_factru"><code>#</code></a>
 </td>
 <td>
 <code>ner</code>
@@ -172,7 +172,7 @@ Manual PER, LOC, ORG markup prepared for 2016 Dialog competition
 <td>
 <a name="load_gareev"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_gareev">load_gareev</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_gareev">#</a>
+<a href="#load_gareev"><code>#</code></a>
 </td>
 <td>
 <code>ner</code>
@@ -202,7 +202,7 @@ Email Rinat Gareev (gareev-rm@yandex.ru) ask for dataset
 <td>
 <a name="load_ne5"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ne5">load_ne5</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ne5">#</a>
+<a href="#load_ne5"><code>#</code></a>
 </td>
 <td>
 <code>ner</code>
@@ -232,7 +232,7 @@ News articles with manual PER, LOC, ORG markup
 <td>
 <a name="load_wikiner"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_wikiner">load_wikiner</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_wikiner">#</a>
+<a href="#load_wikiner"><code>#</code></a>
 </td>
 <td>
 <code>ner</code>
@@ -257,7 +257,7 @@ Sentences from Wiki auto annotated with PER, LOC, ORG tags
 <td>
 <a name="load_bsnlp"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_bsnlp">load_bsnlp</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_bsnlp">#</a>
+<a href="#load_bsnlp"><code>#</code></a>
 </td>
 <td>
 <code>ner</code>
@@ -290,7 +290,7 @@ Markup prepared for 2019 BSNLP Shared Task
 <td>
 <a name="load_persons"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_persons">load_persons</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_persons">#</a>
+<a href="#load_persons"><code>#</code></a>
 </td>
 <td>
 <code>ner</code>
@@ -316,7 +316,7 @@ Same as Collection5, only PER markup + normalized names
 <td>
 <a name="load_mokoron"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_mokoron">load_mokoron</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_mokoron">#</a>
+<a href="#load_mokoron"><code>#</code></a>
 </td>
 <td>
 <code>social</code>
@@ -341,7 +341,7 @@ Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql
 <td>
 <a name="load_wiki"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_wiki">load_wiki</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_wiki">#</a>
+<a href="#load_wiki"><code>#</code></a>
 </td>
 <td>
 </td>
@@ -365,7 +365,7 @@ Russian Wiki dump
 <td>
 <a name="load_gramru"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_gramru">load_gramru</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_gramru">#</a>
+<a href="#load_gramru"><code>#</code></a>
 </td>
 <td>
 </td>
@@ -396,7 +396,7 @@ Russian Wiki dump
 <td>
 <a name="load_corpora"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_corpora">load_corpora</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_corpora">#</a>
+<a href="#load_corpora"><code>#</code></a>
 </td>
 <td>
 <code>morph</code>
@@ -418,7 +418,7 @@ RusVectores SimLex-965
 <td>
 <a name="load_simlex"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_simlex">load_simlex</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_simlex">#</a>
+<a href="#load_simlex"><code>#</code></a>
 </td>
 <td>
 <code>emb</code>
@@ -454,7 +454,7 @@ Arzamas
 <td>
 <a name="load_taiga_arzamas"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_arzamas">load_taiga_arzamas</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_arzamas">#</a>
+<a href="#load_taiga_arzamas"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -475,7 +475,7 @@ Fontanka
 <td>
 <a name="load_taiga_fontanka"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_fontanka">load_taiga_fontanka</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_fontanka">#</a>
+<a href="#load_taiga_fontanka"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -496,7 +496,7 @@ Interfax
 <td>
 <a name="load_taiga_interfax"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_interfax">load_taiga_interfax</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_interfax">#</a>
+<a href="#load_taiga_interfax"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -517,7 +517,7 @@ KP
 <td>
 <a name="load_taiga_kp"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_kp">load_taiga_kp</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_kp">#</a>
+<a href="#load_taiga_kp"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -538,7 +538,7 @@ Lenta
 <td>
 <a name="load_taiga_lenta"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_lenta">load_taiga_lenta</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_lenta">#</a>
+<a href="#load_taiga_lenta"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -559,7 +559,7 @@ Taiga/N+1
 <td>
 <a name="load_taiga_nplus1"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_nplus1">load_taiga_nplus1</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_nplus1">#</a>
+<a href="#load_taiga_nplus1"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -580,7 +580,7 @@ Magazines
 <td>
 <a name="load_taiga_magazines"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_magazines">load_taiga_magazines</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_magazines">#</a>
+<a href="#load_taiga_magazines"><code>#</code></a>
 </td>
 <td>
 </td>
@@ -600,7 +600,7 @@ Subtitles
 <td>
 <a name="load_taiga_subtitles"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_subtitles">load_taiga_subtitles</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_subtitles">#</a>
+<a href="#load_taiga_subtitles"><code>#</code></a>
 </td>
 <td>
 </td>
@@ -620,7 +620,7 @@ Social
 <td>
 <a name="load_taiga_social"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_social">load_taiga_social</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_social">#</a>
+<a href="#load_taiga_social"><code>#</code></a>
 </td>
 <td>
 <code>social</code>
@@ -641,7 +641,7 @@ Proza
 <td>
 <a name="load_taiga_proza"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_proza">load_taiga_proza</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_proza">#</a>
+<a href="#load_taiga_proza"><code>#</code></a>
 </td>
 <td>
 <code>lit</code>
@@ -662,7 +662,7 @@ Stihi
 <td>
 <a name="load_taiga_stihi"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_stihi">load_taiga_stihi</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_taiga_stihi">#</a>
+<a href="#load_taiga_stihi"><code>#</code></a>
 </td>
 <td>
 </td>
@@ -690,7 +690,7 @@ Lenta
 <td>
 <a name="load_buriy_lenta"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_lenta">load_buriy_lenta</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_lenta">#</a>
+<a href="#load_buriy_lenta"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -712,7 +712,7 @@ News
 <td>
 <a name="load_buriy_news"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_news">load_buriy_news</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_news">#</a>
+<a href="#load_buriy_news"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -741,7 +741,7 @@ Webhose
 <td>
 <a name="load_buriy_webhose"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_webhose">load_buriy_webhose</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_webhose">#</a>
+<a href="#load_buriy_webhose"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -774,7 +774,7 @@ Interfax
 <td>
 <a name="load_ods_interfax"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_interfax">load_ods_interfax</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_interfax">#</a>
+<a href="#load_ods_interfax"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -796,7 +796,7 @@ Gazeta
 <td>
 <a name="load_ods_gazeta"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_gazeta">load_ods_gazeta</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_gazeta">#</a>
+<a href="#load_ods_gazeta"><code>#</code></a>
 </td>
 <td>
 <code>news</code>
@@ -825,7 +825,7 @@ GSD
 <td>
 <a name="load_ud_gsd"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_gsd">load_ud_gsd</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_gsd">#</a>
+<a href="#load_ud_gsd"><code>#</code></a>
 </td>
 <td>
 <code>morph</code>
@@ -852,7 +852,7 @@ Taiga
 <td>
 <a name="load_ud_taiga"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_taiga">load_ud_taiga</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_taiga">#</a>
+<a href="#load_ud_taiga"><code>#</code></a>
 </td>
 <td>
 <code>morph</code>
@@ -879,7 +879,7 @@ PUD
 <td>
 <a name="load_ud_pud"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_pud">load_ud_pud</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_pud">#</a>
+<a href="#load_ud_pud"><code>#</code></a>
 </td>
 <td>
 <code>morph</code>
@@ -902,7 +902,7 @@ SynTagRus
 <td>
 <a name="load_ud_syntag"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_syntag">load_ud_syntag</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ud_syntag">#</a>
+<a href="#load_ud_syntag"><code>#</code></a>
 </td>
 <td>
 <code>morph</code>
@@ -936,7 +936,7 @@ General Internet-Corpus
 <td>
 <a name="load_morphoru_gicrya"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_morphoru_gicrya">load_morphoru_gicrya</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_morphoru_gicrya">#</a>
+<a href="#load_morphoru_gicrya"><code>#</code></a>
 </td>
 <td>
 <code>morph</code>
@@ -962,7 +962,7 @@ Russian National Corpus
 <td>
 <a name="load_morphoru_rnc"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_morphoru_rnc">load_morphoru_rnc</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_morphoru_rnc">#</a>
+<a href="#load_morphoru_rnc"><code>#</code></a>
 </td>
 <td>
 <code>morph</code>
@@ -988,7 +988,7 @@ OpenCorpora
 <td>
 <a name="load_morphoru_corpora"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_morphoru_corpora">load_morphoru_corpora</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_morphoru_corpora">#</a>
+<a href="#load_morphoru_corpora"><code>#</code></a>
 </td>
 <td>
 <code>morph</code>
@@ -1021,7 +1021,7 @@ HJ: Human Judgements of Word Pairs
 <td>
 <a name="load_russe_hj"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_russe_hj">load_russe_hj</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_russe_hj">#</a>
+<a href="#load_russe_hj"><code>#</code></a>
 </td>
 <td>
 <code>emb</code>
@@ -1042,7 +1042,7 @@ RT: Synonyms and Hypernyms from the Thesaurus RuThes
 <td>
 <a name="load_russe_rt"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_russe_rt">load_russe_rt</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_russe_rt">#</a>
+<a href="#load_russe_rt"><code>#</code></a>
 </td>
 <td>
 <code>emb</code>
@@ -1063,7 +1063,7 @@ AE: Cognitive Associations from the Sociation.org Experiment
 <td>
 <a name="load_russe_ae"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_russe_ae">load_russe_ae</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_russe_ae">#</a>
+<a href="#load_russe_ae"><code>#</code></a>
 </td>
 <td>
 <code>emb</code>
@@ -1095,7 +1095,7 @@ Lexical Relations from the Wisdom of the Crowd (LRWC)
 <td>
 <a name="load_toloka_lrwc"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_toloka_lrwc">load_toloka_lrwc</a></code>
-<a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_toloka_lrwc">#</a>
+<a href="#load_toloka_lrwc"><code>#</code></a>
 </td>
 <td>
 <code>emb</code>

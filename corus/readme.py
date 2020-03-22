@@ -51,7 +51,7 @@ def unfold_metas(items):
             yield False, item
 
 
-def format_metas_(metas, url):
+def format_metas_(metas, nbviewer=None):
     yield '<table>'
     yield '<tr>'
     yield '<th>Dataset</th>'
@@ -66,7 +66,7 @@ def format_metas_(metas, url):
 
         yield '<td>'
         if meta.url:
-            yield '<a href="%s">%s</a>' % (meta.url, meta.title)
+            yield f'<a href="{meta.url}">{meta.title}</a>'
         else:
             yield meta.title
         yield '</td>'
@@ -77,19 +77,18 @@ def format_metas_(metas, url):
                 if index > 0:
                     yield '</br>'
                 name = function.__name__
-                # to refer to cells in readme table
-                yield '<a name="%s"></a>' % name
-                anchor = '#' + name
-                if url:
-                    anchor = url + anchor
-                yield '<code><a href="%s">%s</a></code>' % (anchor, name)
-                yield '<a href="%s">#</a>' % anchor
+                yield f'<a name="{name}"></a>'
+                if nbviewer:
+                    yield f'<code><a href="{nbviewer}#{name}">{name}</a></code>'
+                    yield f'<a href="#{name}"><code>#</code></a>'
+                else:
+                    yield f'<code><a href="#{name}">{name}</a></code>'
             yield '</td>'
 
             yield '<td>'
             if meta.tags:
                 for tag in meta.tags:
-                    yield '<code>%s</code>' % tag
+                    yield f'<code>{tag}</code>'
             yield '</td>'
 
             yield '<td align="right">'
@@ -116,7 +115,7 @@ def format_metas_(metas, url):
             if index > 0:
                 yield '</br>'
             if is_command(step):
-                yield '<code>%s</code>' % step
+                yield f'<code>{step}</code>'
             else:
                 yield step
         yield '</td>'
