@@ -83,6 +83,7 @@ def format_metas_(metas, url):
                 if url:
                     anchor = url + anchor
                 yield '<code><a href="%s">%s</a></code>' % (anchor, name)
+                yield '<a href="%s">#</a>' % anchor
             yield '</td>'
 
             yield '<td>'
