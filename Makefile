@@ -10,7 +10,7 @@ version:
 	bumpversion minor
 
 wheel:
-	python setup.py bdist_wheel
+	python setup.py bdist_wheel sdist
 
 upload:
 	twine upload dist/*
