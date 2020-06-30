@@ -1120,6 +1120,7 @@ Lexical Relations from the Wisdom of the Crowd (LRWC)
 
 - Chat — https://telegram.me/natural_language_processing
 - Issues — https://github.com/natasha/corus/issues
+- Commercial support — https://lab.alexkuk.ru
 
 ## Development
 
