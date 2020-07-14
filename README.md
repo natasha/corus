@@ -94,7 +94,7 @@ $ pip install corus
 <a href="#load_librusec"><code>#</code></a>
 </td>
 <td>
-<code>lit</code>
+<code>fiction</code>
 </td>
 <td align="right">
 301&nbsp;871
@@ -644,7 +644,7 @@ Proza
 <a href="#load_taiga_proza"><code>#</code></a>
 </td>
 <td>
-<code>lit</code>
+<code>fiction</code>
 </td>
 <td align="right">
 1&nbsp;732&nbsp;434

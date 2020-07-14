@@ -100,7 +100,7 @@ class Stats(Record):
 
 NER = 'ner'
 NEWS = 'news'
-LIT = 'lit'
+FICTION = 'fiction'
 SOCIAL = 'social'
 MORPH = 'morph'
 SYNTAX = 'syntax'
@@ -132,7 +132,7 @@ METAS = [
         instruction=[
             'wget http://panchenko.me/data/russe/librusec_fb2.plain.gz'
         ],
-        tags=[LIT],
+        tags=[FICTION],
         functions=[load_librusec]
     ),
     Meta(
@@ -465,7 +465,7 @@ METAS = [
                     count=1732434,
                     bytes=41067043857
                 ),
-                tags=[LIT],
+                tags=[FICTION],
                 functions=[load_taiga_proza]
             ),
             Meta(
