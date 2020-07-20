@@ -494,6 +494,7 @@ METAS = [
         metas=[
             Meta(
                 title='Lenta',
+                description='Consider using dump by @yutkin, it has more recent snapshot of Lenta.ru'
                 instruction=[
                     'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/lenta.tar.bz2',
                 ],
