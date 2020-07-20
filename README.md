@@ -702,6 +702,9 @@ Lenta
 1.57 Gb
 </td>
 <td>
+Consider using dump by @yutkin, it has more recent snapshot of Lenta.ru
+</br>
+</br>
 <code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/lenta.tar.bz2</code>
 </td>
 </tr>
@@ -756,7 +759,7 @@ Webhose
 Dump from webhose.io, 300 sources for one month.
 </br>
 </br>
-<code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/stress.tar.gz</code>
+<code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/webhose-2016.tar.bz2</code>
 </td>
 </tr>
 <tr>
