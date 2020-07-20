@@ -523,7 +523,7 @@ METAS = [
                 title='Webhose',
                 description='Dump from webhose.io, 300 sources for one month.',
                 instruction=[
-                    'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/stress.tar.gz'
+                    'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/webhose-2016.tar.bz2'
                 ],
                 stats=Stats(
                     count=285965,
