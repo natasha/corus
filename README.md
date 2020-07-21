@@ -685,31 +685,6 @@ Several Russian news datasets from webhose.io, lenta.ru and other news sites.
 </tr>
 <tr>
 <td>
-Lenta
-</td>
-<td>
-<a name="load_buriy_lenta"></a>
-<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_buriy_lenta">load_buriy_lenta</a></code>
-<a href="#load_buriy_lenta"><code>#</code></a>
-</td>
-<td>
-<code>news</code>
-</td>
-<td align="right">
-699&nbsp;777
-</td>
-<td align="right">
-1.57 Gb
-</td>
-<td>
-Consider using dump by @yutkin, it has more recent snapshot of Lenta.ru
-</br>
-</br>
-<code>wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/lenta.tar.bz2</code>
-</td>
-</tr>
-<tr>
-<td>
 News
 </td>
 <td>

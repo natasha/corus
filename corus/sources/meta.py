@@ -23,7 +23,6 @@ from . import (
     load_taiga_proza,
     load_taiga_stihi,
 
-    load_buriy_lenta,
     load_buriy_news,
     load_buriy_webhose,
 
@@ -492,19 +491,6 @@ METAS = [
         url='https://github.com/buriy/russian-nlp-datasets/releases',
         description='Several Russian news datasets from webhose.io, lenta.ru and other news sites.',
         metas=[
-            Meta(
-                title='Lenta',
-                description='Consider using dump by @yutkin, it has more recent snapshot of Lenta.ru',
-                instruction=[
-                    'wget https://github.com/buriy/russian-nlp-datasets/releases/download/r4/lenta.tar.bz2',
-                ],
-                stats=Stats(
-                    count=699777,
-                    bytes=1683268809
-                ),
-                tags=[NEWS],
-                functions=[load_buriy_lenta],
-            ),
             Meta(
                 title='News',
                 description='Dump of top 40 news + 20 fashion news sites.',
