@@ -109,7 +109,7 @@ def parse_tokens(lines):
         g = next_ == G_TAG
         if g:
             next(pairs)
-    
+
         yield OmniaToken(text, lemma, atag, tag, ztag, g)
 
 
