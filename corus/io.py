@@ -1,6 +1,7 @@
 
 import gzip
 import bz2
+import lzma
 from zipfile import ZipFile
 
 import csv
@@ -64,28 +65,27 @@ def parse_xml(text):
 
 #########
 #
-#   GZ
+#   GZ, BZ, XZ
 #
 #####
 
 
-def load_gz_lines(path, encoding='utf8'):
-    with gzip.open(path, mode='rt', encoding=encoding) as file:
+def load_z_lines(path, open, encoding='utf8'):
+    with open(path, mode='rt', encoding=encoding) as file:
         for line in file:
             yield rstrip(line)
 
 
-########
-#
-#    BZ
-#
-########
+def load_gz_lines(path):
+    return load_z_lines(path, gzip.open)
 
 
-def load_bz2_lines(path, encoding='utf8'):
-    with bz2.open(path, mode='rt', encoding=encoding) as file:
-        for line in file:
-            yield rstrip(line)
+def load_bz2_lines(path):
+    return load_z_lines(path, bz2.open)
+
+
+def load_xz_lines(path):
+    return load_z_lines(path, lzma.open)
 
 
 #######
