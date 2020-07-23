@@ -2,6 +2,12 @@
 from corus.record import Record
 
 from . import (
+    load_mokoron,
+    load_wiki,
+    load_simlex,
+    load_gramru,
+    load_corpora,
+
     load_factru,
     load_gareev,
     load_lenta,
@@ -26,9 +32,6 @@ from . import (
     load_buriy_news,
     load_buriy_webhose,
 
-    load_mokoron,
-    load_wiki,
-
     load_ods_interfax,
     load_ods_gazeta,
 
@@ -44,16 +47,11 @@ from . import (
     load_morphoru_rnc,
     load_morphoru_corpora,
 
-    load_gramru,
-    load_corpora,
-
     load_russe_hj,
     load_russe_rt,
     load_russe_ae,
 
     load_toloka_lrwc,
-
-    load_simlex,
 )
 
 
@@ -105,6 +103,8 @@ MORPH = 'morph'
 SYNTAX = 'syntax'
 EMB = 'emb'
 SIM = 'sim'
+SENTIMENT = 'sentiment'
+WEB = 'web'
 
 METAS = [
     Meta(
@@ -146,6 +146,72 @@ METAS = [
         ],
         tags=[NEWS],
         functions=[load_ria_raw, load_ria]
+    ),
+    Meta(
+        title='Mokoron Russian Twitter Corpus',
+        url='http://study.mokoron.com/',
+        description='Russian Twitter sentiment markup',
+        instruction=[
+            'Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql'
+        ],
+        stats=Stats(
+            count=17633417,
+            bytes=1998559570
+        ),
+        tags=[SOCIAL, SENTIMENT],
+        functions=[load_mokoron],
+    ),
+    Meta(
+        title='Wikipedia',
+        url='https://dumps.wikimedia.org/',
+        description='Russian Wiki dump',
+        instruction=[
+            'wget https://dumps.wikimedia.org/ruwiki/latest/ruwiki-latest-pages-articles.xml.bz2'
+        ],
+        stats=Stats(
+            count=1541401,
+            bytes=13895798340
+        ),
+        functions=[load_wiki],
+    ),
+    Meta(
+        title='GramEval2020',
+        url='https://github.com/dialogue-evaluation/GramEval2020',
+        instruction=[
+            'wget https://github.com/dialogue-evaluation/GramEval2020/archive/master.zip',
+            'unzip master.zip',
+            'mv GramEval2020-master/dataTrain train',
+            'mv GramEval2020-master/dataOpenTest dev',
+            'rm -r master.zip GramEval2020-master',
+            'wget https://github.com/AlexeySorokin/GramEval2020/raw/master/data/GramEval_private_test.conllu'
+        ],
+        stats=Stats(
+            count=162372,
+            bytes=31503713
+        ),
+        functions=[load_gramru],
+    ),
+    Meta(
+        title='OpenCorpora',
+        url='http://opencorpora.org/',
+        instruction=[
+            'wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.zip'
+        ],
+        stats=Stats(
+            count=4030,
+            bytes=21194932
+        ),
+        tags=[MORPH],
+        functions=[load_corpora],
+    ),
+    Meta(
+        title='RusVectores SimLex-965',
+        instruction=[
+            'wget https://rusvectores.org/static/testsets/ru_simlex965_tagged.tsv',
+            'wget https://rusvectores.org/static/testsets/ru_simlex965.tsv'
+        ],
+        tags=[EMB, SIM],
+        functions=[load_simlex],
     ),
 
 
@@ -250,118 +316,6 @@ METAS = [
         tags=[NER, NEWS],
         functions=[load_persons]
     ),
-
-
-    #########
-    #
-    #    MOKORON
-    #
-    #########
-
-
-    Meta(
-        title='Mokoron Russian Twitter Corpus',
-        url='http://study.mokoron.com/',
-        description='Russian Twitter sentiment markup',
-        instruction=[
-            'Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql'
-        ],
-        stats=Stats(
-            count=17633417,
-            bytes=1998559570
-        ),
-        tags=[SOCIAL],
-        functions=[load_mokoron],
-    ),
-
-
-    ###########
-    #
-    #   WIKI
-    #
-    #########
-
-
-    Meta(
-        title='Wikipedia',
-        url='https://dumps.wikimedia.org/',
-        description='Russian Wiki dump',
-        instruction=[
-            'wget https://dumps.wikimedia.org/ruwiki/latest/ruwiki-latest-pages-articles.xml.bz2'
-        ],
-        stats=Stats(
-            count=1541401,
-            bytes=13895798340
-        ),
-        functions=[load_wiki],
-    ),
-
-
-    ########
-    #
-    #   GRAMRU
-    #
-    #########
-
-
-    Meta(
-        title='GramEval2020',
-        url='https://github.com/dialogue-evaluation/GramEval2020',
-        instruction=[
-            'wget https://github.com/dialogue-evaluation/GramEval2020/archive/master.zip',
-            'unzip master.zip',
-            'mv GramEval2020-master/dataTrain train',
-            'mv GramEval2020-master/dataOpenTest dev',
-            'rm -r master.zip GramEval2020-master',
-            'wget https://github.com/AlexeySorokin/GramEval2020/raw/master/data/GramEval_private_test.conllu'
-        ],
-        stats=Stats(
-            count=162372,
-            bytes=31503713
-        ),
-        functions=[load_gramru],
-    ),
-
-
-    ########
-    #
-    #   CORPORA
-    #
-    #########
-
-
-    Meta(
-        title='OpenCorpora',
-        url='http://opencorpora.org/',
-        instruction=[
-            'wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.zip'
-        ],
-        stats=Stats(
-            count=4030,
-            bytes=21194932
-        ),
-        tags=[MORPH],
-        functions=[load_corpora],
-    ),
-
-
-    ########
-    #
-    #   SIMLEX
-    #
-    ##########
-
-
-    Meta(
-        title='RusVectores SimLex-965',
-        instruction=[
-            'wget https://rusvectores.org/static/testsets/ru_simlex965_tagged.tsv',
-            'wget https://rusvectores.org/static/testsets/ru_simlex965.tsv'
-        ],
-        tags=[EMB, SIM],
-        functions=[load_simlex],
-    ),
-
 
     ##########
     #
@@ -634,7 +588,7 @@ METAS = [
 
     #############
     #
-    #    UD
+    #    MORPHORUEVAL
     #
     #########
 
