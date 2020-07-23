@@ -5,6 +5,7 @@ from . import (
     load_mokoron,
     load_wiki,
     load_simlex,
+    load_omnia,
     load_gramru,
     load_corpora,
 
@@ -212,6 +213,19 @@ METAS = [
         ],
         tags=[EMB, SIM],
         functions=[load_simlex],
+    ),
+    Meta(
+        title='Omnia Russica',
+        url='https://omnia-russica.github.io/',
+        description='Taiga + Wiki + Araneum. Read "Even larger Russian corpus" https://events.spbu.ru/eventsContent/events/2019/corpora/corp_sborn.pdf',
+        instruction=[
+            'Manually download http://bit.ly/2ZT4BY9'
+        ],
+        stats=Stats(
+            bytes=525728427750
+        ),
+        tags=[MORPH, WEB, FICTION],
+        functions=[load_omnia]
     ),
 
 
