@@ -77,7 +77,10 @@ def group_pairs(stream):
 
 def parse_tokens(lines):
     pairs = group_pairs(lines)
-    for line, next_ in pairs:
+    for line, next in pairs:
+        if line == G_TAG:
+            continue
+
         parts = line.split('\t')
         if len(parts) != 5:
             # наблюдать       наблюдать       Vb      Vmn----a-e      1
@@ -96,8 +99,6 @@ def parse_tokens(lines):
             # <дуарда>
             # <еоргиевича>
 
-            # multiple <g/>
-
             # just skip them
             continue
 
@@ -105,10 +106,7 @@ def parse_tokens(lines):
         # http://unesco.uniba.sk/aranea_about/aut.html
         # http://nl.ijs.si/ME/V4/msd/html/msd-ru.html
         text, lemma, atag, tag, ztag = parts
-
-        g = next_ == G_TAG
-        if g:
-            next(pairs)
+        g = next == G_TAG
 
         yield OmniaToken(text, lemma, atag, tag, ztag, g)
 
