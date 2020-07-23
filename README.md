@@ -137,6 +137,158 @@ Dump of lib.rus.ec prepared for RUSSE workshop
 </tr>
 <tr>
 <td>
+<a href="http://study.mokoron.com/">Mokoron Russian Twitter Corpus</a>
+</td>
+<td>
+<a name="load_mokoron"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_mokoron">load_mokoron</a></code>
+<a href="#load_mokoron"><code>#</code></a>
+</td>
+<td>
+<code>social</code>
+<code>sentiment</code>
+</td>
+<td align="right">
+17&nbsp;633&nbsp;417
+</td>
+<td align="right">
+1.86 Gb
+</td>
+<td>
+Russian Twitter sentiment markup
+</br>
+</br>
+Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://dumps.wikimedia.org/">Wikipedia</a>
+</td>
+<td>
+<a name="load_wiki"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_wiki">load_wiki</a></code>
+<a href="#load_wiki"><code>#</code></a>
+</td>
+<td>
+</td>
+<td align="right">
+1&nbsp;541&nbsp;401
+</td>
+<td align="right">
+12.94 Gb
+</td>
+<td>
+Russian Wiki dump
+</br>
+</br>
+<code>wget https://dumps.wikimedia.org/ruwiki/latest/ruwiki-latest-pages-articles.xml.bz2</code>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/dialogue-evaluation/GramEval2020">GramEval2020</a>
+</td>
+<td>
+<a name="load_gramru"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_gramru">load_gramru</a></code>
+<a href="#load_gramru"><code>#</code></a>
+</td>
+<td>
+</td>
+<td align="right">
+162&nbsp;372
+</td>
+<td align="right">
+30.04 Mb
+</td>
+<td>
+<code>wget https://github.com/dialogue-evaluation/GramEval2020/archive/master.zip</code>
+</br>
+<code>unzip master.zip</code>
+</br>
+<code>mv GramEval2020-master/dataTrain train</code>
+</br>
+<code>mv GramEval2020-master/dataOpenTest dev</code>
+</br>
+<code>rm -r master.zip GramEval2020-master</code>
+</br>
+<code>wget https://github.com/AlexeySorokin/GramEval2020/raw/master/data/GramEval_private_test.conllu</code>
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://opencorpora.org/">OpenCorpora</a>
+</td>
+<td>
+<a name="load_corpora"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_corpora">load_corpora</a></code>
+<a href="#load_corpora"><code>#</code></a>
+</td>
+<td>
+<code>morph</code>
+</td>
+<td align="right">
+4&nbsp;030
+</td>
+<td align="right">
+20.21 Mb
+</td>
+<td>
+<code>wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.zip</code>
+</td>
+</tr>
+<tr>
+<td>
+RusVectores SimLex-965
+</td>
+<td>
+<a name="load_simlex"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_simlex">load_simlex</a></code>
+<a href="#load_simlex"><code>#</code></a>
+</td>
+<td>
+<code>emb</code>
+<code>sim</code>
+</td>
+<td align="right">
+</td>
+<td align="right">
+</td>
+<td>
+<code>wget https://rusvectores.org/static/testsets/ru_simlex965_tagged.tsv</code>
+</br>
+<code>wget https://rusvectores.org/static/testsets/ru_simlex965.tsv</code>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://omnia-russica.github.io/">Omnia Russica</a>
+</td>
+<td>
+<a name="load_omnia"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_omnia">load_omnia</a></code>
+<a href="#load_omnia"><code>#</code></a>
+</td>
+<td>
+<code>morph</code>
+<code>web</code>
+<code>fiction</code>
+</td>
+<td align="right">
+</td>
+<td align="right">
+489.62 Gb
+</td>
+<td>
+Taiga + Wiki + Araneum. Read "Even larger Russian corpus" https://events.spbu.ru/eventsContent/events/2019/corpora/corp_sborn.pdf
+</br>
+</br>
+Manually download http://bit.ly/2ZT4BY9
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/dialogue-evaluation/factRuEval-2016/">factRuEval-2016</a>
 </td>
 <td>
@@ -307,131 +459,6 @@ Same as Collection5, only PER markup + normalized names
 </br>
 </br>
 <code>wget http://ai-center.botik.ru/Airec/ai-resources/Persons-1000.zip</code>
-</td>
-</tr>
-<tr>
-<td>
-<a href="http://study.mokoron.com/">Mokoron Russian Twitter Corpus</a>
-</td>
-<td>
-<a name="load_mokoron"></a>
-<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_mokoron">load_mokoron</a></code>
-<a href="#load_mokoron"><code>#</code></a>
-</td>
-<td>
-<code>social</code>
-</td>
-<td align="right">
-17&nbsp;633&nbsp;417
-</td>
-<td align="right">
-1.86 Gb
-</td>
-<td>
-Russian Twitter sentiment markup
-</br>
-</br>
-Manually download https://www.dropbox.com/s/9egqjszeicki4ho/db.sql
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://dumps.wikimedia.org/">Wikipedia</a>
-</td>
-<td>
-<a name="load_wiki"></a>
-<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_wiki">load_wiki</a></code>
-<a href="#load_wiki"><code>#</code></a>
-</td>
-<td>
-</td>
-<td align="right">
-1&nbsp;541&nbsp;401
-</td>
-<td align="right">
-12.94 Gb
-</td>
-<td>
-Russian Wiki dump
-</br>
-</br>
-<code>wget https://dumps.wikimedia.org/ruwiki/latest/ruwiki-latest-pages-articles.xml.bz2</code>
-</td>
-</tr>
-<tr>
-<td>
-<a href="https://github.com/dialogue-evaluation/GramEval2020">GramEval2020</a>
-</td>
-<td>
-<a name="load_gramru"></a>
-<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_gramru">load_gramru</a></code>
-<a href="#load_gramru"><code>#</code></a>
-</td>
-<td>
-</td>
-<td align="right">
-162&nbsp;372
-</td>
-<td align="right">
-30.04 Mb
-</td>
-<td>
-<code>wget https://github.com/dialogue-evaluation/GramEval2020/archive/master.zip</code>
-</br>
-<code>unzip master.zip</code>
-</br>
-<code>mv GramEval2020-master/dataTrain train</code>
-</br>
-<code>mv GramEval2020-master/dataOpenTest dev</code>
-</br>
-<code>rm -r master.zip GramEval2020-master</code>
-</br>
-<code>wget https://github.com/AlexeySorokin/GramEval2020/raw/master/data/GramEval_private_test.conllu</code>
-</td>
-</tr>
-<tr>
-<td>
-<a href="http://opencorpora.org/">OpenCorpora</a>
-</td>
-<td>
-<a name="load_corpora"></a>
-<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_corpora">load_corpora</a></code>
-<a href="#load_corpora"><code>#</code></a>
-</td>
-<td>
-<code>morph</code>
-</td>
-<td align="right">
-4&nbsp;030
-</td>
-<td align="right">
-20.21 Mb
-</td>
-<td>
-<code>wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.zip</code>
-</td>
-</tr>
-<tr>
-<td>
-RusVectores SimLex-965
-</td>
-<td>
-<a name="load_simlex"></a>
-<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_simlex">load_simlex</a></code>
-<a href="#load_simlex"><code>#</code></a>
-</td>
-<td>
-<code>emb</code>
-<code>sim</code>
-</td>
-<td align="right">
-</td>
-<td align="right">
-</td>
-<td>
-<code>wget https://rusvectores.org/static/testsets/ru_simlex965_tagged.tsv</code>
-</br>
-<code>wget https://rusvectores.org/static/testsets/ru_simlex965.tsv</code>
 </td>
 </tr>
 <tr>
