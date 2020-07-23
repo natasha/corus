@@ -76,7 +76,7 @@ def is_zip_header(record):
 
 
 def assert_zip_header(record):
-    assert record.flags == 0, record.flga
+    assert record.flags == 0, record.flags
     assert record.compression in (NO_COMPRESSION, DEFLATED), record.compression
 
 
