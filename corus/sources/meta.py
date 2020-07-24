@@ -35,6 +35,11 @@ from . import (
 
     load_ods_interfax,
     load_ods_gazeta,
+    load_ods_izvestia,
+    load_ods_meduza,
+    load_ods_ria,
+    load_ods_rt,
+    load_ods_tass,
 
     load_ria_raw,
     load_ria,
@@ -500,17 +505,17 @@ METAS = [
 
     Group(
         title='ODS #proj_news_viz',
-        url='https://github.com/ods-ai-ml4sg/proj_news_viz',
+        url='https://github.com/ods-ai-ml4sg/proj_news_viz/releases/tag/data',
         description='Several news sites scraped by members of #proj_news_viz ODS project.',
         metas=[
             Meta(
                 title='Interfax',
                 instruction=[
-                    'Manually download interfax_v1.csv.zip https://drive.google.com/file/d/1M7z0YoOgpm53IsJ3qOhT_nfiDnGUPeys/view',
+                    'wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/interfax.csv.gz',
                 ],
                 stats=Stats(
-                    count=543962,
-                    bytes=1314464670
+                    count=543961,
+                    bytes=1314462876,
                 ),
                 tags=[NEWS],
                 functions=[load_ods_interfax],
@@ -518,15 +523,76 @@ METAS = [
             Meta(
                 title='Gazeta',
                 instruction=[
-                    'Manually download gazeta_v1.csv.zip from https://drive.google.com/file/d/18B8CvHgmwwyz9GWBZ0TS6dE_x6gYnWCb/view',
+                    'wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/gazeta.csv.gz',
                 ],
                 stats=Stats(
                     count=865847,
-                    bytes=1752712439
+                    bytes=1752712320
                 ),
                 tags=[NEWS],
                 functions=[load_ods_gazeta],
             ),
+            Meta(
+                title='Izvestia',
+                instruction=[
+                    'wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/iz.csv.gz',
+                ],
+                stats=Stats(
+                    count=86601,
+                    bytes=322117124
+                ),
+                tags=[NEWS],
+                functions=[load_ods_izvestia],
+            ),
+            Meta(
+                title='Meduza',
+                instruction=[
+                    'wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/meduza.csv.gz',
+                ],
+                stats=Stats(
+                    count=71806,
+                    bytes=283233963
+                ),
+                tags=[NEWS],
+                functions=[load_ods_meduza],
+            ),
+            Meta(
+                title='RIA',
+                instruction=[
+                    'wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/ria.csv.gz',
+                ],
+                stats=Stats(
+                    count=101543,
+                    bytes=245236791
+                ),
+                tags=[NEWS],
+                functions=[load_ods_ria],
+            ),
+            Meta(
+                title='Russia Today',
+                instruction=[
+                    'wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/rt.csv.gz',
+                ],
+                stats=Stats(
+                    count=106644,
+                    bytes=196212474
+                ),
+                tags=[NEWS],
+                functions=[load_ods_rt],
+            ),
+            Meta(
+                title='TASS',
+                instruction=[
+                    'wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/tass-001.csv.gz',
+                ],
+                stats=Stats(
+                    count=1135635,
+                    bytes=3515136716
+                ),
+                tags=[NEWS],
+                functions=[load_ods_tass],
+            ),
+
         ]
     ),
 

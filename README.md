@@ -766,7 +766,7 @@ Dump from webhose.io, 300 sources for one month.
 </tr>
 <tr>
 <td>
-<a href="https://github.com/ods-ai-ml4sg/proj_news_viz">ODS #proj_news_viz</a>
+<a href="https://github.com/ods-ai-ml4sg/proj_news_viz/releases/tag/data">ODS #proj_news_viz</a>
 </td>
 <td colspan="5">
 Several news sites scraped by members of #proj_news_viz ODS project.
@@ -785,13 +785,13 @@ Interfax
 <code>news</code>
 </td>
 <td align="right">
-543&nbsp;962
+543&nbsp;961
 </td>
 <td align="right">
 1.22 Gb
 </td>
 <td>
-Manually download interfax_v1.csv.zip https://drive.google.com/file/d/1M7z0YoOgpm53IsJ3qOhT_nfiDnGUPeys/view
+<code>wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/interfax.csv.gz</code>
 </td>
 </tr>
 <tr>
@@ -813,7 +813,117 @@ Gazeta
 1.63 Gb
 </td>
 <td>
-Manually download gazeta_v1.csv.zip from https://drive.google.com/file/d/18B8CvHgmwwyz9GWBZ0TS6dE_x6gYnWCb/view
+<code>wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/gazeta.csv.gz</code>
+</td>
+</tr>
+<tr>
+<td>
+Izvestia
+</td>
+<td>
+<a name="load_ods_izvestia"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_izvestia">load_ods_izvestia</a></code>
+<a href="#load_ods_izvestia"><code>#</code></a>
+</td>
+<td>
+<code>news</code>
+</td>
+<td align="right">
+86&nbsp;601
+</td>
+<td align="right">
+307.19 Mb
+</td>
+<td>
+<code>wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/iz.csv.gz</code>
+</td>
+</tr>
+<tr>
+<td>
+Meduza
+</td>
+<td>
+<a name="load_ods_meduza"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_meduza">load_ods_meduza</a></code>
+<a href="#load_ods_meduza"><code>#</code></a>
+</td>
+<td>
+<code>news</code>
+</td>
+<td align="right">
+71&nbsp;806
+</td>
+<td align="right">
+270.11 Mb
+</td>
+<td>
+<code>wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/meduza.csv.gz</code>
+</td>
+</tr>
+<tr>
+<td>
+RIA
+</td>
+<td>
+<a name="load_ods_ria"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_ria">load_ods_ria</a></code>
+<a href="#load_ods_ria"><code>#</code></a>
+</td>
+<td>
+<code>news</code>
+</td>
+<td align="right">
+101&nbsp;543
+</td>
+<td align="right">
+233.88 Mb
+</td>
+<td>
+<code>wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/ria.csv.gz</code>
+</td>
+</tr>
+<tr>
+<td>
+Russia Today
+</td>
+<td>
+<a name="load_ods_rt"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_rt">load_ods_rt</a></code>
+<a href="#load_ods_rt"><code>#</code></a>
+</td>
+<td>
+<code>news</code>
+</td>
+<td align="right">
+106&nbsp;644
+</td>
+<td align="right">
+187.12 Mb
+</td>
+<td>
+<code>wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/rt.csv.gz</code>
+</td>
+</tr>
+<tr>
+<td>
+TASS
+</td>
+<td>
+<a name="load_ods_tass"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ods_tass">load_ods_tass</a></code>
+<a href="#load_ods_tass"><code>#</code></a>
+</td>
+<td>
+<code>news</code>
+</td>
+<td align="right">
+1&nbsp;135&nbsp;635
+</td>
+<td align="right">
+3.27 Gb
+</td>
+<td>
+<code>wget https://github.com/ods-ai-ml4sg/proj_news_viz/releases/download/data/tass-001.csv.gz</code>
 </td>
 </tr>
 <tr>

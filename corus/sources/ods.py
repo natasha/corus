@@ -4,8 +4,7 @@ from datetime import datetime
 
 from corus.record import Record
 from corus.io import (
-    list_zip,
-    load_zip_lines,
+    load_gz_lines,
     parse_csv,
     skip_header
 )
@@ -46,9 +45,9 @@ class Stats(Record):
         self.comments = comments
 
 
-def none_row(row, nones=('-', '')):
+def none_row(row):
     for cell in row:
-        if cell in nones:
+        if not cell or cell == '-':
             cell = None
         yield cell
 
@@ -59,29 +58,22 @@ def maybe_int(value):
     return
 
 
-def fix_csv(lines):
-    # https://github.com/ods-ai-ml4sg/proj_news_viz/blob/master/scraping/newsbot/newsbot/pipelines.py#L36
-    for line in lines:
-        yield line.replace(r'\"', '""')
-
-
-def fix_new_line(text):
-    if text:
-        return text.replace(r'\n', '\n')
-
-
 def parse_news(lines):
-    rows = parse_csv(fix_csv(lines))
-    header = skip_header(rows)
+    # tass raises "field larger than field limit"
+    rows = parse_csv(lines, max_field=100000000)
+    skip_header(rows)
     for row in rows:
-        row = list(none_row(row))
-        if len(row) != len(header) + 1:  # extra , before EOL
-            # rare Д.Акулинин, а также М.Кузовлев.\n\",-,-,-,-,-,-,-,-,-
-            continue
-
         (timestamp, url, edition, topics, authors, title, text,
-         fb, vk, ok, twitter, lj, tg, likes, views, comments, _) = row
+         fb, vk, ok, twitter, lj, tg, likes, views, comments) = none_row(row)
+
         timestamp = datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S')
+
+        if authors:
+            authors = authors.split(',')
+
+        # empty texts in meduza
+        text = text or ''
+
         stats = Stats(
             maybe_int(fb),
             maybe_int(vk),
@@ -93,27 +85,14 @@ def parse_news(lines):
             maybe_int(views),
             maybe_int(comments)
         )
-        if authors:
-            authors = authors.split(',')
         yield NewsRecord(
-            timestamp, url,
-            fix_new_line(edition),
-            fix_new_line(topics),
-            authors,
-            fix_new_line(title),
-            fix_new_line(text),
-            stats
+            timestamp, url, edition, topics, authors,
+            title, text, stats
         )
 
 
-def load_lines(path):
-    for name in list_zip(path):
-        for line in load_zip_lines(path, name):
-            yield line
-
-
 def load_news(path):
-    lines = load_lines(path)
+    lines = load_gz_lines(path)
     return parse_news(lines)
 
 
@@ -125,7 +104,32 @@ def load_ods_gazeta(path):
     return load_news(path)
 
 
+def load_ods_izvestia(path):
+    return load_news(path)
+
+
+def load_ods_meduza(path):
+    return load_news(path)
+
+
+def load_ods_ria(path):
+    return load_news(path)
+
+
+def load_ods_rt(path):
+    return load_news(path)
+
+
+def load_ods_tass(path):
+    return load_news(path)
+
+
 __all__ = [
     'load_ods_interfax',
-    'load_ods_gazeta'
+    'load_ods_gazeta',
+    'load_ods_izvestia',
+    'load_ods_meduza',
+    'load_ods_ria',
+    'load_ods_rt',
+    'load_ods_tass',
 ]
