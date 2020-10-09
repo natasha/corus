@@ -3,7 +3,7 @@
 
 ![CI](https://github.com/natasha/corus/workflows/CI/badge.svg) [![codecov](https://codecov.io/gh/natasha/corus/branch/master/graph/badge.svg)](https://codecov.io/gh/natasha/corus)
 
-Links to publicly available Russian corpora + code for loading and parsing. <a href="#reference">20+ datasets, 350Gb+ of text</a>.
+Links to publicly available Russian corpora + code for loading and parsing. <a href="#reference">20+ datasets, 350Gb+ of text</a>. See <a href="https://natasha.github.io/corus">natasha.github.io article</a> for more info.
 
 ## Usage
 
