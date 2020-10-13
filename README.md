@@ -235,7 +235,7 @@ Russian Wiki dump
 20.21 Mb
 </td>
 <td>
-<code>wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.zip</code>
+<code>wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.byfile.zip</code>
 </td>
 </tr>
 <tr>
