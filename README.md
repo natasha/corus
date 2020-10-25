@@ -235,7 +235,7 @@ Russian Wiki dump
 20.21 Mb
 </td>
 <td>
-<code>wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.byfile.zip</code>
+<code>wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.zip</code>
 </td>
 </tr>
 <tr>
@@ -1226,6 +1226,31 @@ Lexical Relations from the Wisdom of the Crowd (LRWC)
 <code>unzip LRWC.zip</code>
 </br>
 <code>rm LRWC.zip</code>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/cimm-kzn/RuDReC">RuADReCT</a>
+</td>
+<td>
+<a name="load_ruadrect"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ruadrect">load_ruadrect</a></code>
+<a href="#load_ruadrect"><code>#</code></a>
+</td>
+<td>
+<code>social</code>
+</td>
+<td align="right">
+9&nbsp;515
+</td>
+<td align="right">
+2.09 Mb
+</td>
+<td>
+The Russian Adverse Drug Reaction Corpus of Tweets
+</br>
+</br>
+Manually download https://yadi.sk/d/hawvLUHQzeZGQAunzip RuADReCT.zip
 </td>
 </tr>
 </table>

@@ -8,6 +8,7 @@ from . import (
     load_omnia,
     load_gramru,
     load_corpora,
+    load_ruadrect,
 
     load_factru,
     load_gareev,
@@ -784,6 +785,21 @@ METAS = [
                 ],
                 tags=[EMB, SIM],
                 functions=[load_toloka_lrwc],
+            ),
+            Meta(
+                title='RuADReCT',
+                url='https://toloka.yandex.ru/datasets/',
+                description='The Russian Adverse Drug Reaction Corpus of Tweets',
+                instruction=[
+                    'Manually download https://yadi.sk/d/hawvLUHQzeZGQA'
+                    'unzip RuADReCT.zip'
+                ],
+                stats=Stats(
+                    count=9515,
+                    bytes=2190063
+                ),
+                tags=[SOCIAL],
+                functions=[load_ruadrect],
             ),
         ]
     ),
