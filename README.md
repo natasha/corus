@@ -1230,7 +1230,7 @@ Lexical Relations from the Wisdom of the Crowd (LRWC)
 </tr>
 <tr>
 <td>
-<a href="https://toloka.yandex.ru/datasets/">RuADReCT</a>
+<a href="https://github.com/cimm-kzn/RuDReC">RuADReCT</a>
 </td>
 <td>
 <a name="load_ruadrect"></a>
@@ -1247,7 +1247,7 @@ Lexical Relations from the Wisdom of the Crowd (LRWC)
 2.09 Mb
 </td>
 <td>
-The Russian Adverse Drug Reaction Corpus of Tweets
+The Russian Adverse Drug Reaction Corpus of Tweets (SMM4H 2020 Task 2)
 </br>
 </br>
 <code>wget https://github.com/cimm-kzn/RuDReC/raw/master/data/RuADReCT.zip</code>
