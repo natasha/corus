@@ -1250,7 +1250,7 @@ Lexical Relations from the Wisdom of the Crowd (LRWC)
 The Russian Adverse Drug Reaction Corpus of Tweets
 </br>
 </br>
-Manually download https://yadi.sk/d/hawvLUHQzeZGQA
+<code>wget https://github.com/cimm-kzn/RuDReC/raw/master/data/RuADReCT.zip</code>
 </br>
 <code>unzip RuADReCT.zip</code>
 </br>

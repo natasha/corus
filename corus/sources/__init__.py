@@ -21,4 +21,4 @@ from .russe import *  # noqa
 from .toloka import load_toloka_lrwc  # noqa
 from .simlex import load_simlex  # noqa
 from .omnia import load_omnia  # noqa
-from .ruadrect import load_ruadrect  # noqa
+from .toloka import load_ruadrect  # noqa
