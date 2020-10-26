@@ -787,9 +787,10 @@ METAS = [
                 functions=[load_toloka_lrwc],
             ),
             Meta(
-                title='RuADReCT',
+                title='The Russian Adverse Drug Reaction Corpus of Tweets (RuADReCT)',
                 url='https://github.com/cimm-kzn/RuDReC',
-                description='The Russian Adverse Drug Reaction Corpus of Tweets (SMM4H 2020 Task 2)',
+                description='This corpus was developed for the Social Media Mining for Health Applications (#SMM4H) '
+                            'Shared Task 2020',
                 instruction=[
                     'wget https://github.com/cimm-kzn/RuDReC/raw/master/data/RuADReCT.zip',
                     'unzip RuADReCT.zip',
