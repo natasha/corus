@@ -791,7 +791,7 @@ METAS = [
                 url='https://toloka.yandex.ru/datasets/',
                 description='The Russian Adverse Drug Reaction Corpus of Tweets',
                 instruction=[
-                    'Manually download https://yadi.sk/d/hawvLUHQzeZGQA',
+                    'wget https://github.com/cimm-kzn/RuDReC/raw/master/data/RuADReCT.zip',
                     'unzip RuADReCT.zip',
                     'rm RuADReCT.zip'
                 ],
