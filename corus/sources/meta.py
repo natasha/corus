@@ -788,8 +788,8 @@ METAS = [
             ),
             Meta(
                 title='RuADReCT',
-                url='https://toloka.yandex.ru/datasets/',
-                description='The Russian Adverse Drug Reaction Corpus of Tweets',
+                url='https://github.com/cimm-kzn/RuDReC',
+                description='The Russian Adverse Drug Reaction Corpus of Tweets (SMM4H 2020 Task 2)',
                 instruction=[
                     'wget https://github.com/cimm-kzn/RuDReC/raw/master/data/RuADReCT.zip',
                     'unzip RuADReCT.zip',
