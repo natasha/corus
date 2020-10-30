@@ -4,7 +4,6 @@ from corus.io import (
     load_lines,
     parse_tsv,
     skip_header,
-    rstrip
 )
 
 
@@ -71,12 +70,6 @@ def parse_ruadrect(lines):
         yield RuADReCTRecord(*cells)
 
 
-def load_lines_ruadrect(path):
-    with open(path, encoding="utf-8") as file:
-        for line in file:
-            yield rstrip(line)
-
-
 def load_ruadrect(path):
-    lines = load_lines_ruadrect(path)
+    lines = load_lines(path)
     return parse_ruadrect(lines)
