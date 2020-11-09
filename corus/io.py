@@ -46,8 +46,8 @@ def dump_text(text, path):
         file.write(text)
 
 
-def load_lines(path):
-    with open(path) as file:
+def load_lines(path, encoding="utf-8"):
+    with open(path, encoding=encoding) as file:
         for line in file:
             yield rstrip(line)
 

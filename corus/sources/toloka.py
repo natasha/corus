@@ -3,7 +3,7 @@ from corus.record import Record
 from corus.io import (
     load_lines,
     parse_tsv,
-    skip_header
+    skip_header,
 )
 
 
@@ -48,3 +48,28 @@ def parse_toloka_lrwc(lines):
 def load_toloka_lrwc(path):
     lines = load_lines(path)
     return parse_toloka_lrwc(lines)
+
+
+class RuADReCTRecord(Record):
+    __attributes__ = ['tweet_id', 'tweet', 'label']
+
+    def __init__(self, tweet_id, tweet, label):
+        self.tweet_id = tweet_id
+        self.tweet = tweet
+        self.label = label
+
+# – tweet_id: уникальный номер сообщения в системе twitter;
+# – tweet:  текст сообщения (твита);
+# - label: класс твита, 1 - содержит упоминание побочного эффекта, 0 - не содердит
+
+
+def parse_ruadrect(lines):
+    rows = parse_tsv(lines)
+    skip_header(rows)
+    for cells in rows:
+        yield RuADReCTRecord(*cells)
+
+
+def load_ruadrect(path):
+    lines = load_lines(path)
+    return parse_ruadrect(lines)
