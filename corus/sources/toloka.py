@@ -73,7 +73,3 @@ def parse_ruadrect(lines):
 def load_ruadrect(path):
     lines = load_lines(path)
     return parse_ruadrect(lines)
-
-path = 'D:\PyCharm Project\corus\corus/data/toloka/ruadrect/task2_ru_train.tsv'
-records = load_ruadrect(path)
-print(list(records))
