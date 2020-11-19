@@ -86,6 +86,28 @@ $ pip install corus
 </tr>
 <tr>
 <td>
+<a href="https://github.com/yutkin/Lenta.Ru-News-Dataset">Lenta.ru v1.1</a>
+</td>
+<td>
+<a name="load_lenta2"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_lenta2">load_lenta2</a></code>
+<a href="#load_lenta2"><code>#</code></a>
+</td>
+<td>
+<code>news</code>
+</td>
+<td align="right">
+800&nbsp;975
+</td>
+<td align="right">
+1.94 Gb
+</td>
+<td>
+<code>wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.1/lenta-ru-news.csv.bz2</code>
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://russe.nlpub.org/downloads/">Lib.rus.ec</a>
 </td>
 <td>

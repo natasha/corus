@@ -13,6 +13,7 @@ from . import (
     load_factru,
     load_gareev,
     load_lenta,
+    load_lenta2,
     load_librusec,
     load_ne5,
     load_wikiner,
@@ -126,6 +127,19 @@ METAS = [
         ],
         tags=[NEWS],
         functions=[load_lenta]
+    ),
+    Meta(
+        title='Lenta.ru v1.1',
+        url='https://github.com/yutkin/Lenta.Ru-News-Dataset',
+        stats=Stats(
+            bytes=2084746431,
+            count=800975
+        ),
+        instruction=[
+            'wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.1/lenta-ru-news.csv.bz2'
+        ],
+        tags=[NEWS],
+        functions=[load_lenta2]
     ),
     Meta(
         title='Lib.rus.ec',
