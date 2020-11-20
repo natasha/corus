@@ -86,6 +86,28 @@ $ pip install corus
 </tr>
 <tr>
 <td>
+<a href="https://github.com/yutkin/Lenta.Ru-News-Dataset">Lenta.ru v1.1</a>
+</td>
+<td>
+<a name="load_lenta2"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_lenta2">load_lenta2</a></code>
+<a href="#load_lenta2"><code>#</code></a>
+</td>
+<td>
+<code>news</code>
+</td>
+<td align="right">
+800&nbsp;975
+</td>
+<td align="right">
+1.94 Gb
+</td>
+<td>
+<code>wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.1/lenta-ru-news.csv.bz2</code>
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://russe.nlpub.org/downloads/">Lib.rus.ec</a>
 </td>
 <td>
@@ -235,7 +257,7 @@ Russian Wiki dump
 20.21 Mb
 </td>
 <td>
-<code>wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.byfile.zip</code>
+<code>wget http://opencorpora.org/files/export/annot/annot.opcorpora.xml.zip</code>
 </td>
 </tr>
 <tr>
@@ -1226,6 +1248,35 @@ Lexical Relations from the Wisdom of the Crowd (LRWC)
 <code>unzip LRWC.zip</code>
 </br>
 <code>rm LRWC.zip</code>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/cimm-kzn/RuDReC">The Russian Adverse Drug Reaction Corpus of Tweets (RuADReCT)</a>
+</td>
+<td>
+<a name="load_ruadrect"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_ruadrect">load_ruadrect</a></code>
+<a href="#load_ruadrect"><code>#</code></a>
+</td>
+<td>
+<code>social</code>
+</td>
+<td align="right">
+9&nbsp;515
+</td>
+<td align="right">
+2.09 Mb
+</td>
+<td>
+This corpus was developed for the Social Media Mining for Health Applications (#SMM4H) Shared Task 2020
+</br>
+</br>
+<code>wget https://github.com/cimm-kzn/RuDReC/raw/master/data/RuADReCT.zip</code>
+</br>
+<code>unzip RuADReCT.zip</code>
+</br>
+<code>rm RuADReCT.zip</code>
 </td>
 </tr>
 </table>

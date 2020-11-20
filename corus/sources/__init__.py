@@ -1,7 +1,7 @@
 
 from .factru import load_factru  # noqa
 from .gareev import load_gareev  # noqa
-from .lenta import load_lenta  # noqa
+from .lenta import load_lenta, load_lenta2  # noqa
 from .librusec import load_librusec  # noqa
 from .ne5 import load_ne5  # noqa
 from .wikiner import load_wikiner  # noqa
@@ -21,3 +21,4 @@ from .russe import *  # noqa
 from .toloka import load_toloka_lrwc  # noqa
 from .simlex import load_simlex  # noqa
 from .omnia import load_omnia  # noqa
+from .toloka import load_ruadrect  # noqa

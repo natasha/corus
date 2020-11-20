@@ -8,10 +8,12 @@ from . import (
     load_omnia,
     load_gramru,
     load_corpora,
+    load_ruadrect,
 
     load_factru,
     load_gareev,
     load_lenta,
+    load_lenta2,
     load_librusec,
     load_ne5,
     load_wikiner,
@@ -125,6 +127,19 @@ METAS = [
         ],
         tags=[NEWS],
         functions=[load_lenta]
+    ),
+    Meta(
+        title='Lenta.ru v1.1',
+        url='https://github.com/yutkin/Lenta.Ru-News-Dataset',
+        stats=Stats(
+            bytes=2084746431,
+            count=800975
+        ),
+        instruction=[
+            'wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.1/lenta-ru-news.csv.bz2'
+        ],
+        tags=[NEWS],
+        functions=[load_lenta2]
     ),
     Meta(
         title='Lib.rus.ec',
@@ -784,6 +799,23 @@ METAS = [
                 ],
                 tags=[EMB, SIM],
                 functions=[load_toloka_lrwc],
+            ),
+            Meta(
+                title='The Russian Adverse Drug Reaction Corpus of Tweets (RuADReCT)',
+                url='https://github.com/cimm-kzn/RuDReC',
+                description='This corpus was developed for the Social Media Mining for Health Applications (#SMM4H) '
+                            'Shared Task 2020',
+                instruction=[
+                    'wget https://github.com/cimm-kzn/RuDReC/raw/master/data/RuADReCT.zip',
+                    'unzip RuADReCT.zip',
+                    'rm RuADReCT.zip'
+                ],
+                stats=Stats(
+                    count=9515,
+                    bytes=2190063
+                ),
+                tags=[SOCIAL],
+                functions=[load_ruadrect],
             ),
         ]
     ),
