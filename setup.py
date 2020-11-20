@@ -8,7 +8,7 @@ with open('README.md') as file:
 
 setup(
     name='corus',
-    version='0.7.0',
+    version='0.8.0',
     description='Links to russian corpora, functions for loading and parsing',
     long_description=description,
     long_description_content_type='text/markdown',
