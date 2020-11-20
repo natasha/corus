@@ -115,31 +115,35 @@ SENTIMENT = 'sentiment'
 WEB = 'web'
 
 METAS = [
-    Meta(
+    Group(
         title='Lenta.ru',
         url='https://github.com/yutkin/Lenta.Ru-News-Dataset',
-        stats=Stats(
-            bytes=1785632079,
-            count=739351
-        ),
-        instruction=[
-            'wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.0/lenta-ru-news.csv.gz'
-        ],
-        tags=[NEWS],
-        functions=[load_lenta]
-    ),
-    Meta(
-        title='Lenta.ru v1.1',
-        url='https://github.com/yutkin/Lenta.Ru-News-Dataset',
-        stats=Stats(
-            bytes=2084746431,
-            count=800975
-        ),
-        instruction=[
-            'wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.1/lenta-ru-news.csv.bz2'
-        ],
-        tags=[NEWS],
-        functions=[load_lenta2]
+        metas=[
+            Meta(
+                title='Lenta.ru v1.0',
+                stats=Stats(
+                    bytes=1785632079,
+                    count=739351
+                ),
+                instruction=[
+                    'wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.0/lenta-ru-news.csv.gz'
+                ],
+                tags=[NEWS],
+                functions=[load_lenta]
+            ),
+            Meta(
+                title='Lenta.ru v1.1+',
+                stats=Stats(
+                    bytes=2084746431,
+                    count=800975
+                ),
+                instruction=[
+                    'wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.1/lenta-ru-news.csv.bz2'
+                ],
+                tags=[NEWS],
+                functions=[load_lenta2]
+            ),
+        ]
     ),
     Meta(
         title='Lib.rus.ec',

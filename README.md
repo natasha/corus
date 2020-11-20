@@ -66,6 +66,13 @@ $ pip install corus
 <td>
 <a href="https://github.com/yutkin/Lenta.Ru-News-Dataset">Lenta.ru</a>
 </td>
+<td colspan="5">
+</td>
+</tr>
+<tr>
+<td>
+Lenta.ru v1.0
+</td>
 <td>
 <a name="load_lenta"></a>
 <code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_lenta">load_lenta</a></code>
@@ -86,7 +93,7 @@ $ pip install corus
 </tr>
 <tr>
 <td>
-<a href="https://github.com/yutkin/Lenta.Ru-News-Dataset">Lenta.ru v1.1</a>
+Lenta.ru v1.1+
 </td>
 <td>
 <a name="load_lenta2"></a>
