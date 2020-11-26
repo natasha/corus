@@ -32,14 +32,16 @@ class RuDReCEntity(Record):
 
 def parse_entities(record_entities):
     for entity in record_entities:
+        concept_id = entity['concept_id'] if 'concept_id' in entity else ''
+        concept_name = entity['concept_name'] if 'concept_name' in entity else ''
         yield RuDReCEntity(
             entity['entity_id'],
             entity['entity_text'],
             entity['entity_type'],
             entity['start'],
             entity['end'],
-            entity['concept_id'],
-            entity['concept_name'])
+            concept_id,
+            concept_name)
 
 
 def parse_rudrec(lines):
@@ -52,3 +54,4 @@ def parse_rudrec(lines):
 def load_rudrec(path):
     lines = load_lines(path)
     return parse_rudrec(lines)
+
