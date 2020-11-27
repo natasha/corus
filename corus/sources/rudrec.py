@@ -1,4 +1,3 @@
-from datetime import datetime
 
 from corus.record import Record
 from corus.io import (
@@ -54,4 +53,3 @@ def parse_rudrec(lines):
 def load_rudrec(path):
     lines = load_lines(path)
     return parse_rudrec(lines)
-
