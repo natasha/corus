@@ -358,10 +358,12 @@ METAS = [
     Meta(
         title='The Russian Drug Reaction Corpus (RuDReC)',
         url='https://github.com/cimm-kzn/RuDReC',
-        description='RuDReC is a new partially annotated corpus of consumer reviews in Russian about pharmaceutical '
-                    'products for the detection of health-related named entities and the effectiveness of pharmaceutical products. '
-                    'Here you can download and work with the annotated part, to get the raw part (1.4M reviews) '
-                    'please refer to https://github.com/cimm-kzn/RuDReC.',
+        description=(
+            'RuDReC is a new partially annotated corpus of consumer reviews in Russian about pharmaceutical '
+            'products for the detection of health-related named entities and the effectiveness of pharmaceutical products. '
+            'Here you can download and work with the annotated part, to get the raw part (1.4M reviews) '
+            'please refer to https://github.com/cimm-kzn/RuDReC.'
+        ),
         stats=Stats(
             count=4809,
             bytes=1773

@@ -17,7 +17,10 @@ class RuDReCRecord(Record):
 
 
 class RuDReCEntity(Record):
-    __attributes__ = ['entity_id', 'entity_text', 'entity_type', 'start', 'end', 'concept_id', 'concept_name']
+    __attributes__ = [
+        'entity_id', 'entity_text', 'entity_type',
+        'start', 'end', 'concept_id', 'concept_name'
+    ]
 
     def __init__(self, entity_id, entity_text, entity_type, start, end, concept_id, concept_name):
         self.entity_id = entity_id
@@ -29,27 +32,31 @@ class RuDReCEntity(Record):
         self.concept_name = concept_name
 
 
-def parse_entities(record_entities):
-    for entity in record_entities:
-        concept_id = entity['concept_id'] if 'concept_id' in entity else ''
-        concept_name = entity['concept_name'] if 'concept_name' in entity else ''
+def parse_entities(items):
+    for item in items:
         yield RuDReCEntity(
-            entity['entity_id'],
-            entity['entity_text'],
-            entity['entity_type'],
-            entity['start'],
-            entity['end'],
-            concept_id,
-            concept_name)
+            item['entity_id'],
+            item['entity_text'],
+            item['entity_type'],
+            item['start'],
+            item['end'],
+            item.get('concept_id'),
+            item.get('concept_name')
+        )
 
 
-def parse_rudrec(lines):
-    records = parse_jsonl(lines)
-    for record in records:
-        entities = list(parse_entities(record['entities']))
-        yield RuDReCRecord(record['file_name'], record['text'], record['sentence_id'], entities)
+def parse_rudrec(items):
+    for item in items:
+        entities = list(parse_entities(item['entities']))
+        yield RuDReCRecord(
+            item['file_name'],
+            item['text'],
+            item['sentence_id'],
+            entities
+        )
 
 
 def load_rudrec(path):
     lines = load_lines(path)
-    return parse_rudrec(lines)
+    items = parse_jsonl(lines)
+    return parse_rudrec(items)
