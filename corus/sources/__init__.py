@@ -22,3 +22,4 @@ from .toloka import load_toloka_lrwc  # noqa
 from .simlex import load_simlex  # noqa
 from .omnia import load_omnia  # noqa
 from .toloka import load_ruadrect  # noqa
+from .rudrec import load_rudrec  # noqa

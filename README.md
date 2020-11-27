@@ -492,6 +492,31 @@ Same as Collection5, only PER markup + normalized names
 </tr>
 <tr>
 <td>
+<a href="https://github.com/cimm-kzn/RuDReC">The Russian Drug Reaction Corpus (RuDReC)</a>
+</td>
+<td>
+<a name="load_rudrec"></a>
+<code><a href="https://nbviewer.jupyter.org/github/natasha/corus/blob/master/docs.ipynb#load_rudrec">load_rudrec</a></code>
+<a href="#load_rudrec"><code>#</code></a>
+</td>
+<td>
+<code>ner</code>
+</td>
+<td align="right">
+4&nbsp;809
+</td>
+<td align="right">
+1.73 Kb
+</td>
+<td>
+RuDReC is a new partially annotated corpus of consumer reviews in Russian about pharmaceutical products for the detection of health-related named entities and the effectiveness of pharmaceutical products. Here you can download and work with the annotated part, to get the raw part (1.4M reviews) please refer to https://github.com/cimm-kzn/RuDReC.
+</br>
+</br>
+<code>wget https://github.com/cimm-kzn/RuDReC/raw/master/data/rudrec_annotated.json</code>
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://tatianashavrina.github.io/taiga_site/">Taiga</a>
 </td>
 <td colspan="5">
