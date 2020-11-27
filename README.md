@@ -46,8 +46,8 @@ For links to other datasets and their loaders see the <a href="#reference">Refer
 
 Materials are in Russian:
 
-* <a href="https://natasha.github.io/corus">Razdel page on natasha.github.io</a> 
-* <a href="https://youtu.be/-7XT_U6hVvk?t=2758">Razdel section of Datafest 2020 talk</a>
+* <a href="https://natasha.github.io/corus">Corus page on natasha.github.io</a> 
+* <a href="https://youtu.be/-7XT_U6hVvk?t=2758">Corus section of Datafest 2020 talk</a>
 
 ## Install
 
