@@ -3,7 +3,7 @@
 
 ![CI](https://github.com/natasha/corus/workflows/CI/badge.svg) [![codecov](https://codecov.io/gh/natasha/corus/branch/master/graph/badge.svg)](https://codecov.io/gh/natasha/corus)
 
-Links to publicly available Russian corpora + code for loading and parsing. <a href="#reference">20+ datasets, 350Gb+ of text</a>. See <a href="https://natasha.github.io/corus">natasha.github.io article</a> for more info.
+Links to publicly available Russian corpora + code for loading and parsing. <a href="#reference">20+ datasets, 350Gb+ of text</a>.
 
 ## Usage
 
@@ -41,6 +41,13 @@ Iterate over texts:
 ```
 
 For links to other datasets and their loaders see the <a href="#reference">Reference</a> section.
+
+## Documentation
+
+Materials are in Russian:
+
+* <a href="https://natasha.github.io/corus">Razdel page on natasha.github.io</a> 
+* <a href="https://youtu.be/-7XT_U6hVvk?t=2758">Razdel section of Datafest 2020 talk</a>
 
 ## Install
 
