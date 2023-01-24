@@ -1,7 +1,6 @@
 
 import gzip
 import bz2
-import lzma
 from zipfile import ZipFile
 
 import csv
@@ -85,6 +84,10 @@ def load_bz2_lines(path):
 
 
 def load_xz_lines(path):
+    # Python may be built without lzma support
+    # https://github.com/pandas-dev/pandas/issues/27532
+    import lzma
+
     return load_z_lines(path, lzma.open)
 
 
