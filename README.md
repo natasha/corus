@@ -1,7 +1,7 @@
 
 <img src="https://github.com/natasha/natasha-logos/blob/master/corus.svg">
 
-![CI](https://github.com/natasha/corus/workflows/CI/badge.svg) [![codecov](https://codecov.io/gh/natasha/corus/branch/master/graph/badge.svg)](https://codecov.io/gh/natasha/corus)
+![CI](https://github.com/natasha/corus/actions/workflows/test.yml/badge.svg)
 
 Links to publicly available Russian corpora + code for loading and parsing. <a href="#reference">20+ datasets, 350Gb+ of text</a>.
 
@@ -1323,31 +1323,47 @@ This corpus was developed for the Social Media Mining for Health Applications (#
 
 ## Support
 
-- Chat — https://telegram.me/natural_language_processing
+- Chat — https://t.me/natural_language_processing
 - Issues — https://github.com/natasha/corus/issues
 - Commercial support — https://lab.alexkuk.ru
 
-## Development
+## Add new source
 
-Tests:
-
-```bash
-make test
-```
-
-Add new source:
 1. Implement `corus/sources/<source>.py`
 2. Add import into `corus/sources/__init__.py`
 3. Add meta into `corus/source/meta.py`
 4. Add example into `docs.ipynb` (check meta table is correct)
 5. Run tests (readme is updated)
 
-Package:
+## Development
+
+Dev env
 
 ```bash
-make version
+python -m venv ~/.venvs/natasha-corus
+source ~/.venvs/natasha-corus/bin/activate
+
+pip install -r requirements/dev.txt
+pip install -e .
+
+python -m ipykernel install --user --name natasha-corus
+```
+
+Lint + update docs
+
+```bash
+make lint
+make exec-docs
+```
+
+Release
+
+```bash
+# Update setup.py version
+
+git commit -am 'Up version'
+git tag v0.9.0
+
 git push
 git push --tags
-
-make clean wheel upload
 ```
