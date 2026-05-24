@@ -60,7 +60,6 @@ import sys
 import argparse
 import bz2
 import codecs
-import cgi
 import fileinput
 import logging
 import os.path
@@ -76,6 +75,7 @@ PY2 = sys.version_info[0] == 2
 # Python 2.7 compatibiity
 if PY2:
     from urllib import quote
+    from cgi import escape as html_escape
     from htmlentitydefs import name2codepoint
     from itertools import izip as zip, izip_longest as zip_longest
     range = xrange  # Use Python 3 equivalent
@@ -93,6 +93,7 @@ if PY2:
             return self.__dict__ == other.__dict__
 else:
     from urllib.parse import quote
+    from html import escape as html_escape
     from html.entities import name2codepoint
     from itertools import zip_longest
     from types import SimpleNamespace
@@ -808,7 +809,7 @@ class Extractor(object):
             text = text.replace('|-', '')
             text = text.replace('|', '')
         if options.toHTML:
-            text = cgi.escape(text)
+            text = html_escape(text, quote=False)
         return text
 
 
